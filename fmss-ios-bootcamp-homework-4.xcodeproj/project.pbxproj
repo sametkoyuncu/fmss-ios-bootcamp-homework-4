@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F104B9D728E562FA00A2C276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104B9D628E562FA00A2C276 /* AppDelegate.swift */; };
 		F104B9D928E562FA00A2C276 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104B9D828E562FA00A2C276 /* SceneDelegate.swift */; };
-		F104B9DB28E562FA00A2C276 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104B9DA28E562FA00A2C276 /* ViewController.swift */; };
+		F104B9DB28E562FA00A2C276 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104B9DA28E562FA00A2C276 /* HomeViewController.swift */; };
 		F104B9DE28E562FA00A2C276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F104B9DC28E562FA00A2C276 /* Main.storyboard */; };
 		F104B9E028E562FC00A2C276 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F104B9DF28E562FC00A2C276 /* Assets.xcassets */; };
 		F104B9E328E562FC00A2C276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F104B9E128E562FC00A2C276 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		F104B9D328E562FA00A2C276 /* fmss-ios-bootcamp-homework-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fmss-ios-bootcamp-homework-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F104B9D628E562FA00A2C276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F104B9D828E562FA00A2C276 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F104B9DA28E562FA00A2C276 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F104B9DA28E562FA00A2C276 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F104B9DD28E562FA00A2C276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F104B9DF28E562FC00A2C276 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F104B9E228E562FC00A2C276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				F104B9D628E562FA00A2C276 /* AppDelegate.swift */,
 				F104B9D828E562FA00A2C276 /* SceneDelegate.swift */,
-				F104B9DA28E562FA00A2C276 /* ViewController.swift */,
+				F104B9DA28E562FA00A2C276 /* HomeViewController.swift */,
 				F104B9DC28E562FA00A2C276 /* Main.storyboard */,
 				F104B9DF28E562FC00A2C276 /* Assets.xcassets */,
 				F104B9E128E562FC00A2C276 /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F104B9DB28E562FA00A2C276 /* ViewController.swift in Sources */,
+				F104B9DB28E562FA00A2C276 /* HomeViewController.swift in Sources */,
 				F104B9D728E562FA00A2C276 /* AppDelegate.swift in Sources */,
 				F104B9D928E562FA00A2C276 /* SceneDelegate.swift in Sources */,
 			);
@@ -290,9 +290,11 @@
 				DEVELOPMENT_TEAM = A9S7ZDQSZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fmss-ios-bootcamp-homework-4/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Travel App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,7 +306,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,9 +320,11 @@
 				DEVELOPMENT_TEAM = A9S7ZDQSZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fmss-ios-bootcamp-homework-4/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Travel App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
