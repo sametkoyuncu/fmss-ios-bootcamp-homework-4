@@ -105,9 +105,7 @@
                             <constraint firstItem="f4q-3Z-uie" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xPP-6R-9mP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="home" selectedImage="homeSelected" id="2pN-pL-UvG">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="jRV-I9-RbI"/>
                     <connections>
                         <outlet property="collectionView" destination="CTA-uh-Qzk" id="HA6-1y-DfB"/>
                         <outlet property="headerView" destination="f4q-3Z-uie" id="TGc-c1-vB4"/>
@@ -115,12 +113,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908.69565217391312" y="-593.30357142857144"/>
+            <point key="canvasLocation" x="1818.840579710145" y="-593.30357142857144"/>
         </scene>
-        <!--Details View Controller-->
+        <!--List View Controller-->
         <scene sceneID="aLk-Bj-d7T">
             <objects>
-                <viewController storyboardIdentifier="DetailsVC" modalPresentationStyle="fullScreen" id="J8j-jM-3qy" customClass="DetailsViewController" customModule="fmss_ios_bootcamp_homework_4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListVC" modalPresentationStyle="fullScreen" id="J8j-jM-3qy" customClass="ListViewController" customModule="fmss_ios_bootcamp_homework_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qZr-yA-zAj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,8 +145,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zqb-dj-RlZ">
-                                <rect key="frame" x="0.0" y="91" width="414" height="805"/>
+                                <rect key="frame" x="11" y="91" width="392" height="805"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="14" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -159,19 +158,21 @@
                             <constraint firstAttribute="bottom" secondItem="Zqb-dj-RlZ" secondAttribute="bottom" id="M8f-9c-hcy"/>
                             <constraint firstItem="zzo-Xv-ImL" firstAttribute="top" secondItem="i7H-5S-pz1" secondAttribute="top" constant="5" id="Vvl-Vr-q5o"/>
                             <constraint firstItem="Kv4-pK-cl8" firstAttribute="top" secondItem="i7H-5S-pz1" secondAttribute="top" constant="5" id="cY6-fL-f6G"/>
-                            <constraint firstItem="Zqb-dj-RlZ" firstAttribute="trailing" secondItem="i7H-5S-pz1" secondAttribute="trailing" id="ja8-W1-dr7"/>
+                            <constraint firstItem="Zqb-dj-RlZ" firstAttribute="trailing" secondItem="i7H-5S-pz1" secondAttribute="trailing" constant="-11" id="ja8-W1-dr7"/>
                             <constraint firstItem="zzo-Xv-ImL" firstAttribute="leading" secondItem="i7H-5S-pz1" secondAttribute="leading" constant="20" id="nfN-0h-nyZ"/>
                             <constraint firstItem="Kv4-pK-cl8" firstAttribute="leading" secondItem="zzo-Xv-ImL" secondAttribute="trailing" constant="13" id="u9q-S7-V9z"/>
-                            <constraint firstItem="Zqb-dj-RlZ" firstAttribute="leading" secondItem="i7H-5S-pz1" secondAttribute="leading" id="wBm-91-qpv"/>
+                            <constraint firstItem="Zqb-dj-RlZ" firstAttribute="leading" secondItem="i7H-5S-pz1" secondAttribute="leading" constant="11" id="wBm-91-qpv"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Zqb-dj-RlZ" id="lez-sC-6GB"/>
+                        <outlet property="titleLabel" destination="Kv4-pK-cl8" id="tYZ-jr-GGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcz-K4-hRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1827.5362318840582" y="-593.30357142857144"/>
+            <point key="canvasLocation" x="2480" y="-593"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wdy-ld-Oea">
@@ -220,7 +221,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="c5r-X4-zys"/>
+                        <segue destination="uSK-n6-1T8" kind="relationship" relationship="viewControllers" id="c5r-X4-zys"/>
                         <segue destination="B6e-CD-ceH" kind="relationship" relationship="viewControllers" id="TcX-hE-CcK"/>
                         <segue destination="e4R-Ud-6Ty" kind="relationship" relationship="viewControllers" id="TqZ-iu-dk2"/>
                     </connections>
@@ -228,6 +229,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOC-MR-eCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-335" y="98"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IOl-NF-g8X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uSK-n6-1T8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="home" selectedImage="homeSelected" id="2pN-pL-UvG">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IIB-LU-I2E">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FhB-eI-f4P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IH6-Tj-O9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="-593.30357142857144"/>
         </scene>
     </scenes>
     <resources>
