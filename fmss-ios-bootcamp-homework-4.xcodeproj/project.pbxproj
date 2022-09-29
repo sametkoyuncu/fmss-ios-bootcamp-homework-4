@@ -15,9 +15,9 @@
 		F104B9E328E562FC00A2C276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F104B9E128E562FC00A2C276 /* LaunchScreen.storyboard */; };
 		F104B9EC28E5ACAE00A2C276 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104B9EA28E5ACAE00A2C276 /* HomeCollectionViewCell.swift */; };
 		F104B9ED28E5ACAE00A2C276 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */; };
-		F1582DBF28E618BA0016D4F1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1582DBE28E618BA0016D4F1 /* DetailsViewController.swift */; };
-		F1582DC228E618FD0016D4F1 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1582DC028E618FD0016D4F1 /* DetailsTableViewCell.swift */; };
-		F1582DC328E618FD0016D4F1 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1582DC128E618FD0016D4F1 /* DetailsTableViewCell.xib */; };
+		F1582DBF28E618BA0016D4F1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1582DBE28E618BA0016D4F1 /* ListViewController.swift */; };
+		F1582DC228E618FD0016D4F1 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */; };
+		F1582DC328E618FD0016D4F1 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		F104B9E428E562FC00A2C276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F104B9EA28E5ACAE00A2C276 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
-		F1582DBE28E618BA0016D4F1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		F1582DC028E618FD0016D4F1 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
-		F1582DC128E618FD0016D4F1 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
+		F1582DBE28E618BA0016D4F1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,15 +69,15 @@
 				F104B9D628E562FA00A2C276 /* AppDelegate.swift */,
 				F104B9D828E562FA00A2C276 /* SceneDelegate.swift */,
 				F104B9DA28E562FA00A2C276 /* HomeViewController.swift */,
-				F1582DBE28E618BA0016D4F1 /* DetailsViewController.swift */,
+				F1582DBE28E618BA0016D4F1 /* ListViewController.swift */,
 				F104B9DC28E562FA00A2C276 /* Main.storyboard */,
 				F104B9DF28E562FC00A2C276 /* Assets.xcassets */,
 				F104B9E128E562FC00A2C276 /* LaunchScreen.storyboard */,
 				F104B9E428E562FC00A2C276 /* Info.plist */,
 				F104B9EA28E5ACAE00A2C276 /* HomeCollectionViewCell.swift */,
 				F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */,
-				F1582DC028E618FD0016D4F1 /* DetailsTableViewCell.swift */,
-				F1582DC128E618FD0016D4F1 /* DetailsTableViewCell.xib */,
+				F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */,
+				F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */,
 			);
 			path = "fmss-ios-bootcamp-homework-4";
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1582DC328E618FD0016D4F1 /* DetailsTableViewCell.xib in Resources */,
+				F1582DC328E618FD0016D4F1 /* ListTableViewCell.xib in Resources */,
 				F104B9E328E562FC00A2C276 /* LaunchScreen.storyboard in Resources */,
 				F104B9E028E562FC00A2C276 /* Assets.xcassets in Resources */,
 				F104B9DE28E562FA00A2C276 /* Main.storyboard in Resources */,
@@ -155,12 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1582DC228E618FD0016D4F1 /* DetailsTableViewCell.swift in Sources */,
+				F1582DC228E618FD0016D4F1 /* ListTableViewCell.swift in Sources */,
 				F104B9DB28E562FA00A2C276 /* HomeViewController.swift in Sources */,
 				F104B9D728E562FA00A2C276 /* AppDelegate.swift in Sources */,
 				F104B9D928E562FA00A2C276 /* SceneDelegate.swift in Sources */,
 				F104B9EC28E5ACAE00A2C276 /* HomeCollectionViewCell.swift in Sources */,
-				F1582DBF28E618BA0016D4F1 /* DetailsViewController.swift in Sources */,
+				F1582DBF28E618BA0016D4F1 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

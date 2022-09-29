@@ -30,14 +30,18 @@ class HomeViewController: UIViewController {
         headerView.layer.masksToBounds = false
     }
     @IBAction func flightsButtonPressed(_ sender: UIButton) {
-        let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storboardID) as! DetailsViewController
-        destinationVC.modalPresentationStyle = .fullScreen
+        let destinationVC = storyboard?.instantiateViewController(withIdentifier: ListViewController.storboardID) as! ListViewController
+        
+        destinationVC.detailsType = .flights
+        
         navigationController?.pushViewController(destinationVC, animated: true)
     }
     @IBAction func hotelsButtonPressed(_ sender: UIButton) {
-        let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storboardID) as! DetailsViewController
+        let destinationVC = storyboard?.instantiateViewController(withIdentifier: ListViewController.storboardID) as! ListViewController
         
-        present(destinationVC, animated: true)
+        destinationVC.detailsType = .hotels
+        
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     func registerCells() {
