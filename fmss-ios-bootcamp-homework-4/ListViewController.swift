@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum DetailsTypeEnum: String  {
-    case flights = "Flights"
-    case hotels = "Hotels"
-}
-
 class ListViewController: UIViewController {
     
     static let storboardID = "ListVC"
@@ -48,7 +43,13 @@ class ListViewController: UIViewController {
 
 // MARK: - TableView Delegate Methods
 extension ListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
+        
+        destinationVC.detailsType = detailsType
+        
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
 }
 
 // MARK: - TableView DataSource Methods
