@@ -12,3 +12,8 @@ enum DetailsTypeEnum: String  {
     case flights = "Flights"
     case hotels = "Hotels"
 }
+
+enum ActiveSearchTab {
+    case hotels
+    case flights
+}
