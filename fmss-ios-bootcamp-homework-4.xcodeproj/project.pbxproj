@@ -23,6 +23,10 @@
 		F1D716AE28E6C9690095EF7D /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D716AD28E6C9690095EF7D /* BookmarksViewController.swift */; };
 		F1D716B128E6CC0C0095EF7D /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D716AF28E6CC0C0095EF7D /* BookmarksTableViewCell.swift */; };
 		F1D716B228E6CC0C0095EF7D /* BookmarksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1D716B028E6CC0C0095EF7D /* BookmarksTableViewCell.xib */; };
+		F1D716B428E6E2070095EF7D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D716B328E6E2070095EF7D /* Extensions.swift */; };
+		F1D716B628E6E24D0095EF7D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D716B528E6E24D0095EF7D /* SearchViewController.swift */; };
+		F1D716B928E6F4070095EF7D /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D716B728E6F4070095EF7D /* SearchTableViewCell.swift */; };
+		F1D716BA28E6F4070095EF7D /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		F1D716AD28E6C9690095EF7D /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		F1D716AF28E6CC0C0095EF7D /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
 		F1D716B028E6CC0C0095EF7D /* BookmarksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksTableViewCell.xib; sourceTree = "<group>"; };
+		F1D716B328E6E2070095EF7D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F1D716B528E6E24D0095EF7D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F1D716B728E6F4070095EF7D /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 				F1582DBE28E618BA0016D4F1 /* ListViewController.swift */,
 				F13CA10428E6C3DB00347497 /* DetailsViewController.swift */,
 				F1D716AD28E6C9690095EF7D /* BookmarksViewController.swift */,
+				F1D716B528E6E24D0095EF7D /* SearchViewController.swift */,
 				F104B9DC28E562FA00A2C276 /* Main.storyboard */,
 				F104B9DF28E562FC00A2C276 /* Assets.xcassets */,
 				F104B9E128E562FC00A2C276 /* LaunchScreen.storyboard */,
@@ -90,9 +99,12 @@
 				F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */,
 				F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */,
 				F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */,
-				F13CA10628E6C41F00347497 /* Enums.swift */,
 				F1D716AF28E6CC0C0095EF7D /* BookmarksTableViewCell.swift */,
 				F1D716B028E6CC0C0095EF7D /* BookmarksTableViewCell.xib */,
+				F1D716B328E6E2070095EF7D /* Extensions.swift */,
+				F13CA10628E6C41F00347497 /* Enums.swift */,
+				F1D716B728E6F4070095EF7D /* SearchTableViewCell.swift */,
+				F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */,
 			);
 			path = "fmss-ios-bootcamp-homework-4";
 			sourceTree = "<group>";
@@ -159,6 +171,7 @@
 				F104B9E328E562FC00A2C276 /* LaunchScreen.storyboard in Resources */,
 				F104B9E028E562FC00A2C276 /* Assets.xcassets in Resources */,
 				F104B9DE28E562FA00A2C276 /* Main.storyboard in Resources */,
+				F1D716BA28E6F4070095EF7D /* SearchTableViewCell.xib in Resources */,
 				F104B9ED28E5ACAE00A2C276 /* HomeCollectionViewCell.xib in Resources */,
 				F1D716B228E6CC0C0095EF7D /* BookmarksTableViewCell.xib in Resources */,
 			);
@@ -177,9 +190,12 @@
 				F104B9DB28E562FA00A2C276 /* HomeViewController.swift in Sources */,
 				F104B9D728E562FA00A2C276 /* AppDelegate.swift in Sources */,
 				F104B9D928E562FA00A2C276 /* SceneDelegate.swift in Sources */,
+				F1D716B628E6E24D0095EF7D /* SearchViewController.swift in Sources */,
 				F13CA10528E6C3DB00347497 /* DetailsViewController.swift in Sources */,
+				F1D716B928E6F4070095EF7D /* SearchTableViewCell.swift in Sources */,
 				F104B9EC28E5ACAE00A2C276 /* HomeCollectionViewCell.swift in Sources */,
 				F13CA10728E6C41F00347497 /* Enums.swift in Sources */,
+				F1D716B428E6E2070095EF7D /* Extensions.swift in Sources */,
 				F1582DBF28E618BA0016D4F1 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
