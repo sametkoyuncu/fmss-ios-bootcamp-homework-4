@@ -71,7 +71,16 @@ class SearchViewController: UIViewController {
 
 // MARK: - table view delegate methods
 extension SearchViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
+        // TODO: burası değişecek
+        destinationVC.detailsType = .hotels
+        
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
 }
 
 // MARK: - table view datasource methods

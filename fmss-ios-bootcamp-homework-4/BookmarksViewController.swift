@@ -17,6 +17,8 @@ class BookmarksViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        navigationController?.navigationBar.isHidden = true
     }
     
     func registerCell() {
@@ -26,7 +28,14 @@ class BookmarksViewController: UIViewController {
 }
 
 extension BookmarksViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
+        // TODO: burası değişecek
+        destinationVC.detailsType = .flights
+        
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
 }
 
 extension BookmarksViewController: UITableViewDataSource {
@@ -36,7 +45,6 @@ extension BookmarksViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookmarksTableViewCell.identifier, for: indexPath) as! BookmarksTableViewCell
-        
         
         return cell
     }

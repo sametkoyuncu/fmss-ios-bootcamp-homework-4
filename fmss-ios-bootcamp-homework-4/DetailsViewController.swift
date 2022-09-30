@@ -13,6 +13,7 @@ class DetailsViewController: UIViewController {
     
     var detailsType: DetailsTypeEnum?
 
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,6 +25,12 @@ class DetailsViewController: UIViewController {
         if let detailsType = detailsType {
             titleLabel.text = detailsType.rawValue
         }
+        
+        headerView.clipsToBounds = true
+        headerView.layer.cornerRadius = 35
+        headerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
+        navigationController?.navigationBar.isHidden = true
 
     }
     @IBAction func bavkButtonPressed(_ sender: UIButton) {

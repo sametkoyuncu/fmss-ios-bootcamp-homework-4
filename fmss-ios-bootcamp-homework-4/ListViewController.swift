@@ -30,6 +30,8 @@ class ListViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         
         tableView.separatorStyle = .none
+        
+        
     }
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -44,6 +46,8 @@ class ListViewController: UIViewController {
 // MARK: - TableView Delegate Methods
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
         
         destinationVC.detailsType = detailsType
@@ -61,6 +65,8 @@ extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as! ListTableViewCell
+    
+        
         return cell
     }
     

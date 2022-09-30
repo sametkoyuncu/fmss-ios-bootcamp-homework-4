@@ -23,6 +23,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hnE-ov-axx">
                                 <rect key="frame" x="0.0" y="0.0" width="453" height="153"/>
                             </imageView>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3m-IG-2Sv">
+                                <rect key="frame" x="0.0" y="0.0" width="453" height="153"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saf-ik-cGK">
                                 <rect key="frame" x="13" y="43" width="427" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -46,7 +50,11 @@
                             <constraint firstItem="saf-ik-cGK" firstAttribute="leading" secondItem="ATV-gx-7iC" secondAttribute="leading" constant="13" id="abG-hO-w1Y"/>
                             <constraint firstAttribute="trailing" secondItem="AvV-MZ-vgo" secondAttribute="trailing" constant="13" id="e8o-fa-apQ"/>
                             <constraint firstAttribute="height" constant="153" id="hyu-xy-OlB"/>
+                            <constraint firstAttribute="trailing" secondItem="B3m-IG-2Sv" secondAttribute="trailing" id="jYj-SU-zt7"/>
+                            <constraint firstItem="B3m-IG-2Sv" firstAttribute="leading" secondItem="ATV-gx-7iC" secondAttribute="leading" id="l9H-3u-LAX"/>
+                            <constraint firstItem="B3m-IG-2Sv" firstAttribute="top" secondItem="ATV-gx-7iC" secondAttribute="top" id="moG-1M-f0q"/>
                             <constraint firstItem="saf-ik-cGK" firstAttribute="top" secondItem="ATV-gx-7iC" secondAttribute="top" constant="43" id="pVT-1o-wLw"/>
+                            <constraint firstAttribute="bottom" secondItem="B3m-IG-2Sv" secondAttribute="bottom" id="rUF-pP-02R"/>
                             <constraint firstAttribute="bottom" secondItem="hnE-ov-axx" secondAttribute="bottom" id="v9X-za-J7y"/>
                             <constraint firstAttribute="trailing" secondItem="saf-ik-cGK" secondAttribute="trailing" constant="13" id="zPi-J7-Zli"/>
                         </constraints>

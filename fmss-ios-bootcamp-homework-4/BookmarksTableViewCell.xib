@@ -22,6 +22,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="EIB-ht-ABU">
                                 <rect key="frame" x="0.0" y="0.0" width="432" height="146"/>
                             </imageView>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOt-Ed-Bt4">
+                                <rect key="frame" x="0.0" y="0.0" width="432" height="146"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP6-ef-3VE">
                                 <rect key="frame" x="24" y="43" width="384" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -38,15 +42,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kP6-ef-3VE" firstAttribute="leading" secondItem="zft-0H-DIV" secondAttribute="leading" constant="24" id="103-CI-cUA"/>
+                            <constraint firstAttribute="trailing" secondItem="qOt-Ed-Bt4" secondAttribute="trailing" id="4sn-Jq-TWL"/>
                             <constraint firstItem="EIB-ht-ABU" firstAttribute="top" secondItem="zft-0H-DIV" secondAttribute="top" id="8NF-Of-xAy"/>
                             <constraint firstAttribute="trailing" secondItem="EIB-ht-ABU" secondAttribute="trailing" id="91W-Nc-TAW"/>
                             <constraint firstAttribute="bottom" secondItem="EIB-ht-ABU" secondAttribute="bottom" id="Bc9-rj-KMD"/>
                             <constraint firstAttribute="trailing" secondItem="V50-XP-EFR" secondAttribute="trailing" constant="24" id="FAU-SB-sks"/>
                             <constraint firstAttribute="trailing" secondItem="kP6-ef-3VE" secondAttribute="trailing" constant="24" id="Gak-my-c3J"/>
+                            <constraint firstItem="qOt-Ed-Bt4" firstAttribute="leading" secondItem="zft-0H-DIV" secondAttribute="leading" id="ISN-z3-28I"/>
                             <constraint firstItem="V50-XP-EFR" firstAttribute="leading" secondItem="zft-0H-DIV" secondAttribute="leading" constant="24" id="PTh-ED-3Ah"/>
+                            <constraint firstItem="qOt-Ed-Bt4" firstAttribute="top" secondItem="zft-0H-DIV" secondAttribute="top" id="W19-Wt-NLH"/>
                             <constraint firstItem="kP6-ef-3VE" firstAttribute="top" secondItem="zft-0H-DIV" secondAttribute="top" constant="43" id="csf-wY-u6a"/>
                             <constraint firstAttribute="height" constant="146" id="nzz-E3-kxf"/>
                             <constraint firstItem="V50-XP-EFR" firstAttribute="top" secondItem="kP6-ef-3VE" secondAttribute="bottom" id="r33-m0-MCr"/>
+                            <constraint firstAttribute="bottom" secondItem="qOt-Ed-Bt4" secondAttribute="bottom" id="szs-kl-OlG"/>
                             <constraint firstItem="EIB-ht-ABU" firstAttribute="leading" secondItem="zft-0H-DIV" secondAttribute="leading" id="x75-VA-8ah"/>
                         </constraints>
                     </view>

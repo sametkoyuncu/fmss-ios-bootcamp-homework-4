@@ -97,7 +97,7 @@
                             <constraint firstItem="CTA-uh-Qzk" firstAttribute="top" secondItem="EaH-9D-T20" secondAttribute="bottom" id="3JQ-LH-w0q"/>
                             <constraint firstItem="EaH-9D-T20" firstAttribute="top" secondItem="f4q-3Z-uie" secondAttribute="bottom" constant="16" id="54D-FC-DOg"/>
                             <constraint firstItem="f4q-3Z-uie" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Aba-a0-cHw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="f4q-3Z-uie" secondAttribute="bottom" constant="220" id="I6b-wN-MI9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="f4q-3Z-uie" secondAttribute="bottom" constant="300" id="I6b-wN-MI9"/>
                             <constraint firstItem="CTA-uh-Qzk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Np5-4B-KaO"/>
                             <constraint firstItem="f4q-3Z-uie" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WHb-Re-psK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CTA-uh-Qzk" secondAttribute="bottom" id="gbe-Kb-DyM"/>
@@ -209,26 +209,6 @@
                                     <constraint firstItem="VRg-L7-dRq" firstAttribute="top" secondItem="4pu-if-6xi" secondAttribute="top" id="t1A-3h-VVz"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQK-yy-RdB">
-                                <rect key="frame" x="21" y="421" width="89" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                <color key="textColor" systemColor="tintColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfO-7d-YwB">
-                                <rect key="frame" x="21" y="448" width="372" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRX-nt-NCx">
-                                <rect key="frame" x="21" y="488" width="359" height="153"/>
-                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum non id venenatis, elementum. Enim augue velit tristique eu viverra. Massa.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum non id venenatis, elementum. Enim augue velit tristique eu viverra. Massa.</string>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYG-MY-vjy">
                                 <rect key="frame" x="40.5" y="764" width="333" height="68"/>
                                 <state key="normal" title="Button"/>
@@ -237,37 +217,59 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                                     <action selector="bookmarkButtonPressed:" destination="Ojy-VD-QZ3" eventType="touchUpInside" id="mOL-NY-Kv8"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DeJ-Ni-tBw">
+                                <rect key="frame" x="16" y="421" width="382" height="219.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQK-yy-RdB">
+                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <color key="textColor" systemColor="tintColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfO-7d-YwB">
+                                        <rect key="frame" x="0.0" y="25" width="52" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRX-nt-NCx">
+                                        <rect key="frame" x="0.0" y="66.5" width="370" height="153"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum non id venenatis, elementum. Enim augue velit tristique eu viverra. Massa.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum non id venenatis, elementum. Enim augue velit tristique eu viverra. Massa.</string>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OWG-EY-1Ci"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WRX-nt-NCx" firstAttribute="leading" secondItem="OWG-EY-1Ci" secondAttribute="leading" constant="21" id="7PA-I7-CGw"/>
+                            <constraint firstItem="sYG-MY-vjy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DeJ-Ni-tBw" secondAttribute="bottom" constant="16" id="24Q-iW-EP4"/>
                             <constraint firstItem="4pu-if-6xi" firstAttribute="trailing" secondItem="OWG-EY-1Ci" secondAttribute="trailing" id="7zL-di-S0n"/>
-                            <constraint firstItem="sYG-MY-vjy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WRX-nt-NCx" secondAttribute="bottom" priority="250" constant="20" id="E8m-4f-sRW"/>
-                            <constraint firstItem="OWG-EY-1Ci" firstAttribute="bottom" secondItem="sYG-MY-vjy" secondAttribute="bottom" constant="30" id="EY4-3y-hXn"/>
-                            <constraint firstItem="dfO-7d-YwB" firstAttribute="top" secondItem="IQK-yy-RdB" secondAttribute="bottom" constant="10" id="JRb-Xz-NK9"/>
-                            <constraint firstItem="IQK-yy-RdB" firstAttribute="top" secondItem="4pu-if-6xi" secondAttribute="bottom" constant="16" id="LvT-lP-vjX"/>
-                            <constraint firstItem="sYG-MY-vjy" firstAttribute="centerX" secondItem="EL3-GI-aOL" secondAttribute="centerX" id="NYy-L2-uqP"/>
-                            <constraint firstItem="OWG-EY-1Ci" firstAttribute="trailing" secondItem="dfO-7d-YwB" secondAttribute="trailing" constant="21" id="V1s-zZ-zPo"/>
-                            <constraint firstItem="IQK-yy-RdB" firstAttribute="leading" secondItem="OWG-EY-1Ci" secondAttribute="leading" constant="21" id="Yjh-3s-cB1"/>
+                            <constraint firstItem="DeJ-Ni-tBw" firstAttribute="top" secondItem="4pu-if-6xi" secondAttribute="bottom" constant="16" id="Bru-Ly-Gy3"/>
+                            <constraint firstItem="DeJ-Ni-tBw" firstAttribute="leading" secondItem="EL3-GI-aOL" secondAttribute="leading" constant="16" id="C4c-r9-AWJ"/>
+                            <constraint firstItem="OWG-EY-1Ci" firstAttribute="bottom" secondItem="sYG-MY-vjy" secondAttribute="bottom" constant="30" id="PrX-H5-md9"/>
                             <constraint firstItem="4pu-if-6xi" firstAttribute="top" secondItem="EL3-GI-aOL" secondAttribute="top" id="akY-2d-ZCR"/>
-                            <constraint firstAttribute="trailing" secondItem="WRX-nt-NCx" secondAttribute="trailing" constant="34" id="bRf-gt-BCQ"/>
-                            <constraint firstItem="WRX-nt-NCx" firstAttribute="top" secondItem="dfO-7d-YwB" secondAttribute="bottom" constant="6" id="egO-6E-DsD"/>
-                            <constraint firstItem="dfO-7d-YwB" firstAttribute="leading" secondItem="OWG-EY-1Ci" secondAttribute="leading" constant="21" id="n0l-x1-NfZ"/>
+                            <constraint firstAttribute="trailing" secondItem="DeJ-Ni-tBw" secondAttribute="trailing" constant="16" id="cVS-LE-qMo"/>
+                            <constraint firstItem="sYG-MY-vjy" firstAttribute="centerX" secondItem="EL3-GI-aOL" secondAttribute="centerX" id="iwQ-yu-lFW"/>
                             <constraint firstItem="4pu-if-6xi" firstAttribute="leading" secondItem="OWG-EY-1Ci" secondAttribute="leading" id="rL3-7x-1xg"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bookmarkButton" destination="sYG-MY-vjy" id="ffG-xL-Ctg"/>
                         <outlet property="categoryLabel" destination="IQK-yy-RdB" id="PDX-EZ-zoe"/>
                         <outlet property="coverImage" destination="VRg-L7-dRq" id="b9r-6X-W5W"/>
                         <outlet property="descriptionLabel" destination="WRX-nt-NCx" id="YTL-zq-08t"/>
+                        <outlet property="headerView" destination="4pu-if-6xi" id="Xkk-rw-k1q"/>
                         <outlet property="titleLabel" destination="dfO-7d-YwB" id="4wb-eU-DN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtB-Xo-nfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3450.7246376811595" y="-593.30357142857144"/>
+            <point key="canvasLocation" x="4573.913043478261" y="125.89285714285714"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="wdy-ld-Oea">
@@ -381,9 +383,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                             <constraint firstItem="lT6-Ds-tVK" firstAttribute="leading" secondItem="EQ3-HM-yGZ" secondAttribute="trailing" constant="5" id="zPa-vd-lDB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="search" selectedImage="searchSelected" id="dNb-kr-Xfj">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="clh-WB-Ykn"/>
                     <connections>
                         <outlet property="flightsButton" destination="lT6-Ds-tVK" id="Si4-s2-9br"/>
                         <outlet property="hotelsButton" destination="EQ3-HM-yGZ" id="DhN-nW-dSL"/>
@@ -394,7 +394,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XY5-Lu-Hw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908.69565217391312" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1818.840579710145" y="97.767857142857139"/>
         </scene>
         <!--Bookmarks View Controller-->
         <scene sceneID="8Zk-qN-z95">
@@ -405,12 +405,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g6g-Qi-DYo">
-                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="691"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGg-Yj-Mzj">
-                                <rect key="frame" x="16" y="54" width="382" height="36"/>
+                                <rect key="frame" x="32" y="78" width="366" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -422,22 +422,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                             <constraint firstItem="g6g-Qi-DYo" firstAttribute="bottom" secondItem="Vh5-ic-FfA" secondAttribute="bottom" id="1PA-ew-w4A"/>
                             <constraint firstItem="g6g-Qi-DYo" firstAttribute="leading" secondItem="Vh5-ic-FfA" secondAttribute="leading" id="3mM-35-Oai"/>
                             <constraint firstItem="g6g-Qi-DYo" firstAttribute="top" secondItem="QGg-Yj-Mzj" secondAttribute="bottom" constant="8" id="7DQ-6r-lve"/>
-                            <constraint firstItem="QGg-Yj-Mzj" firstAttribute="top" secondItem="Vh5-ic-FfA" secondAttribute="top" constant="10" id="CVJ-WS-YXQ"/>
-                            <constraint firstItem="QGg-Yj-Mzj" firstAttribute="leading" secondItem="Vh5-ic-FfA" secondAttribute="leading" constant="16" id="LI6-f7-G2E"/>
+                            <constraint firstItem="QGg-Yj-Mzj" firstAttribute="top" secondItem="Vh5-ic-FfA" secondAttribute="top" constant="34" id="CVJ-WS-YXQ"/>
+                            <constraint firstItem="QGg-Yj-Mzj" firstAttribute="leading" secondItem="Vh5-ic-FfA" secondAttribute="leading" constant="32" id="LI6-f7-G2E"/>
                             <constraint firstItem="Vh5-ic-FfA" firstAttribute="trailing" secondItem="QGg-Yj-Mzj" secondAttribute="trailing" constant="16" id="Sbl-t8-uVE"/>
                             <constraint firstItem="g6g-Qi-DYo" firstAttribute="trailing" secondItem="Vh5-ic-FfA" secondAttribute="trailing" id="UKB-H9-lCh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="bookmarks" selectedImage="bookmarksSelected" id="sGp-sf-WpV">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="78q-KK-H3t"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="g6g-Qi-DYo" id="Bp2-d6-FSO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J8-vz-SLo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908.69565217391312" y="813.61607142857144"/>
+            <point key="canvasLocation" x="1818.840579710145" y="813.61607142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3Uj-C5-4uR">
@@ -451,8 +450,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                     </tabBar>
                     <connections>
                         <segue destination="uSK-n6-1T8" kind="relationship" relationship="viewControllers" id="c5r-X4-zys"/>
-                        <segue destination="B6e-CD-ceH" kind="relationship" relationship="viewControllers" id="TcX-hE-CcK"/>
-                        <segue destination="e4R-Ud-6Ty" kind="relationship" relationship="viewControllers" id="TqZ-iu-dk2"/>
+                        <segue destination="0fg-mt-vJK" kind="relationship" relationship="viewControllers" id="TcX-hE-CcK"/>
+                        <segue destination="JmM-xA-kZs" kind="relationship" relationship="viewControllers" id="TqZ-iu-dk2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOC-MR-eCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -479,6 +478,48 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IH6-Tj-O9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="-593.30357142857144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NBh-IQ-80B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="0fg-mt-vJK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="search" selectedImage="searchSelected" id="dNb-kr-Xfj">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2oi-vt-De4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B6e-CD-ceH" kind="relationship" relationship="rootViewController" id="d49-gb-l5n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXE-Kd-tzl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bYh-MH-G5l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JmM-xA-kZs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="bookmarks" selectedImage="bookmarksSelected" id="sGp-sf-WpV">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zgR-dK-U4R">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e4R-Ud-6Ty" kind="relationship" relationship="rootViewController" id="avD-uN-Lp3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xE8-Pd-zFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="813.61607142857144"/>
         </scene>
     </scenes>
     <resources>
