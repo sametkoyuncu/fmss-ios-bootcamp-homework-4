@@ -17,6 +17,9 @@
 		F104B9ED28E5ACAE00A2C276 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */; };
 		F13CA10528E6C3DB00347497 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13CA10428E6C3DB00347497 /* DetailsViewController.swift */; };
 		F13CA10728E6C41F00347497 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13CA10628E6C41F00347497 /* Enums.swift */; };
+		F153627A28E8BB4D008C0F5C /* CoinEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153627928E8BB4D008C0F5C /* CoinEntity.swift */; };
+		F153627C28E8BBFB008C0F5C /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153627B28E8BBFB008C0F5C /* CoinManager.swift */; };
+		F153627E28E8BE99008C0F5C /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F153627D28E8BE99008C0F5C /* data.json */; };
 		F1582DBF28E618BA0016D4F1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1582DBE28E618BA0016D4F1 /* ListViewController.swift */; };
 		F1582DC228E618FD0016D4F1 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */; };
 		F1582DC328E618FD0016D4F1 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */; };
@@ -42,6 +45,9 @@
 		F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		F13CA10428E6C3DB00347497 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F13CA10628E6C41F00347497 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F153627928E8BB4D008C0F5C /* CoinEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinEntity.swift; sourceTree = "<group>"; };
+		F153627B28E8BBFB008C0F5C /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		F153627D28E8BE99008C0F5C /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = "fmss-ios-bootcamp-homework-4/LocalJSONTestModule/data.json"; sourceTree = SOURCE_ROOT; };
 		F1582DBE28E618BA0016D4F1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
@@ -84,25 +90,76 @@
 		F104B9D528E562FA00A2C276 /* fmss-ios-bootcamp-homework-4 */ = {
 			isa = PBXGroup;
 			children = (
+				F153628528E8D005008C0F5C /* LocalJSONTestModule */,
 				F181292628E71875009DB64F /* Resources */,
-				F104B9DA28E562FA00A2C276 /* HomeViewController.swift */,
-				F1582DBE28E618BA0016D4F1 /* ListViewController.swift */,
-				F13CA10428E6C3DB00347497 /* DetailsViewController.swift */,
-				F1D716AD28E6C9690095EF7D /* BookmarksViewController.swift */,
-				F1D716B528E6E24D0095EF7D /* SearchViewController.swift */,
-				F104B9EA28E5ACAE00A2C276 /* HomeCollectionViewCell.swift */,
-				F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */,
-				F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */,
-				F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */,
-				F1D716AF28E6CC0C0095EF7D /* BookmarksTableViewCell.swift */,
-				F1D716B028E6CC0C0095EF7D /* BookmarksTableViewCell.xib */,
-				F1D716B728E6F4070095EF7D /* SearchTableViewCell.swift */,
-				F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */,
+				F153627F28E8CF2A008C0F5C /* HomeModule */,
+				F153628128E8CF53008C0F5C /* ListModule */,
+				F153628228E8CF73008C0F5C /* DetailsModule */,
+				F153628328E8CF8D008C0F5C /* SearchModule */,
+				F153628428E8CFD6008C0F5C /* BookmarksModule */,
 				F1D716B328E6E2070095EF7D /* Extensions.swift */,
 				F13CA10628E6C41F00347497 /* Enums.swift */,
 				F181292828E718A4009DB64F /* Supported Files */,
 			);
 			path = "fmss-ios-bootcamp-homework-4";
+			sourceTree = "<group>";
+		};
+		F153627F28E8CF2A008C0F5C /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				F104B9DA28E562FA00A2C276 /* HomeViewController.swift */,
+				F104B9EA28E5ACAE00A2C276 /* HomeCollectionViewCell.swift */,
+				F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		F153628128E8CF53008C0F5C /* ListModule */ = {
+			isa = PBXGroup;
+			children = (
+				F1582DBE28E618BA0016D4F1 /* ListViewController.swift */,
+				F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */,
+				F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */,
+			);
+			path = ListModule;
+			sourceTree = "<group>";
+		};
+		F153628228E8CF73008C0F5C /* DetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+				F13CA10428E6C3DB00347497 /* DetailsViewController.swift */,
+			);
+			path = DetailsModule;
+			sourceTree = "<group>";
+		};
+		F153628328E8CF8D008C0F5C /* SearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				F1D716B528E6E24D0095EF7D /* SearchViewController.swift */,
+				F1D716B728E6F4070095EF7D /* SearchTableViewCell.swift */,
+				F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */,
+			);
+			path = SearchModule;
+			sourceTree = "<group>";
+		};
+		F153628428E8CFD6008C0F5C /* BookmarksModule */ = {
+			isa = PBXGroup;
+			children = (
+				F1D716AD28E6C9690095EF7D /* BookmarksViewController.swift */,
+				F1D716AF28E6CC0C0095EF7D /* BookmarksTableViewCell.swift */,
+				F1D716B028E6CC0C0095EF7D /* BookmarksTableViewCell.xib */,
+			);
+			path = BookmarksModule;
+			sourceTree = "<group>";
+		};
+		F153628528E8D005008C0F5C /* LocalJSONTestModule */ = {
+			isa = PBXGroup;
+			children = (
+				F153627D28E8BE99008C0F5C /* data.json */,
+				F153627928E8BB4D008C0F5C /* CoinEntity.swift */,
+				F153627B28E8BBFB008C0F5C /* CoinManager.swift */,
+			);
+			path = LocalJSONTestModule;
 			sourceTree = "<group>";
 		};
 		F181292628E71875009DB64F /* Resources */ = {
@@ -186,6 +243,7 @@
 				F1582DC328E618FD0016D4F1 /* ListTableViewCell.xib in Resources */,
 				F104B9E328E562FC00A2C276 /* LaunchScreen.storyboard in Resources */,
 				F104B9E028E562FC00A2C276 /* Assets.xcassets in Resources */,
+				F153627E28E8BE99008C0F5C /* data.json in Resources */,
 				F104B9DE28E562FA00A2C276 /* Main.storyboard in Resources */,
 				F1D716BA28E6F4070095EF7D /* SearchTableViewCell.xib in Resources */,
 				F104B9ED28E5ACAE00A2C276 /* HomeCollectionViewCell.xib in Resources */,
@@ -203,6 +261,7 @@
 				F1D716AE28E6C9690095EF7D /* BookmarksViewController.swift in Sources */,
 				F1D716B128E6CC0C0095EF7D /* BookmarksTableViewCell.swift in Sources */,
 				F1582DC228E618FD0016D4F1 /* ListTableViewCell.swift in Sources */,
+				F153627A28E8BB4D008C0F5C /* CoinEntity.swift in Sources */,
 				F104B9DB28E562FA00A2C276 /* HomeViewController.swift in Sources */,
 				F104B9D728E562FA00A2C276 /* AppDelegate.swift in Sources */,
 				F104B9D928E562FA00A2C276 /* SceneDelegate.swift in Sources */,
@@ -213,6 +272,7 @@
 				F13CA10728E6C41F00347497 /* Enums.swift in Sources */,
 				F1D716B428E6E2070095EF7D /* Extensions.swift in Sources */,
 				F1582DBF28E618BA0016D4F1 /* ListViewController.swift in Sources */,
+				F153627C28E8BBFB008C0F5C /* CoinManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
