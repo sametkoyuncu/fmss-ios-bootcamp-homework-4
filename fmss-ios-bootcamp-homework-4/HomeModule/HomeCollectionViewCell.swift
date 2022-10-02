@@ -8,10 +8,13 @@
 import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var containerView: UIView!
-    
-    @IBOutlet weak var coverImage: UIImageView!
     static let identifier = "HomeCollectionViewCell"
+    // outlets
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

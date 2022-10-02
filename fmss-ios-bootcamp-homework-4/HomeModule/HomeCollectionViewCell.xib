@@ -66,8 +66,10 @@
             </constraints>
             <size key="customSize" width="354" height="276"/>
             <connections>
+                <outlet property="categoryLabel" destination="9u4-dt-xg2" id="iLT-eO-Eds"/>
                 <outlet property="containerView" destination="GOM-mn-yVy" id="7Q5-df-6QI"/>
                 <outlet property="coverImage" destination="s6v-dy-hrY" id="auU-o5-BnA"/>
+                <outlet property="titleLabel" destination="A5P-UN-mE0" id="t7t-oY-2Qg"/>
             </connections>
             <point key="canvasLocation" x="356.52173913043481" y="166.74107142857142"/>
         </collectionViewCell>
