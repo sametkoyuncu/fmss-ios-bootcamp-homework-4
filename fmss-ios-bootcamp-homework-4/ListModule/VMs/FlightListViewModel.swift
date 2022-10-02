@@ -32,15 +32,8 @@ class FlightListViewModel {
         """
         
         let image = "saw"
-        let category = String(describing: flight.airline?.callsign)
-        
-        return ListItemEntity(cellTitle: title, desc: desc, image: image, category: category)
-    }
-    // Todo: protocol e taşınacak
-    func didClickItem(at index: Int) {
-        let _ = model.flights[index]
-        print("selected index: \(index)")
-        // TODO: navigate
+        // TODO: uçuşlarda id yerine uçuş numarası olacak
+        return ListItemEntity(id: flight.flight?.number, cellTitle: title, desc: desc, image: image)
     }
 }
 

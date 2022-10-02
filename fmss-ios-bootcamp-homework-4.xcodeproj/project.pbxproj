@@ -25,12 +25,18 @@
 		F153628F28E8D295008C0F5C /* HotelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153628E28E8D295008C0F5C /* HotelEntity.swift */; };
 		F153629128E8D303008C0F5C /* HotelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153629028E8D303008C0F5C /* HotelListModel.swift */; };
 		F153629428E963C1008C0F5C /* ListItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153629328E963C1008C0F5C /* ListItemEntity.swift */; };
-		F153629728E9707F008C0F5C /* ListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153629628E9707F008C0F5C /* ListViewModelProtocol.swift */; };
 		F1582DBF28E618BA0016D4F1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1582DBE28E618BA0016D4F1 /* ListViewController.swift */; };
 		F1582DC228E618FD0016D4F1 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */; };
 		F1582DC328E618FD0016D4F1 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */; };
 		F1585B9428E97E16001B23DC /* FlightEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585B9328E97E16001B23DC /* FlightEntity.swift */; };
 		F1585B9628E97F4F001B23DC /* flights.json in Resources */ = {isa = PBXBuildFile; fileRef = F1585B9528E97F4F001B23DC /* flights.json */; };
+		F1AF2F4528E9AD9D00297C3E /* DetailsScreenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F4428E9AD9D00297C3E /* DetailsScreenEntity.swift */; };
+		F1AF2F4728E9AE1400297C3E /* HotelDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F4628E9AE1400297C3E /* HotelDetailsModel.swift */; };
+		F1AF2F4928E9AEF400297C3E /* HotelDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F4828E9AEF400297C3E /* HotelDetailsViewModel.swift */; };
+		F1AF2F4E28E9B74B00297C3E /* ListViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F4D28E9B74B00297C3E /* ListViewModelProtocols.swift */; };
+		F1AF2F5028E9B78E00297C3E /* DetailsViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F4F28E9B78E00297C3E /* DetailsViewModelProtocols.swift */; };
+		F1AF2F5228E9B85A00297C3E /* FlightDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F5128E9B85A00297C3E /* FlightDetailsViewModel.swift */; };
+		F1AF2F5428E9B8A200297C3E /* FlightDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F5328E9B8A200297C3E /* FlightDetailsModel.swift */; };
 		F1D716AE28E6C9690095EF7D /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D716AD28E6C9690095EF7D /* BookmarksViewController.swift */; };
 		F1D716B128E6CC0C0095EF7D /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D716AF28E6CC0C0095EF7D /* BookmarksTableViewCell.swift */; };
 		F1D716B228E6CC0C0095EF7D /* BookmarksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1D716B028E6CC0C0095EF7D /* BookmarksTableViewCell.xib */; };
@@ -40,7 +46,6 @@
 		F1D716BA28E6F4070095EF7D /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */; };
 		F1FD6D3D28E9800700D8DBEA /* FlightListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD6D3C28E9800700D8DBEA /* FlightListModel.swift */; };
 		F1FD6D3F28E9809A00D8DBEA /* FlightListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD6D3E28E9809A00D8DBEA /* FlightListViewModel.swift */; };
-		F1FD6D4228E983C000D8DBEA /* ListViewModelDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD6D4128E983C000D8DBEA /* ListViewModelDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,12 +69,18 @@
 		F153628E28E8D295008C0F5C /* HotelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelEntity.swift; sourceTree = "<group>"; };
 		F153629028E8D303008C0F5C /* HotelListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListModel.swift; sourceTree = "<group>"; };
 		F153629328E963C1008C0F5C /* ListItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemEntity.swift; sourceTree = "<group>"; };
-		F153629628E9707F008C0F5C /* ListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocol.swift; sourceTree = "<group>"; };
 		F1582DBE28E618BA0016D4F1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F1582DC028E618FD0016D4F1 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		F1582DC128E618FD0016D4F1 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		F1585B9328E97E16001B23DC /* FlightEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightEntity.swift; sourceTree = "<group>"; };
 		F1585B9528E97F4F001B23DC /* flights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flights.json; sourceTree = "<group>"; };
+		F1AF2F4428E9AD9D00297C3E /* DetailsScreenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenEntity.swift; sourceTree = "<group>"; };
+		F1AF2F4628E9AE1400297C3E /* HotelDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsModel.swift; sourceTree = "<group>"; };
+		F1AF2F4828E9AEF400297C3E /* HotelDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsViewModel.swift; sourceTree = "<group>"; };
+		F1AF2F4D28E9B74B00297C3E /* ListViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocols.swift; sourceTree = "<group>"; };
+		F1AF2F4F28E9B78E00297C3E /* DetailsViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelProtocols.swift; sourceTree = "<group>"; };
+		F1AF2F5128E9B85A00297C3E /* FlightDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewModel.swift; sourceTree = "<group>"; };
+		F1AF2F5328E9B8A200297C3E /* FlightDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsModel.swift; sourceTree = "<group>"; };
 		F1D716AD28E6C9690095EF7D /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		F1D716AF28E6CC0C0095EF7D /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
 		F1D716B028E6CC0C0095EF7D /* BookmarksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksTableViewCell.xib; sourceTree = "<group>"; };
@@ -79,7 +90,6 @@
 		F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		F1FD6D3C28E9800700D8DBEA /* FlightListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListModel.swift; sourceTree = "<group>"; };
 		F1FD6D3E28E9809A00D8DBEA /* FlightListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListViewModel.swift; sourceTree = "<group>"; };
-		F1FD6D4128E983C000D8DBEA /* ListViewModelDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +150,9 @@
 		F153628128E8CF53008C0F5C /* ListModule */ = {
 			isa = PBXGroup;
 			children = (
-				F153628928E8D239008C0F5C /* Model */,
+				F153628928E8D239008C0F5C /* Models */,
 				F153628B28E8D24B008C0F5C /* View */,
-				F153628A28E8D242008C0F5C /* VM */,
+				F153628A28E8D242008C0F5C /* VMs */,
 			);
 			path = ListModule;
 			sourceTree = "<group>";
@@ -150,7 +160,9 @@
 		F153628228E8CF73008C0F5C /* DetailsModule */ = {
 			isa = PBXGroup;
 			children = (
-				F13CA10428E6C3DB00347497 /* DetailsViewController.swift */,
+				F1AF2F4128E99D3D00297C3E /* Model */,
+				F1AF2F4228E99D4300297C3E /* View */,
+				F1AF2F4328E99D4800297C3E /* VM */,
 			);
 			path = DetailsModule;
 			sourceTree = "<group>";
@@ -194,31 +206,31 @@
 			path = LocalJSONFiles;
 			sourceTree = "<group>";
 		};
-		F153628928E8D239008C0F5C /* Model */ = {
+		F153628928E8D239008C0F5C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F1FD6D3B28E97FD800D8DBEA /* Entities */,
 				F153629028E8D303008C0F5C /* HotelListModel.swift */,
 				F1FD6D3C28E9800700D8DBEA /* FlightListModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		F153628A28E8D242008C0F5C /* VM */ = {
+		F153628A28E8D242008C0F5C /* VMs */ = {
 			isa = PBXGroup;
 			children = (
-				F1FD6D4028E9838B00D8DBEA /* Protocol */,
 				F153628C28E8D279008C0F5C /* HotelListViewModel.swift */,
 				F1FD6D3E28E9809A00D8DBEA /* FlightListViewModel.swift */,
+				F1AF2F4D28E9B74B00297C3E /* ListViewModelProtocols.swift */,
 			);
-			path = VM;
+			path = VMs;
 			sourceTree = "<group>";
 		};
 		F153628B28E8D24B008C0F5C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F1582DBE28E618BA0016D4F1 /* ListViewController.swift */,
 				F153629528E9662C008C0F5C /* Cell */,
+				F1582DBE28E618BA0016D4F1 /* ListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +264,34 @@
 			name = "Supported Files";
 			sourceTree = "<group>";
 		};
+		F1AF2F4128E99D3D00297C3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1AF2F4428E9AD9D00297C3E /* DetailsScreenEntity.swift */,
+				F1AF2F4628E9AE1400297C3E /* HotelDetailsModel.swift */,
+				F1AF2F5328E9B8A200297C3E /* FlightDetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1AF2F4228E99D4300297C3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F13CA10428E6C3DB00347497 /* DetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1AF2F4328E99D4800297C3E /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				F1AF2F4828E9AEF400297C3E /* HotelDetailsViewModel.swift */,
+				F1AF2F5128E9B85A00297C3E /* FlightDetailsViewModel.swift */,
+				F1AF2F4F28E9B78E00297C3E /* DetailsViewModelProtocols.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		F1FD6D3B28E97FD800D8DBEA /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,15 +300,6 @@
 				F1585B9328E97E16001B23DC /* FlightEntity.swift */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		F1FD6D4028E9838B00D8DBEA /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				F153629628E9707F008C0F5C /* ListViewModelProtocol.swift */,
-				F1FD6D4128E983C000D8DBEA /* ListViewModelDelegateProtocol.swift */,
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,30 +380,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F153629728E9707F008C0F5C /* ListViewModelProtocol.swift in Sources */,
 				F1D716AE28E6C9690095EF7D /* BookmarksViewController.swift in Sources */,
+				F1AF2F4E28E9B74B00297C3E /* ListViewModelProtocols.swift in Sources */,
 				F153629428E963C1008C0F5C /* ListItemEntity.swift in Sources */,
 				F1D716B128E6CC0C0095EF7D /* BookmarksTableViewCell.swift in Sources */,
 				F1582DC228E618FD0016D4F1 /* ListTableViewCell.swift in Sources */,
 				F153627A28E8BB4D008C0F5C /* CoinEntity.swift in Sources */,
+				F1AF2F4928E9AEF400297C3E /* HotelDetailsViewModel.swift in Sources */,
+				F1AF2F5228E9B85A00297C3E /* FlightDetailsViewModel.swift in Sources */,
 				F104B9DB28E562FA00A2C276 /* HomeViewController.swift in Sources */,
 				F1FD6D3D28E9800700D8DBEA /* FlightListModel.swift in Sources */,
 				F104B9D728E562FA00A2C276 /* AppDelegate.swift in Sources */,
 				F153629128E8D303008C0F5C /* HotelListModel.swift in Sources */,
+				F1AF2F4528E9AD9D00297C3E /* DetailsScreenEntity.swift in Sources */,
 				F153628D28E8D279008C0F5C /* HotelListViewModel.swift in Sources */,
 				F1585B9428E97E16001B23DC /* FlightEntity.swift in Sources */,
 				F104B9D928E562FA00A2C276 /* SceneDelegate.swift in Sources */,
 				F1D716B628E6E24D0095EF7D /* SearchViewController.swift in Sources */,
 				F13CA10528E6C3DB00347497 /* DetailsViewController.swift in Sources */,
+				F1AF2F5428E9B8A200297C3E /* FlightDetailsModel.swift in Sources */,
 				F1D716B928E6F4070095EF7D /* SearchTableViewCell.swift in Sources */,
 				F1FD6D3F28E9809A00D8DBEA /* FlightListViewModel.swift in Sources */,
 				F153628F28E8D295008C0F5C /* HotelEntity.swift in Sources */,
+				F1AF2F5028E9B78E00297C3E /* DetailsViewModelProtocols.swift in Sources */,
 				F104B9EC28E5ACAE00A2C276 /* HomeCollectionViewCell.swift in Sources */,
-				F1FD6D4228E983C000D8DBEA /* ListViewModelDelegateProtocol.swift in Sources */,
 				F13CA10728E6C41F00347497 /* Enums.swift in Sources */,
 				F1D716B428E6E2070095EF7D /* Extensions.swift in Sources */,
 				F1582DBF28E618BA0016D4F1 /* ListViewController.swift in Sources */,
 				F153627C28E8BBFB008C0F5C /* CoinManager.swift in Sources */,
+				F1AF2F4728E9AE1400297C3E /* HotelDetailsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
