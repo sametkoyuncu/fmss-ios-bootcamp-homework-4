@@ -1,0 +1,1703 @@
+[
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "17:45:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "18:45:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "7248"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "16:15:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "17:15:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "7246"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "12:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "13:30:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "7244"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "08:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "09:00:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "7242"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "07:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "08:00:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "7240"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "09:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "10:30:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "279"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "10:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "11:00:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "275"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "12:20:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "13:20:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "273"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "20:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "21:30:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "271"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "08:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "09:30:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "270"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "22:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "23:00:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "269"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "18:15:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "19:15:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "267"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "14:45:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "15:45:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "265"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "18:45:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "19:45:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "263"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "08:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "09:30:00"
+        },
+        "airline": {
+            "name": "BoraJet Havacilik Tasimacilik Ucak Bakim Onarim Ve Ticaret A.S.",
+            "callsign": "BORA JET",
+            "iata": "YB",
+            "icao": "BRJ"
+        },
+        "flight": {
+            "number": "261"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "23:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "00:30:00"
+        },
+        "airline": {
+            "name": "SunExpress",
+            "callsign": "SUNEXPRESS",
+            "iata": "XQ",
+            "icao": "SXS"
+        },
+        "flight": {
+            "number": "7258"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "21:35:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "22:35:00"
+        },
+        "airline": {
+            "name": "SunExpress",
+            "callsign": "SUNEXPRESS",
+            "iata": "XQ",
+            "icao": "SXS"
+        },
+        "flight": {
+            "number": "7256"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "19:55:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "20:55:00"
+        },
+        "airline": {
+            "name": "SunExpress",
+            "callsign": "SUNEXPRESS",
+            "iata": "XQ",
+            "icao": "SXS"
+        },
+        "flight": {
+            "number": "7254"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "17:45:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "18:45:00"
+        },
+        "airline": {
+            "name": "SunExpress",
+            "callsign": "SUNEXPRESS",
+            "iata": "XQ",
+            "icao": "SXS"
+        },
+        "flight": {
+            "number": "7248"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "16:15:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "17:15:00"
+        },
+        "airline": {
+            "name": "SunExpress",
+            "callsign": "SUNEXPRESS",
+            "iata": "XQ",
+            "icao": "SXS"
+        },
+        "flight": {
+            "number": "7246"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "05:55:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "06:55:00"
+        },
+        "airline": {
+            "name": "SunExpress",
+            "callsign": "SUNEXPRESS",
+            "iata": "XQ",
+            "icao": "SXS"
+        },
+        "flight": {
+            "number": "7244"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "08:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "09:00:00"
+        },
+        "airline": {
+            "name": "SunExpress",
+            "callsign": "SUNEXPRESS",
+            "iata": "XQ",
+            "icao": "SXS"
+        },
+        "flight": {
+            "number": "7242"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "07:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "08:00:00"
+        },
+        "airline": {
+            "name": "SunExpress",
+            "callsign": "SUNEXPRESS",
+            "iata": "XQ",
+            "icao": "SXS"
+        },
+        "flight": {
+            "number": "7240"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "23:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "00:30:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "7258"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "21:35:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "22:35:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "7256"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "17:45:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "18:45:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "7248"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "16:15:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "17:15:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "7246"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "12:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "13:30:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "7244"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "08:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "09:00:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "7242"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "07:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "08:00:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "7240"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": null
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": null
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "3606"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "21:05:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "22:10:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "2982"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "19:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "20:10:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "2980"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "17:05:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "18:10:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "2976"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "15:45:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "16:40:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "2972"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "11:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "12:35:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "2968"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "20:10:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "21:20:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "2966"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "07:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "08:35:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "2964"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "06:25:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "07:25:00"
+        },
+        "airline": {
+            "name": "THY - Turkish Airlines",
+            "callsign": "TURKISH",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        "flight": {
+            "number": "2962"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "00:10:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "01:15:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "4802"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": null
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": null
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "4662"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "08:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "09:25:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "4402"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "06:40:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "07:45:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "4110"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "21:45:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "22:50:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "4102"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "15:50:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "16:55:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "4100"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "00:35:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "01:45:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2690"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "23:50:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "00:55:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2686"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "09:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "10:10:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2684"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "08:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "09:10:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2680"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "00:10:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "01:20:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2678"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "23:45:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "00:55:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2674"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "11:25:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "12:30:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2668"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "09:30:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "10:35:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2666"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "10:15:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "11:35:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2664"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "07:15:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "08:25:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2662"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "06:15:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "07:25:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "2660"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "18:20:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "19:25:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "112"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "20:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "21:10:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "110"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "13:20:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "14:25:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "108"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "16:20:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "17:25:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "106"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "10:15:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "11:25:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "104"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "00:10:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "01:15:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "102"
+        }
+    },
+    {
+        "departure": {
+            "airport": "Sabiha Gokcen",
+            "timezone": "Europe\/Istanbul",
+            "iata": "SAW",
+            "icao": "LTFJ",
+            "terminal": null,
+            "time": "07:00:00"
+        },
+        "arrival": {
+            "airport": "Esenboga International",
+            "timezone": "Europe\/Istanbul",
+            "iata": "ESB",
+            "icao": "LTAC",
+            "terminal": null,
+            "time": "08:05:00"
+        },
+        "airline": {
+            "name": "Pegasus Airlines",
+            "callsign": "SUNTURK",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        "flight": {
+            "number": "100"
+        }
+    }
+]

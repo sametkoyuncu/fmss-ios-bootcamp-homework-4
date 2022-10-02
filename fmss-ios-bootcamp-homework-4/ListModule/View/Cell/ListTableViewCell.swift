@@ -12,6 +12,9 @@ class ListTableViewCell: UITableViewCell {
     static let identifier = "ListTableViewCell"
     
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

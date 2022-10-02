@@ -22,7 +22,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="C1N-4H-PdQ">
                                 <rect key="frame" x="0.0" y="0.0" width="403" height="191"/>
                             </imageView>
-                            <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTW-9b-glg">
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTW-9b-glg">
                                 <rect key="frame" x="0.0" y="0.0" width="403" height="191"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -68,6 +68,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="8mc-aD-cvg" id="SVY-wv-wIq"/>
+                <outlet property="coverImage" destination="C1N-4H-PdQ" id="Bog-NF-6eS"/>
+                <outlet property="descriptionLabel" destination="FIA-Gp-mt0" id="8mc-Qc-Imx"/>
+                <outlet property="titleLabel" destination="Gcg-dZ-pX4" id="FsJ-ZW-NKh"/>
             </connections>
             <point key="canvasLocation" x="197.82608695652175" y="165.06696428571428"/>
         </tableViewCell>
