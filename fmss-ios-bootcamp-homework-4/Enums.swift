@@ -11,6 +11,7 @@ import Foundation
 enum DetailsTypeEnum: String  {
     case flights = "Flights"
     case hotels = "Hotels"
+    case articles = "Articles"
 }
 
 enum ActiveSearchTab {

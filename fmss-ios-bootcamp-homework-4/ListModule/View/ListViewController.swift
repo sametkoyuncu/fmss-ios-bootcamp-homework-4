@@ -32,7 +32,7 @@ class ListViewController: UIViewController {
             listViewModel = HotelListViewModel()
         case .flights:
             listViewModel = FlightListViewModel()
-        case .none:
+        case .articles, .none:
             fatalError("Details Type Not Found! (from viewWillAppear)")
         }
         listViewModel?.didViewLoad()

@@ -51,6 +51,8 @@ class DetailsViewController: UIViewController {
             detailsViewModel = HotelDetailsViewModel()
         case .flights:
             detailsViewModel = FlightDetailsViewModel()
+        case .articles:
+            detailsViewModel = ArticleDetailsViewModel()
         case .none:
             fatalError("Details Type Not Found! (from viewWillAppear)")
         }
