@@ -8,15 +8,15 @@
 import Foundation
 
 class ListItemEntity {
+    var id: String?
     var cellTitle: String?
     var desc: String?
     var image: String?
-    var category: String?
     
-    init(cellTitle: String?, desc: String?, image: String?, category: String?) {
+    init(id: String?, cellTitle: String?, desc: String?, image: String?) {
+        self.id = id
         self.cellTitle = cellTitle
         self.desc = desc
         self.image = image
-        self.category = category
     }
 }

@@ -4,7 +4,7 @@
 //
 //  Created by Samet Koyuncu on 29.09.2022.
 //
-
+// TODO: view model in delegate i yok gibi
 import UIKit
 
 class ListViewController: UIViewController {
@@ -67,8 +67,10 @@ extension ListViewController: UITableViewDelegate {
         
         let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
         
+        destinationVC.selectedId = listViewModel?.getModel(at: indexPath.row).id
         destinationVC.detailsType = detailsType
         
+            
         navigationController?.pushViewController(destinationVC, animated: true)
     }
 }

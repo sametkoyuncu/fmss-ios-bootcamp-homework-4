@@ -17,17 +17,10 @@ class HotelListViewModel {
     }
     
     private func transformHotelToListItemEntity(from hotel: Hotel) -> ListItemEntity {
-        return ListItemEntity(cellTitle: hotel.name,
+        return ListItemEntity(id: hotel.id,
+                              cellTitle: hotel.name,
                               desc: hotel.hotelDescription,
-                              image: hotel.image,
-                              category: (String(describing: hotel.score)))
-    }
-    
-    // Todo: protocol e taşınacak
-    func didClickItem(at index: Int) {
-        let _ = model.hotels[index]
-        print("selected index: \(index)")
-        // TODO: navigate
+                              image: hotel.image)
     }
 }
 
