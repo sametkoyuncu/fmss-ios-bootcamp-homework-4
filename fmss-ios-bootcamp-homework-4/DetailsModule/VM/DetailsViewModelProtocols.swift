@@ -9,6 +9,7 @@ import Foundation
 
 protocol DetailsViewModelMethodsProtocol {
     var viewDelegate: DetailsViewModelViewDelegateProtocol? {get set}
+    
     func didViewLoad(_ id: String)
     func getModel() -> DetailsScreenEntity
 }

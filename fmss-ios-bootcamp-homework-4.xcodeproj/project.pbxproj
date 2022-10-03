@@ -33,6 +33,12 @@
 		F18FF2B428E9FF0F00423D76 /* ArticleCellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FF2B328E9FF0F00423D76 /* ArticleCellEntity.swift */; };
 		F18FF2B728EA01EC00423D76 /* ArticleDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FF2B628EA01EC00423D76 /* ArticleDetailsModel.swift */; };
 		F18FF2B928EA027D00423D76 /* ArticleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FF2B828EA027D00423D76 /* ArticleDetailsViewModel.swift */; };
+		F19D9AAD28EAB2C5001E0F4D /* HotelSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19D9AAC28EAB2C5001E0F4D /* HotelSearchModel.swift */; };
+		F19D9AB228EAB69D001E0F4D /* SearchCellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19D9AB128EAB69D001E0F4D /* SearchCellEntity.swift */; };
+		F19D9AB428EAB701001E0F4D /* HotelSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19D9AB328EAB701001E0F4D /* HotelSearchViewModel.swift */; };
+		F19D9AB628EAB7F8001E0F4D /* SearchViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19D9AB528EAB7F8001E0F4D /* SearchViewModelProtocols.swift */; };
+		F19D9AB828EAC086001E0F4D /* FlightSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19D9AB728EAC086001E0F4D /* FlightSearchModel.swift */; };
+		F19D9ABA28EAC266001E0F4D /* FlightSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19D9AB928EAC266001E0F4D /* FlightSearchViewModel.swift */; };
 		F1AF2F4528E9AD9D00297C3E /* DetailsScreenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F4428E9AD9D00297C3E /* DetailsScreenEntity.swift */; };
 		F1AF2F4728E9AE1400297C3E /* HotelDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F4628E9AE1400297C3E /* HotelDetailsModel.swift */; };
 		F1AF2F4928E9AEF400297C3E /* HotelDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF2F4828E9AEF400297C3E /* HotelDetailsViewModel.swift */; };
@@ -84,6 +90,12 @@
 		F18FF2B328E9FF0F00423D76 /* ArticleCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellEntity.swift; sourceTree = "<group>"; };
 		F18FF2B628EA01EC00423D76 /* ArticleDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsModel.swift; sourceTree = "<group>"; };
 		F18FF2B828EA027D00423D76 /* ArticleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewModel.swift; sourceTree = "<group>"; };
+		F19D9AAC28EAB2C5001E0F4D /* HotelSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchModel.swift; sourceTree = "<group>"; };
+		F19D9AB128EAB69D001E0F4D /* SearchCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellEntity.swift; sourceTree = "<group>"; };
+		F19D9AB328EAB701001E0F4D /* HotelSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchViewModel.swift; sourceTree = "<group>"; };
+		F19D9AB528EAB7F8001E0F4D /* SearchViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelProtocols.swift; sourceTree = "<group>"; };
+		F19D9AB728EAC086001E0F4D /* FlightSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchModel.swift; sourceTree = "<group>"; };
+		F19D9AB928EAC266001E0F4D /* FlightSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchViewModel.swift; sourceTree = "<group>"; };
 		F1AF2F4428E9AD9D00297C3E /* DetailsScreenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenEntity.swift; sourceTree = "<group>"; };
 		F1AF2F4628E9AE1400297C3E /* HotelDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsModel.swift; sourceTree = "<group>"; };
 		F1AF2F4828E9AEF400297C3E /* HotelDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -186,9 +198,9 @@
 		F153628328E8CF8D008C0F5C /* SearchModule */ = {
 			isa = PBXGroup;
 			children = (
-				F1D716B528E6E24D0095EF7D /* SearchViewController.swift */,
-				F1D716B728E6F4070095EF7D /* SearchTableViewCell.swift */,
-				F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */,
+				F19D9AAB28EAB2A8001E0F4D /* Models */,
+				F19D9AAE28EAB633001E0F4D /* VMs */,
+				F19D9AAF28EAB668001E0F4D /* View */,
 			);
 			path = SearchModule;
 			sourceTree = "<group>";
@@ -288,6 +300,44 @@
 				F18FF2B328E9FF0F00423D76 /* ArticleCellEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		F19D9AAB28EAB2A8001E0F4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F19D9AAC28EAB2C5001E0F4D /* HotelSearchModel.swift */,
+				F19D9AB128EAB69D001E0F4D /* SearchCellEntity.swift */,
+				F19D9AB728EAC086001E0F4D /* FlightSearchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F19D9AAE28EAB633001E0F4D /* VMs */ = {
+			isa = PBXGroup;
+			children = (
+				F19D9AB328EAB701001E0F4D /* HotelSearchViewModel.swift */,
+				F19D9AB528EAB7F8001E0F4D /* SearchViewModelProtocols.swift */,
+				F19D9AB928EAC266001E0F4D /* FlightSearchViewModel.swift */,
+			);
+			path = VMs;
+			sourceTree = "<group>";
+		};
+		F19D9AAF28EAB668001E0F4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F19D9AB028EAB674001E0F4D /* Cell */,
+				F1D716B528E6E24D0095EF7D /* SearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F19D9AB028EAB674001E0F4D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F1D716B728E6F4070095EF7D /* SearchTableViewCell.swift */,
+				F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F1AF2F4128E99D3D00297C3E /* Model */ = {
@@ -433,6 +483,7 @@
 				F1D716B128E6CC0C0095EF7D /* BookmarksTableViewCell.swift in Sources */,
 				F1582DC228E618FD0016D4F1 /* ListTableViewCell.swift in Sources */,
 				F153627A28E8BB4D008C0F5C /* CoinEntity.swift in Sources */,
+				F19D9AB828EAC086001E0F4D /* FlightSearchModel.swift in Sources */,
 				F1AF2F4928E9AEF400297C3E /* HotelDetailsViewModel.swift in Sources */,
 				F1AF2F5228E9B85A00297C3E /* FlightDetailsViewModel.swift in Sources */,
 				F1EFE72728E9F86E004338E6 /* ArticleListModel.swift in Sources */,
@@ -442,6 +493,7 @@
 				F104B9D728E562FA00A2C276 /* AppDelegate.swift in Sources */,
 				F153629128E8D303008C0F5C /* HotelListModel.swift in Sources */,
 				F1AF2F4528E9AD9D00297C3E /* DetailsScreenEntity.swift in Sources */,
+				F19D9AB628EAB7F8001E0F4D /* SearchViewModelProtocols.swift in Sources */,
 				F153628D28E8D279008C0F5C /* HotelListViewModel.swift in Sources */,
 				F1585B9428E97E16001B23DC /* FlightEntity.swift in Sources */,
 				F104B9D928E562FA00A2C276 /* SceneDelegate.swift in Sources */,
@@ -450,12 +502,16 @@
 				F18FF2B928EA027D00423D76 /* ArticleDetailsViewModel.swift in Sources */,
 				F1AF2F5428E9B8A200297C3E /* FlightDetailsModel.swift in Sources */,
 				F1D716B928E6F4070095EF7D /* SearchTableViewCell.swift in Sources */,
+				F19D9AAD28EAB2C5001E0F4D /* HotelSearchModel.swift in Sources */,
 				F1FD6D3F28E9809A00D8DBEA /* FlightListViewModel.swift in Sources */,
 				F153628F28E8D295008C0F5C /* HotelEntity.swift in Sources */,
 				F1AF2F5028E9B78E00297C3E /* DetailsViewModelProtocols.swift in Sources */,
 				F18FF2B428E9FF0F00423D76 /* ArticleCellEntity.swift in Sources */,
 				F104B9EC28E5ACAE00A2C276 /* HomeCollectionViewCell.swift in Sources */,
 				F13CA10728E6C41F00347497 /* Enums.swift in Sources */,
+				F19D9AB428EAB701001E0F4D /* HotelSearchViewModel.swift in Sources */,
+				F19D9ABA28EAC266001E0F4D /* FlightSearchViewModel.swift in Sources */,
+				F19D9AB228EAB69D001E0F4D /* SearchCellEntity.swift in Sources */,
 				F1D716B428E6E2070095EF7D /* Extensions.swift in Sources */,
 				F1582DBF28E618BA0016D4F1 /* ListViewController.swift in Sources */,
 				F1EFE72928E9F8DD004338E6 /* ArticleEntity.swift in Sources */,
