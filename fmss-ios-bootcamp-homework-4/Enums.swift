@@ -18,3 +18,9 @@ enum ActiveSearchTab {
     case hotels
     case flights
 }
+
+enum SearchStates {
+    case empty
+    case success
+    case notFound
+}
