@@ -55,6 +55,8 @@
 		F1D716B628E6E24D0095EF7D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D716B528E6E24D0095EF7D /* SearchViewController.swift */; };
 		F1D716B928E6F4070095EF7D /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D716B728E6F4070095EF7D /* SearchTableViewCell.swift */; };
 		F1D716BA28E6F4070095EF7D /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */; };
+		F1E9D29B28EC90B10029AF60 /* DetailsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E9D29A28EC90B10029AF60 /* DetailsModuleBuilder.swift */; };
+		F1E9D29D28EC9BCC0029AF60 /* ListModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E9D29C28EC9BCC0029AF60 /* ListModuleBuilder.swift */; };
 		F1EFE72428E9F73A004338E6 /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = F1EFE72328E9F73A004338E6 /* articles.json */; };
 		F1EFE72728E9F86E004338E6 /* ArticleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EFE72628E9F86E004338E6 /* ArticleListModel.swift */; };
 		F1EFE72928E9F8DD004338E6 /* ArticleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EFE72828E9F8DD004338E6 /* ArticleEntity.swift */; };
@@ -114,6 +116,8 @@
 		F1D716B528E6E24D0095EF7D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F1D716B728E6F4070095EF7D /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		F1D716B828E6F4070095EF7D /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		F1E9D29A28EC90B10029AF60 /* DetailsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModuleBuilder.swift; sourceTree = "<group>"; };
+		F1E9D29C28EC9BCC0029AF60 /* ListModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModuleBuilder.swift; sourceTree = "<group>"; };
 		F1EFE72328E9F73A004338E6 /* articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
 		F1EFE72628E9F86E004338E6 /* ArticleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListModel.swift; sourceTree = "<group>"; };
 		F1EFE72828E9F8DD004338E6 /* ArticleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEntity.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				F153628928E8D239008C0F5C /* Models */,
 				F153628B28E8D24B008C0F5C /* View */,
 				F153628A28E8D242008C0F5C /* VMs */,
+				F1E9D29C28EC9BCC0029AF60 /* ListModuleBuilder.swift */,
 			);
 			path = ListModule;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				F1AF2F4128E99D3D00297C3E /* Model */,
 				F1AF2F4228E99D4300297C3E /* View */,
 				F1AF2F4328E99D4800297C3E /* VM */,
+				F1E9D29A28EC90B10029AF60 /* DetailsModuleBuilder.swift */,
 			);
 			path = DetailsModule;
 			sourceTree = "<group>";
@@ -532,6 +538,7 @@
 				F1AF2F5228E9B85A00297C3E /* FlightDetailsViewModel.swift in Sources */,
 				F1EFE72728E9F86E004338E6 /* ArticleListModel.swift in Sources */,
 				F104B9DB28E562FA00A2C276 /* HomeViewController.swift in Sources */,
+				F1E9D29D28EC9BCC0029AF60 /* ListModuleBuilder.swift in Sources */,
 				F18FF2B728EA01EC00423D76 /* ArticleDetailsModel.swift in Sources */,
 				F19D9AC828EAD87D001E0F4D /* BookmarkListModel.swift in Sources */,
 				F1FD6D3D28E9800700D8DBEA /* FlightListModel.swift in Sources */,
@@ -557,6 +564,7 @@
 				F18FF2B428E9FF0F00423D76 /* ArticleCellEntity.swift in Sources */,
 				F104B9EC28E5ACAE00A2C276 /* HomeCollectionViewCell.swift in Sources */,
 				F13CA10728E6C41F00347497 /* Enums.swift in Sources */,
+				F1E9D29B28EC90B10029AF60 /* DetailsModuleBuilder.swift in Sources */,
 				F19D9ABF28EAD367001E0F4D /* BookmarkItemEntity.swift in Sources */,
 				F19D9AB428EAB701001E0F4D /* HotelSearchViewModel.swift in Sources */,
 				F19D9ABA28EAC266001E0F4D /* FlightSearchViewModel.swift in Sources */,

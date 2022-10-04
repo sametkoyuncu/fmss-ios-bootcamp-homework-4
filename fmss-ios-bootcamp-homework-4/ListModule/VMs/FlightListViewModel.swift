@@ -8,11 +8,12 @@
 import Foundation
 
 class FlightListViewModel {
-    private let model = FlightListModel()
+    private let model: FlightListModel
     
     weak var viewDelegate: ListViewModelViewDelegateProtocol?
     
-    init() {
+    init(model _model: FlightListModel) {
+        model = _model
         model.delegate = self
     }
     

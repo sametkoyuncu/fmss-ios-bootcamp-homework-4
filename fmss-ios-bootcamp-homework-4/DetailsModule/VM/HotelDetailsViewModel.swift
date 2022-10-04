@@ -8,11 +8,12 @@
 import Foundation
 
 class HotelDetailsViewModel {
-    private let model = HotelDetailsModel()
+    private let model: HotelDetailsModel
     
     weak var viewDelegate: DetailsViewModelViewDelegateProtocol?
     
-    init() {
+    init(model _model: HotelDetailsModel) {
+        model = _model
         model.delegate = self
     }
     
@@ -51,8 +52,8 @@ extension HotelDetailsViewModel: HotelDetailsModelProtocol {
 
 // MARK: - View Model Methods Protocol
 extension HotelDetailsViewModel: DetailsViewModelMethodsProtocol {
-    func didViewLoad(_ selectedId: String) {
-        model.fetchDataBy(id: selectedId)
+    func didViewLoad() {
+        model.fetchData()
     }
     
     func getModel() -> DetailsScreenEntity {

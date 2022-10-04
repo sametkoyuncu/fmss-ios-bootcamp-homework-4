@@ -8,11 +8,12 @@
 import Foundation
 
 class ArticleDetailsViewModel {
-    private let model = ArticleDetailsModel()
+    private let model: ArticleDetailsModel
     
     weak var viewDelegate: DetailsViewModelViewDelegateProtocol?
     
-    init() {
+    init(model _model: ArticleDetailsModel) {
+        model = _model
         model.delegate = self
     }
     
@@ -49,8 +50,8 @@ extension ArticleDetailsViewModel: DetailsViewModelMethodsProtocol {
         model.addItem(newItem)
     }
     
-    func didViewLoad(_ selectedId: String) {
-        model.fetchDataBy(id: selectedId)
+    func didViewLoad() {
+        model.fetchData()
     }
     
     func getModel() -> DetailsScreenEntity {

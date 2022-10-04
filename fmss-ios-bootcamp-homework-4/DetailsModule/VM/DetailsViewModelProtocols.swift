@@ -10,7 +10,7 @@ import Foundation
 protocol DetailsViewModelMethodsProtocol {
     var viewDelegate: DetailsViewModelViewDelegateProtocol? {get set}
     
-    func didViewLoad(_ id: String)
+    func didViewLoad()
     func getModel() -> DetailsScreenEntity
     func didSaveButtonPressed(newItem: BookmarkItem)
 }

@@ -11,8 +11,6 @@ class DetailsViewController: UIViewController {
     
     static let storyboardID = "DetailsVC"
     
-    var selectedId: String?
-    
     var detailsType: DetailsTypeEnum?
     
     var detailsViewModel: DetailsViewModelMethodsProtocol?
@@ -27,7 +25,7 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        detailsViewModel?.didViewLoad()
         setup()
     }
     // MARK: - Section Heading
@@ -37,39 +35,12 @@ class DetailsViewController: UIViewController {
     }
     
     func setup() {
-        
-        if let detailsType = detailsType {
-            titleLabel.text = detailsType.rawValue
-        }
-        
         headerView.clipsToBounds = true
         headerView.layer.cornerRadius = 35
         headerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         
         navigationController?.navigationBar.isHidden = true
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        switch detailsType {
-        case .hotels:
-            detailsViewModel = HotelDetailsViewModel()
-        case .flights:
-            detailsViewModel = FlightDetailsViewModel()
-        case .articles:
-            detailsViewModel = ArticleDetailsViewModel()
-        case .none:
-            fatalError("Details Type Not Found! (from viewWillAppear)")
-        }
-        
-        detailsViewModel?.viewDelegate = self
-        
-        if let selectedId = selectedId {
-            detailsViewModel?.didViewLoad(selectedId)
-        }
-        
-    }
-    
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -92,7 +63,6 @@ extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {
             let item = detailsViewModel!.getModel()
-            
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else {return}
                 
@@ -108,3 +78,26 @@ extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
 }
 
 
+
+/* old codes
+ 
+ override func viewWillAppear(_ animated: Bool) {
+    
+    switch detailsType {
+    case .hotels:
+        detailsViewModel = HotelDetailsViewModel()
+    case .flights:
+        detailsViewModel = FlightDetailsViewModel()
+    case .articles:
+        detailsViewModel = ArticleDetailsViewModel()
+    case .none:
+        fatalError("Details Type Not Found! (from viewWillAppear)")
+    }
+    
+    detailsViewModel?.viewDelegate = self
+    
+    if let selectedId = selectedId {
+        detailsViewModel?.didViewLoad(selectedId)
+    }
+    
+}*/

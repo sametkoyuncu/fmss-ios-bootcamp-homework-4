@@ -17,13 +17,19 @@ class ArticleDetailsModel {
     
     var selectedArticle: Article?
     
+    private var id: String
+    
+    init(id:String) {
+        self.id = id
+    }
+    
     // MARK: -
     deinit {
         delegate = nil
     }
     
     
-    func fetchDataBy(id: String) {
+    func fetchData() {
         guard let path = Bundle.main.path(forResource: "articles", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)
             return

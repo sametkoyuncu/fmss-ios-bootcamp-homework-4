@@ -8,12 +8,13 @@
 import Foundation
 
 class FlightDetailsViewModel {
-    private let model = FlightDetailsModel()
+    private let model: FlightDetailsModel
     var selectedId: String?
     
     weak var viewDelegate: DetailsViewModelViewDelegateProtocol?
     
-    init() {
+    init(model _model: FlightDetailsModel) {
+        model = _model
         model.delegate = self
     }
     
@@ -68,8 +69,8 @@ extension FlightDetailsViewModel: DetailsViewModelMethodsProtocol {
         model.addItem(newItem)
     }
     
-    func didViewLoad(_ selectedId: String) {
-        model.fetchDataBy(id: selectedId)
+    func didViewLoad() {
+        model.fetchData()
     }
     
     func getModel() -> DetailsScreenEntity {

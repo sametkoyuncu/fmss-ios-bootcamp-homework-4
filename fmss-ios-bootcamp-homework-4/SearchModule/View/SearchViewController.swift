@@ -154,7 +154,7 @@ extension SearchViewController: UITableViewDelegate {
         
         let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
         
-        destinationVC.selectedId = searchViewModel?.getModel(at: indexPath.row).id
+        //destinationVC.selectedId = searchViewModel?.getModel(at: indexPath.row).id
         destinationVC.detailsType = activeTab == .hotels ? .hotels : .flights
         
             
