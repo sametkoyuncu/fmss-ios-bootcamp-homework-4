@@ -39,7 +39,6 @@ class DetailsViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         detailsViewModel?.viewDelegate = nil
         detailsViewModel = nil
-        navigationController?.popToRootViewController(animated: true)
     }
  
     func setup() {
