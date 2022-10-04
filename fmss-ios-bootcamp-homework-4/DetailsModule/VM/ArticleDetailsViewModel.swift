@@ -24,7 +24,7 @@ class ArticleDetailsViewModel {
     }
     
     private func transformArticleToDetailsScreenEntity(from article: Article) -> DetailsScreenEntity {
-        return DetailsScreenEntity(id: article.id, cellTitle: article.title, desc: article.content, image: article.image, category: article.category)
+        return DetailsScreenEntity(id: article.content, cellTitle: article.title, desc: article.content, image: article.image, category: article.category)
     }
 }
 
@@ -64,9 +64,9 @@ extension ArticleDetailsViewModel: DetailsViewModelMethodsProtocol {
     
     func getModel() -> DetailsScreenEntity {
         // TODO:
-        let hotel = model.selectedArticle!
+        let article = model.selectedArticle!
         
-        model.isFavorite(by: hotel.id!)
-        return transformArticleToDetailsScreenEntity(from: hotel)
+        model.isFavorite(by: article.content!)
+        return transformArticleToDetailsScreenEntity(from: article)
     }
 }

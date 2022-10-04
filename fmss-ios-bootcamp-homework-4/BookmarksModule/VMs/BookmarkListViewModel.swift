@@ -36,10 +36,21 @@ class BookmarkListViewModel {
 
     
     private func transformItemToTodoItem(from item: Item) -> BookmarkItem {
-        let type: DetailsTypeEnum = item.type == "hotels" ? .hotels : .flights
+        let type: DetailsTypeEnum?
+        
+        switch item.type {
+        case "hotels":
+            type = .hotels
+        case "flights":
+            type = .flights
+        case "articles":
+            type = .articles
+        case .none, .some(_):
+            fatalError("type is not found")
+        }
 
         return BookmarkItem(id: item.id!,
-                            idForSearch: item.idForSearch!,
+                            idForSearch: item.idForSearch,
                             title: item.title!,
                             description: item.desc!,
                             image: item.image!,

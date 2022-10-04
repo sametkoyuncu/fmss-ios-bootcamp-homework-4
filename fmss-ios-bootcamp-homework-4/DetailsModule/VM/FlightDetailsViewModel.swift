@@ -9,7 +9,6 @@ import Foundation
 
 class FlightDetailsViewModel {
     private let model: FlightDetailsModel
-    var selectedId: String?
     
     weak var viewDelegate: DetailsViewModelViewDelegateProtocol?
     
