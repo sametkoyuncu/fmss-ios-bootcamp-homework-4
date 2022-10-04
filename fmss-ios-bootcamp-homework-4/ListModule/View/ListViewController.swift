@@ -4,14 +4,14 @@
 //
 //  Created by Samet Koyuncu on 29.09.2022.
 //
-// TODO: view model in delegate i yok gibi
+// TODO: burada memory leak olması kuvvetle muhtemel
 import UIKit
 
 class ListViewController: UIViewController {
     
     static let storboardID = "ListVC"
     
-    private var listViewModel: ListViewModelMethodsProtocol?
+    var listViewModel: ListViewModelMethodsProtocol?
 
     var detailsType: DetailsTypeEnum?
     
@@ -24,17 +24,6 @@ class ListViewController: UIViewController {
         
         setup()
         registerCells()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        switch detailsType {
-        case .hotels:
-            listViewModel = HotelListViewModel()
-        case .flights:
-            listViewModel = FlightListViewModel()
-        case .articles, .none:
-            fatalError("Details Type Not Found! (from viewWillAppear)")
-        }
         listViewModel?.didViewLoad()
     }
     
@@ -65,12 +54,14 @@ extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
         
-        destinationVC.selectedId = listViewModel?.getModel(at: indexPath.row).id
-        destinationVC.detailsType = detailsType
+        guard let id = listViewModel?.getModel(at: indexPath.row).id else { return }
         
-            
+        guard let detailsType = detailsType else { return }
+        
+        let destinationVC = DetailsModuleBuilder.createModule(with: id, for: detailsType, vc: vc)
+
         navigationController?.pushViewController(destinationVC, animated: true)
     }
 }
@@ -103,13 +94,28 @@ extension ListViewController: UITableViewDataSource {
     }
 }
 
+extension ListViewController: ListViewModelViewDelegateProtocol {
+    func didCellItemFetch(isSuccess: Bool) {
+        if isSuccess {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.tableView.reloadData()
+            }
+        } else {
+            // TODO:
+        }
+    }
+    
+    
+}
+
 // MARK: - bu kullanım çalışmadı ama lazım olur diye kalsın :)
 
 /*private var listViewModel: FlightOrHotelViewModel?
 
 enum FlightOrHotelViewModel {
     case hotelViewModel(HotelListViewModel)
-    case flightViewModel(HotelListViewModel)
+    case flightViewModel(FlightListViewModel)
 }*/
 
 /*
@@ -119,7 +125,7 @@ override func viewWillAppear(_ animated: Bool) {
         listViewModel = .hotelViewModel(HotelListViewModel())
     case .flights:
         // todo
-        listViewModel = .flightViewModel(HotelListViewModel())
+        listViewModel = .flightViewModel(FlightListViewModel())
     case .none:
         return
     }
@@ -128,3 +134,16 @@ override func viewWillAppear(_ animated: Bool) {
 
 
 
+/*
+override func viewWillAppear(_ animated: Bool) {
+    switch detailsType {
+    case .hotels:
+        listViewModel = HotelListViewModel()
+    case .flights:
+        listViewModel = FlightListViewModel()
+    case .articles, .none:
+        fatalError("Details Type Not Found! (from viewWillAppear)")
+    }
+    listViewModel?.viewDelegate = self
+    listViewModel?.didViewLoad()
+}*/

@@ -16,6 +16,11 @@ class FlightListModel {
     
     var flights: Flights = []
     
+    // TODO: -
+    deinit {
+        delegate = nil
+    }
+    
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "flights", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)

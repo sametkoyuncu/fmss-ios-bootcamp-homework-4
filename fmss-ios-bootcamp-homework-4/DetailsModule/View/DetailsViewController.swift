@@ -7,15 +7,20 @@
 
 import UIKit
 
+enum ButtonState {
+    case add
+    case remove
+}
+
 class DetailsViewController: UIViewController {
     
     static let storyboardID = "DetailsVC"
     
-    var selectedId: String?
-    
     var detailsType: DetailsTypeEnum?
     
     var detailsViewModel: DetailsViewModelMethodsProtocol?
+    
+    var buttonState: ButtonState = .add
     
     // outlets
     @IBOutlet weak var headerView: UIView!
@@ -27,16 +32,17 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        detailsViewModel?.didViewLoad()
         setup()
     }
-    
+    // MARK: - Section Heading
+    override func viewDidDisappear(_ animated: Bool) {
+        detailsViewModel?.viewDelegate = nil
+        detailsViewModel = nil
+        navigationController?.popToRootViewController(animated: true)
+    }
+ 
     func setup() {
-        
-        if let detailsType = detailsType {
-            titleLabel.text = detailsType.rawValue
-        }
-        
         headerView.clipsToBounds = true
         headerView.layer.cornerRadius = 35
         headerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
@@ -44,41 +50,68 @@ class DetailsViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        switch detailsType {
-        case .hotels:
-            detailsViewModel = HotelDetailsViewModel()
-        case .flights:
-            detailsViewModel = FlightDetailsViewModel()
-        case .articles:
-            detailsViewModel = ArticleDetailsViewModel()
-        case .none:
-            fatalError("Details Type Not Found! (from viewWillAppear)")
-        }
-        
-        detailsViewModel?.viewDelegate = self
-        
-        if let selectedId = selectedId {
-            detailsViewModel?.didViewLoad(selectedId)
-        }
-        
-    }
-    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func bookmarkButtonPressed(_ sender: UIButton) {
+    @IBAction func bookmarkButtonPressed(_ sender: UIButton) {        
+
+        let item = detailsViewModel?.getModel()
+        
+        if let item = item {
+            if buttonState == .add {
+                let newItem: BookmarkItem = .init(idForSearch: item.id,
+                                                  title: item.cellTitle,
+                                                  description: item.desc,
+                                                  image: item.image)
+                detailsViewModel?.didSaveButtonPressed(newItem: newItem)
+            } else {
+                detailsViewModel?.removeFromFavoritesBy(id: item.id!)
+            }
+            
+        }
+        
     }
 }
 
 extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
+    func didItemRemoved(isSuccess: Bool) {
+        if isSuccess {
+            buttonState = .add
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.bookmarkButton.setImage(UIImage(named: "addBookmarkButton"), for: .normal)
+            }
+        }
+    }
+    
+    func didItemAdded(isSuccess: Bool) {
+        if isSuccess {
+            buttonState = .remove
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.bookmarkButton.setImage(UIImage(named: "removeBookmarkButton"), for: .normal)
+            }
+        }
+    }
+    
+    func didFavoriteCheck(isSuccess: Bool) {
+        if isSuccess {
+            buttonState = .remove
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                
+                self.bookmarkButton.setImage(UIImage(named: "removeBookmarkButton"), for: .normal)
+            }
+        }
+    }
+    
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {
             let item = detailsViewModel!.getModel()
-            
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                
                 self.coverImage.image = UIImage(named: item.image ?? "noImage")
                 self.titleLabel.text = item.cellTitle
                 self.descriptionLabel.text = item.desc
@@ -91,3 +124,26 @@ extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
 }
 
 
+
+/* old codes
+ 
+ override func viewWillAppear(_ animated: Bool) {
+ 
+ switch detailsType {
+ case .hotels:
+ detailsViewModel = HotelDetailsViewModel()
+ case .flights:
+ detailsViewModel = FlightDetailsViewModel()
+ case .articles:
+ detailsViewModel = ArticleDetailsViewModel()
+ case .none:
+ fatalError("Details Type Not Found! (from viewWillAppear)")
+ }
+ 
+ detailsViewModel?.viewDelegate = self
+ 
+ if let selectedId = selectedId {
+ detailsViewModel?.didViewLoad(selectedId)
+ }
+ 
+ }*/

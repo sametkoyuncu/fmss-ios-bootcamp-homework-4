@@ -8,16 +8,24 @@
 import Foundation
 
 class FlightDetailsViewModel {
-    private let model = FlightDetailsModel()
+    private let model: FlightDetailsModel
     var selectedId: String?
     
     weak var viewDelegate: DetailsViewModelViewDelegateProtocol?
     
-    init() {
+    init(model _model: FlightDetailsModel) {
+        model = _model
         model.delegate = self
     }
     
+    // MARK: - Section Heading
+    deinit {
+        model.delegate = nil
+        viewDelegate = nil
+    }
+    
     private func transformFlightToDetailsScreenEntity(from flight: Flight) -> DetailsScreenEntity {
+        let id = flight.flight?.number
         let title = "Flight Number: \(flight.flight?.number ?? "")"
         //  description details
         let from = flight.departure?.airport?.rawValue
@@ -35,26 +43,42 @@ class FlightDetailsViewModel {
         let image = "saw"
         let category = flight.airline?.callsign?.rawValue
 
-        return DetailsScreenEntity(cellTitle: title, desc: desc, image: image, category: category)
+        return DetailsScreenEntity(id: id, cellTitle: title, desc: desc, image: image, category: category)
     }
 }
 
 // MARK: - Model Protocol Methods
 extension FlightDetailsViewModel: FlightDetailsModelProtocol {
+    func didDataRemoveProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemRemoved(isSuccess: isSuccess)
+    }
+    
+    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
+    }
+    
+    func didDataAddProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemAdded(isSuccess: isSuccess)
+    }
+    
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        if isSuccess {
-            viewDelegate?.didCellItemFetch(isSuccess: true)
-        } else {
-            // TODO:
-        }
+        viewDelegate?.didCellItemFetch(isSuccess: isSuccess)
     }
 }
 
 
 // MARK: - View Model Methods Protocol
 extension FlightDetailsViewModel: DetailsViewModelMethodsProtocol {
-    func didViewLoad(_ selectedId: String) {
-        model.fetchDataBy(id: selectedId)
+    func removeFromFavoritesBy(id: String) {
+        model.removeData(by: id)
+    }
+    
+    func didSaveButtonPressed(newItem: BookmarkItem) {
+        model.addItem(newItem)
+    }
+    
+    func didViewLoad() {
+        model.fetchData()
     }
     
     func getModel() -> DetailsScreenEntity {

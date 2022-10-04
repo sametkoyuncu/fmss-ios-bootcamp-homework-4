@@ -16,6 +16,13 @@ class FlightSearchViewModel {
         model.delegate = self
     }
     
+    // MARK: - Section Heading
+    deinit {
+        model.delegate = nil
+        viewDelegate = nil
+    }
+    
+    
     private func transformFlightToSearchCellEntity(from flight: Flight) -> SearchCellEntity {
         let id = flight.flight?.number
         let title = "Flight Number: \(flight.flight?.number ?? "")"

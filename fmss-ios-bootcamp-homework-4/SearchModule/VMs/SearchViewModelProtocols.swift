@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SearchViewModelMethodsProtocol {
+protocol SearchViewModelMethodsProtocol: AnyObject {
     var viewDelegate: SearchViewModelViewDelegateProtocol? {get set}
     
     func didViewLoad(_ searchText: String)

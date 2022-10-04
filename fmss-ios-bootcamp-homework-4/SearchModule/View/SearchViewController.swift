@@ -46,7 +46,6 @@ class SearchViewController: UIViewController {
         
         registerCell()
         
-        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -54,12 +53,15 @@ class SearchViewController: UIViewController {
         
         state = .empty
         
+        if let searchImage = UIImage(named: "searchIcon") {
+            searchTextField.withImage(direction: .Right, image: searchImage, colorSeparator: UIColor.clear, colorBorder: UIColor.clear)
+        }
+        
     }
-    
+
     func showEmpty() {
         noDataView.isHidden = true
         tableView.isHidden = true
-        searchTextField.text = ""
     }
     
     func showResults() {
@@ -71,12 +73,10 @@ class SearchViewController: UIViewController {
     func showNotFound() {
         tableView.isHidden = true
         DispatchQueue.main.async {
-            
             self.noDataView.isHidden = false
         }
-        
-        
     }
+    
     @IBAction func textChanged(_ sender: UITextField) {
         if searchTextField.text?.count ?? 0 >= 3 {
             if let searchText = searchTextField.text {
@@ -84,20 +84,29 @@ class SearchViewController: UIViewController {
                 case .hotels:
                     searchViewModel = HotelSearchViewModel()
                     searchViewModel?.viewDelegate = self
-                    searchViewModel?.didViewLoad(searchText)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+                        guard let self = self else { return }
+                        self.searchViewModel?.didViewLoad(searchText)
+                    }
+                    
                 case .flights:
                     searchViewModel = FlightSearchViewModel()
                     searchViewModel?.viewDelegate = self
-                    searchViewModel?.didViewLoad(searchText)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+                        guard let self = self else { return }
+                        self.searchViewModel?.didViewLoad(searchText)
+                    }
                 case .none:
                     // TODO:
                     fatalError("there is no active tab")
                 }
                 state = .success
-                // state = .notFound
             }
-            
         }
+        else {
+           state = .empty
+       }
+
     }
     
     @IBAction func hotelsButtonPressed(_ sender: UIButton) {
@@ -120,9 +129,11 @@ class SearchViewController: UIViewController {
             case .hotels:
                 hotelsButton.setImage(UIImage.init(named: "home tab active")!, for: .normal)
                 flightsButton.setImage(UIImage.init(named: "flights tab passive")!, for: .normal)
+                searchTextField.text = ""
             case .flights:
                 hotelsButton.setImage(UIImage.init(named: "home tab passive")!, for: .normal)
                 flightsButton.setImage(UIImage.init(named: "flights tab active")!, for: .normal)
+                searchTextField.text = ""
             }
         }
         
@@ -135,13 +146,13 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
         tableView.deselectRow(at: indexPath, animated: true)
+
+        let vc = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
         
-        let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
-        
-        destinationVC.selectedId = searchViewModel?.getModel(at: indexPath.row).id
-        destinationVC.detailsType = activeTab == .hotels ? .hotels : .flights
-        
-            
+        guard let id = searchViewModel?.getModel(at: indexPath.row).id else { return }
+        let detailsType: DetailsTypeEnum = activeTab == .hotels ? .hotels : .flights
+        let destinationVC = DetailsModuleBuilder.createModule(with: id, for: detailsType, vc: vc)
+
         navigationController?.pushViewController(destinationVC, animated: true)
     }
 }

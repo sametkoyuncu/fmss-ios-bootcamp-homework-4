@@ -16,6 +16,10 @@ class HotelSearchModel {
     
     var hotels: Hotels = []
     
+    deinit {
+        delegate = nil
+    }
+    
     func fetchDataBy(searchText: String) {
         guard let path = Bundle.main.path(forResource: "hotels", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)

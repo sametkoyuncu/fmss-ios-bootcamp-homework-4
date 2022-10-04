@@ -8,41 +8,65 @@
 import Foundation
 
 class ArticleDetailsViewModel {
-    private let model = ArticleDetailsModel()
+    private let model: ArticleDetailsModel
     
     weak var viewDelegate: DetailsViewModelViewDelegateProtocol?
     
-    init() {
+    init(model _model: ArticleDetailsModel) {
+        model = _model
         model.delegate = self
     }
     
+    // MARK: - Section Heading
+    deinit {
+        model.delegate = nil
+        viewDelegate = nil
+    }
+    
     private func transformArticleToDetailsScreenEntity(from article: Article) -> DetailsScreenEntity {
-        return DetailsScreenEntity(cellTitle: article.title, desc: article.content, image: article.image, category: article.category)
+        return DetailsScreenEntity(id: article.id, cellTitle: article.title, desc: article.content, image: article.image, category: article.category)
     }
 }
 
 // MARK: - Model Protocol Methods
 extension ArticleDetailsViewModel: ArticleDetailsModelProtocol {
+    func didDataRemoveProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemRemoved(isSuccess: isSuccess)
+    }
+    
+    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
+    }
+    
+    func didDataAddProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemAdded(isSuccess: isSuccess)
+    }
+    
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        if isSuccess {
-            viewDelegate?.didCellItemFetch(isSuccess: true)
-        } else {
-            // TODO:
-        }
+        viewDelegate?.didCellItemFetch(isSuccess: isSuccess)
     }
 }
 
 
 // MARK: - View Model Methods Protocol
 extension ArticleDetailsViewModel: DetailsViewModelMethodsProtocol {
-    func didViewLoad(_ selectedId: String) {
-        model.fetchDataBy(id: selectedId)
+    func removeFromFavoritesBy(id: String) {
+        model.removeData(by: id)
+    }
+    
+    func didSaveButtonPressed(newItem: BookmarkItem) {
+        model.addItem(newItem)
+    }
+    
+    func didViewLoad() {
+        model.fetchData()
     }
     
     func getModel() -> DetailsScreenEntity {
         // TODO:
-        let article = model.selectedArticle!
+        let hotel = model.selectedArticle!
         
-        return transformArticleToDetailsScreenEntity(from: article)
+        model.isFavorite(by: hotel.id!)
+        return transformArticleToDetailsScreenEntity(from: hotel)
     }
 }

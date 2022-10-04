@@ -8,12 +8,18 @@
 import Foundation
 
 class FlightListViewModel {
-    private let model = FlightListModel()
+    private let model: FlightListModel
     
     weak var viewDelegate: ListViewModelViewDelegateProtocol?
     
-    init() {
+    init(model _model: FlightListModel) {
+        model = _model
         model.delegate = self
+    }
+    
+    // MARK: - Section Heading
+    deinit {
+        viewDelegate = nil
     }
     
     private func transformFlightToListItemEntity(from flight: Flight) -> ListItemEntity {
@@ -50,6 +56,7 @@ extension FlightListViewModel: FlightListModelProtocol {
 
 // MARK: - View Model Methods Protocol
 extension FlightListViewModel: ListViewModelMethodsProtocol {
+    
     // view yüklendiyse data çek
     func didViewLoad() {
         model.fetchData()

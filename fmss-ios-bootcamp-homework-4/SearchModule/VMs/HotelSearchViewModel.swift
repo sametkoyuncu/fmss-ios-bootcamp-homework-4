@@ -16,6 +16,12 @@ class HotelSearchViewModel {
         model.delegate = self
     }
     
+    // MARK: - Section Heading
+    deinit {
+        model.delegate = nil
+        viewDelegate = nil
+    }
+    
     private func transformHotelToSearchCellEntity(from hotel: Hotel) -> SearchCellEntity {
         return SearchCellEntity(id: hotel.id,
                                 title: hotel.name,

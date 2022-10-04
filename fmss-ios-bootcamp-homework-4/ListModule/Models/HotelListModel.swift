@@ -16,6 +16,11 @@ class HotelListModel {
     
     var hotels: Hotels = []
     
+    // TODO: -
+    deinit {
+        delegate = nil
+    }
+    
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "hotels", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)
@@ -30,6 +35,7 @@ class HotelListModel {
             let result = try JSONDecoder().decode(Hotels.self, from: data)
 
             hotels = result
+            
             delegate?.didDataFetchProcessFinish(true)
 
         } catch {

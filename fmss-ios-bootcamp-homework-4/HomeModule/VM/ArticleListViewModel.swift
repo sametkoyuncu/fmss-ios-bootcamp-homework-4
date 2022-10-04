@@ -20,6 +20,10 @@ class ArticleListViewModel {
     init() {
         model.delegate = self
     }
+    // TODO: 
+    deinit {
+        model.delegate = nil
+    }
     
     // view yüklendiyse data çek
     func didViewLoad() {
@@ -37,7 +41,7 @@ class ArticleListViewModel {
     }
     
     private func transformArticleToArticleCellEntity(from article: Article) -> ArticleCellEntity {
-        let id = "\(article.id)"
+        let id = "\(String(describing: article.id))"
         return ArticleCellEntity(id: id, content: article.content, category: article.category, image: article.image)
     }
 }

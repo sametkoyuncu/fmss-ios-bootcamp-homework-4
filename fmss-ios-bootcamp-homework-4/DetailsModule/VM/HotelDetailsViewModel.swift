@@ -8,46 +8,71 @@
 import Foundation
 
 class HotelDetailsViewModel {
-    private let model = HotelDetailsModel()
+    private let model: HotelDetailsModel
     
     weak var viewDelegate: DetailsViewModelViewDelegateProtocol?
     
-    init() {
+    init(model _model: HotelDetailsModel) {
+        model = _model
         model.delegate = self
+    }
+    
+    // MARK: - Section Heading
+    deinit {
+        model.delegate = nil
+        viewDelegate = nil
     }
     
     private func transformHotelToDetailsScreenEntity(from hotel: Hotel) -> DetailsScreenEntity {
         let score = hotel.score
         let category = "Score: \(score!)"
-        return DetailsScreenEntity(cellTitle: hotel.name,
-                              desc: hotel.hotelDescription,
-                              image: hotel.image,
-                              category: category)
+        return DetailsScreenEntity(id: hotel.id,
+                                   cellTitle: hotel.name,
+                                   desc: hotel.hotelDescription,
+                                   image: hotel.image,
+                                   category: category)
     }
 }
 
 // MARK: - Model Protocol Methods
 extension HotelDetailsViewModel: HotelDetailsModelProtocol {
+    func didDataRemoveProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemRemoved(isSuccess: isSuccess)
+    }
+    
+    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
+    }
+    
+    func didDataAddProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemAdded(isSuccess: isSuccess)
+    }
+    
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        if isSuccess {
-            viewDelegate?.didCellItemFetch(isSuccess: true)
-        } else {
-            // TODO: 
-        }
+        viewDelegate?.didCellItemFetch(isSuccess: isSuccess)
     }
 }
 
 
 // MARK: - View Model Methods Protocol
 extension HotelDetailsViewModel: DetailsViewModelMethodsProtocol {
-    func didViewLoad(_ selectedId: String) {
-        model.fetchDataBy(id: selectedId)
+    func removeFromFavoritesBy(id: String) {
+        model.removeData(by: id)
+    }
+    
+    func didViewLoad() {
+        model.fetchData()
     }
     
     func getModel() -> DetailsScreenEntity {
         // TODO:
         let hotel = model.selectedHotel!
         
+        model.isFavorite(by: hotel.id!)
         return transformHotelToDetailsScreenEntity(from: hotel)
+    }
+    
+    func didSaveButtonPressed(newItem: BookmarkItem) {
+        model.addItem(newItem)
     }
 }

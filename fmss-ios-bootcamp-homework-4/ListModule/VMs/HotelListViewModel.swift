@@ -8,19 +8,24 @@
 import Foundation
 
 class HotelListViewModel {
-    private let model = HotelListModel()
+    private let model: HotelListModel
     
     weak var viewDelegate: ListViewModelViewDelegateProtocol?
     
-    init() {
+    init(model _model: HotelListModel) {
+        model = _model
         model.delegate = self
+    }
+    // MARK: - 
+    deinit {
+        model.delegate = nil
     }
     
     private func transformHotelToListItemEntity(from hotel: Hotel) -> ListItemEntity {
         return ListItemEntity(id: hotel.id,
                               cellTitle: hotel.name,
                               desc: hotel.hotelDescription,
-                              image: hotel.image)
+                              image: "noImage")
     }
 }
 
