@@ -70,6 +70,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="zft-0H-DIV" id="g6h-nx-pbV"/>
+                <outlet property="coverImage" destination="EIB-ht-ABU" id="qo3-Xr-B3h"/>
+                <outlet property="descriptionLabel" destination="V50-XP-EFR" id="faT-uI-GTV"/>
+                <outlet property="titleLabel" destination="kP6-ef-3VE" id="n9K-WI-aWN"/>
             </connections>
             <point key="canvasLocation" x="218.84057971014494" y="149.66517857142856"/>
         </tableViewCell>

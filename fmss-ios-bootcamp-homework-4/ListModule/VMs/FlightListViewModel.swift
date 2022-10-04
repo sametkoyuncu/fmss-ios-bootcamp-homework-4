@@ -16,6 +16,11 @@ class FlightListViewModel {
         model.delegate = self
     }
     
+    // MARK: - Section Heading
+    deinit {
+        viewDelegate = nil
+    }
+    
     private func transformFlightToListItemEntity(from flight: Flight) -> ListItemEntity {
         let title = "Flight Number: \(flight.flight?.number ?? "")"
         //  description details
@@ -50,6 +55,7 @@ extension FlightListViewModel: FlightListModelProtocol {
 
 // MARK: - View Model Methods Protocol
 extension FlightListViewModel: ListViewModelMethodsProtocol {
+    
     // view yüklendiyse data çek
     func didViewLoad() {
         model.fetchData()

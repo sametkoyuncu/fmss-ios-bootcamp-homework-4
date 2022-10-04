@@ -12,6 +12,7 @@ protocol DetailsViewModelMethodsProtocol {
     
     func didViewLoad(_ id: String)
     func getModel() -> DetailsScreenEntity
+    func didSaveButtonPressed(newItem: BookmarkItem)
 }
 
 protocol DetailsViewModelViewDelegateProtocol: AnyObject {

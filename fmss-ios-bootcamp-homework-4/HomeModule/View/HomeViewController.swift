@@ -19,7 +19,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       setup()
+        setup()
+    }
+    
+    // bir etkisi var mı emin değilim
+    override func viewDidDisappear(_ animated: Bool) {
+        viewModel.viewDelegate = nil
     }
     
     func setup() {
@@ -31,6 +36,7 @@ class HomeViewController: UIViewController {
         viewModel.viewDelegate = self
         viewModel.didViewLoad()
         
+        // header view shadow
         headerView.layer.borderWidth = 0.0
         headerView.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
         headerView.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -58,8 +64,6 @@ class HomeViewController: UIViewController {
     func registerCells() {
         collectionView.register(.init(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
     }
-    
-    
 }
 
 // MARK: - Collection View Delegate Methods
@@ -69,7 +73,7 @@ extension HomeViewController: UICollectionViewDelegate {
         // id is not working!!
         destinationVC.selectedId = viewModel.getModel(at: indexPath.row).content
         destinationVC.detailsType = .articles
-            
+        
         navigationController?.pushViewController(destinationVC, animated: true)
     }
 }
@@ -82,24 +86,17 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = viewModel.getModel(at: indexPath.row)
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
         
         cell.coverImage.image = UIImage(named: item.image ?? "noImage")
         cell.categoryLabel.text = item.category
         cell.titleLabel.text = item.content
         
-        // Configure the cell
-        cell.layer.cornerRadius = 15.0
-        cell.layer.borderWidth = 0.0
-        cell.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowRadius = 5.0
-        cell.layer.shadowOpacity = 1
-        cell.layer.masksToBounds = false
-        
         return cell
     }
     
+    // clear background
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.white
     }
@@ -115,16 +112,16 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         let height = collectionView.frame.height - 40
         
         return CGSize(width: width, height: height)
-        
     }
 }
 
+// MARK: - View Model Delegate Methods
 extension HomeViewController: ArticleListViewModelViewProtocol {
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {
-                   DispatchQueue.main.async { [weak self] in
-                       self?.collectionView.reloadData()
-                   }
-               }
+            DispatchQueue.main.async { [weak self] in
+                self?.collectionView.reloadData()
+            }
+        }
     }
 }

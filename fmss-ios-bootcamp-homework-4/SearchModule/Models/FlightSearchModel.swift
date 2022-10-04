@@ -16,6 +16,11 @@ class FlightSearchModel {
     
     var flights: Flights = []
     
+    // MARK: - 
+    deinit {
+        delegate = nil
+    }
+    
     func fetchDataBy(searchText: String) {
         guard let path = Bundle.main.path(forResource: "flights", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)

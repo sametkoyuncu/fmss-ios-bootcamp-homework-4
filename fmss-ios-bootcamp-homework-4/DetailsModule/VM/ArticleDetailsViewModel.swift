@@ -16,13 +16,23 @@ class ArticleDetailsViewModel {
         model.delegate = self
     }
     
+    // MARK: - Section Heading
+    deinit {
+        model.delegate = nil
+        viewDelegate = nil
+    }
+    
     private func transformArticleToDetailsScreenEntity(from article: Article) -> DetailsScreenEntity {
-        return DetailsScreenEntity(cellTitle: article.title, desc: article.content, image: article.image, category: article.category)
+        return DetailsScreenEntity(id: article.id, cellTitle: article.title, desc: article.content, image: article.image, category: article.category)
     }
 }
 
 // MARK: - Model Protocol Methods
 extension ArticleDetailsViewModel: ArticleDetailsModelProtocol {
+    func didDataAddProcessFinish(_ isSuccess: Bool) {
+        // TODO: Section Heading
+    }
+    
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
         if isSuccess {
             viewDelegate?.didCellItemFetch(isSuccess: true)
@@ -35,6 +45,10 @@ extension ArticleDetailsViewModel: ArticleDetailsModelProtocol {
 
 // MARK: - View Model Methods Protocol
 extension ArticleDetailsViewModel: DetailsViewModelMethodsProtocol {
+    func didSaveButtonPressed(newItem: BookmarkItem) {
+        model.addItem(newItem)
+    }
+    
     func didViewLoad(_ selectedId: String) {
         model.fetchDataBy(id: selectedId)
     }

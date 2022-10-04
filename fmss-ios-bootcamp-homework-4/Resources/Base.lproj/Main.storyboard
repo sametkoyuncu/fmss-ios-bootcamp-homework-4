@@ -270,7 +270,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtB-Xo-nfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4573.913043478261" y="125.89285714285714"/>
+            <point key="canvasLocation" x="3707" y="98"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="wdy-ld-Oea">
@@ -322,11 +322,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                                     <action selector="textChanged:" destination="B6e-CD-ceH" eventType="editingChanged" id="x6t-Ss-gnV"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUo-Yq-dkF">
-                                <rect key="frame" x="334" y="189" width="48" height="38"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="searchIcon"/>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9BT-9z-oD1">
                                 <rect key="frame" x="0.0" y="248" width="414" height="648"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -369,7 +364,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                             <constraint firstItem="bH2-XM-ywQ" firstAttribute="leading" secondItem="5Hl-6P-N9v" secondAttribute="leading" constant="32" id="DFC-wr-ryM"/>
                             <constraint firstItem="9BT-9z-oD1" firstAttribute="trailing" secondItem="5Hl-6P-N9v" secondAttribute="trailing" id="JGe-gP-ghc"/>
                             <constraint firstItem="EQ3-HM-yGZ" firstAttribute="leading" secondItem="5Hl-6P-N9v" secondAttribute="leading" constant="32" id="PN7-nu-nl1"/>
-                            <constraint firstItem="bH2-XM-ywQ" firstAttribute="trailing" secondItem="fUo-Yq-dkF" secondAttribute="trailing" id="UK8-vq-bXw"/>
                             <constraint firstItem="EQ3-HM-yGZ" firstAttribute="top" secondItem="Cee-s7-OQk" secondAttribute="bottom" constant="8" id="Uxl-VM-7Ec"/>
                             <constraint firstItem="LIz-Jn-oB2" firstAttribute="centerY" secondItem="sTp-Nk-6Ao" secondAttribute="centerY" id="Zgf-fX-cKQ"/>
                             <constraint firstItem="9BT-9z-oD1" firstAttribute="leading" secondItem="5Hl-6P-N9v" secondAttribute="leading" id="eQN-ph-leZ"/>
@@ -378,7 +372,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                             <constraint firstAttribute="bottom" secondItem="9BT-9z-oD1" secondAttribute="bottom" id="nSh-bV-huH"/>
                             <constraint firstItem="5Hl-6P-N9v" firstAttribute="trailing" secondItem="bH2-XM-ywQ" secondAttribute="trailing" constant="32" id="o6g-D5-Eg9"/>
                             <constraint firstItem="LIz-Jn-oB2" firstAttribute="centerX" secondItem="sTp-Nk-6Ao" secondAttribute="centerX" id="psV-GK-rCi"/>
-                            <constraint firstItem="fUo-Yq-dkF" firstAttribute="centerY" secondItem="bH2-XM-ywQ" secondAttribute="centerY" id="uxM-oA-2Ku"/>
                             <constraint firstItem="bH2-XM-ywQ" firstAttribute="top" secondItem="EQ3-HM-yGZ" secondAttribute="bottom" constant="8" id="uxZ-Ra-bZ4"/>
                             <constraint firstItem="Cee-s7-OQk" firstAttribute="leading" secondItem="5Hl-6P-N9v" secondAttribute="leading" constant="32" id="yEf-xE-tep"/>
                             <constraint firstItem="lT6-Ds-tVK" firstAttribute="leading" secondItem="EQ3-HM-yGZ" secondAttribute="trailing" constant="5" id="zPa-vd-lDB"/>
@@ -538,7 +531,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
         <image name="homeSelected" width="68" height="48"/>
         <image name="hotelIconFull" width="114" height="121"/>
         <image name="search" width="68" height="48"/>
-        <image name="searchIcon" width="24" height="24"/>
         <image name="searchSelected" width="68" height="48"/>
         <image name="uil_cloud-info" width="87" height="87"/>
         <systemColor name="systemBackgroundColor">

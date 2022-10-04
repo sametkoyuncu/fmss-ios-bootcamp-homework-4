@@ -16,18 +16,29 @@ class HotelDetailsViewModel {
         model.delegate = self
     }
     
+    // MARK: - Section Heading
+    deinit {
+        model.delegate = nil
+        viewDelegate = nil
+    }
+    
     private func transformHotelToDetailsScreenEntity(from hotel: Hotel) -> DetailsScreenEntity {
         let score = hotel.score
         let category = "Score: \(score!)"
-        return DetailsScreenEntity(cellTitle: hotel.name,
-                              desc: hotel.hotelDescription,
-                              image: hotel.image,
-                              category: category)
+        return DetailsScreenEntity(id: hotel.id,
+                                   cellTitle: hotel.name,
+                                   desc: hotel.hotelDescription,
+                                   image: hotel.image,
+                                   category: category)
     }
 }
 
 // MARK: - Model Protocol Methods
 extension HotelDetailsViewModel: HotelDetailsModelProtocol {
+    func didDataAddProcessFinish(_ isSuccess: Bool) {
+        // MARK: - Section Heading
+    }
+    
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
         if isSuccess {
             viewDelegate?.didCellItemFetch(isSuccess: true)
@@ -49,5 +60,9 @@ extension HotelDetailsViewModel: DetailsViewModelMethodsProtocol {
         let hotel = model.selectedHotel!
         
         return transformHotelToDetailsScreenEntity(from: hotel)
+    }
+    
+    func didSaveButtonPressed(newItem: BookmarkItem) {
+        model.addItem(newItem)
     }
 }

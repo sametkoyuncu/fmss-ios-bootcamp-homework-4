@@ -4,7 +4,7 @@
 //
 //  Created by Samet Koyuncu on 29.09.2022.
 //
-// TODO: view model in delegate i yok gibi
+// TODO: burada memory leak olması kuvvetle muhtemel
 import UIKit
 
 class ListViewController: UIViewController {
@@ -35,7 +35,13 @@ class ListViewController: UIViewController {
         case .articles, .none:
             fatalError("Details Type Not Found! (from viewWillAppear)")
         }
+        listViewModel?.viewDelegate = self
         listViewModel?.didViewLoad()
+    }
+    // MARK: - Burası işe yarıyor mu?
+    override func viewDidDisappear(_ animated: Bool) {
+        listViewModel?.viewDelegate = nil
+        listViewModel = nil
     }
     
     func setup() {
@@ -103,13 +109,28 @@ extension ListViewController: UITableViewDataSource {
     }
 }
 
+extension ListViewController: ListViewModelViewDelegateProtocol {
+    func didCellItemFetch(isSuccess: Bool) {
+        if isSuccess {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.tableView.reloadData()
+            }
+        } else {
+            // TODO:
+        }
+    }
+    
+    
+}
+
 // MARK: - bu kullanım çalışmadı ama lazım olur diye kalsın :)
 
 /*private var listViewModel: FlightOrHotelViewModel?
 
 enum FlightOrHotelViewModel {
     case hotelViewModel(HotelListViewModel)
-    case flightViewModel(HotelListViewModel)
+    case flightViewModel(FlightListViewModel)
 }*/
 
 /*
@@ -119,7 +140,7 @@ override func viewWillAppear(_ animated: Bool) {
         listViewModel = .hotelViewModel(HotelListViewModel())
     case .flights:
         // todo
-        listViewModel = .flightViewModel(HotelListViewModel())
+        listViewModel = .flightViewModel(FlightListViewModel())
     case .none:
         return
     }

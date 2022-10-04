@@ -9,6 +9,7 @@ import Foundation
 
 protocol HotelDetailsModelProtocol: AnyObject {
     func didDataFetchProcessFinish(_ isSuccess: Bool)
+    func didDataAddProcessFinish(_ isSuccess: Bool)
 }
 
 class HotelDetailsModel {
@@ -16,7 +17,13 @@ class HotelDetailsModel {
     
     var selectedHotel: Hotel?
     
+    // MARK: -
+    deinit {
+        delegate = nil
+    }
+    
     func fetchDataBy(id: String) {
+        
         guard let path = Bundle.main.path(forResource: "hotels", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)
             return
@@ -38,5 +45,25 @@ class HotelDetailsModel {
             delegate?.didDataFetchProcessFinish(false)
             print(error.localizedDescription)
         }
+    }
+    
+    
+    func addItem(_ item: BookmarkItem) {
+        let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
+        
+        let data = Item(context: managedContext)
+        
+        data.setValue(UUID(), forKey: "id")
+        data.setValue(item.idForSearch, forKey: #keyPath(Item.idForSearch))
+        data.setValue(item.title, forKey: #keyPath(Item.title))
+        data.setValue(item.description, forKey: #keyPath(Item.desc))
+        data.setValue(item.image, forKey: #keyPath(Item.image))
+        data.setValue(item.type.rawValue, forKey: #keyPath(Item.type))
+        data.setValue(Date(), forKey: #keyPath(Item.date))
+        
+        AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
+        
+        delegate?.didDataAddProcessFinish(true)
+        
     }
 }

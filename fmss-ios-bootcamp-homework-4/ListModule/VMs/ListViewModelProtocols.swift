@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ListViewModelMethodsProtocol {
+    var viewDelegate: ListViewModelViewDelegateProtocol? {get set}
     func didViewLoad()
     func NumberOfItems() -> Int
     func getModel(at: Int) -> ListItemEntity

@@ -30,6 +30,11 @@ class DetailsViewController: UIViewController {
         
         setup()
     }
+    // MARK: - Section Heading
+    override func viewDidDisappear(_ animated: Bool) {
+        detailsViewModel?.viewDelegate = nil
+        detailsViewModel = nil
+    }
     
     func setup() {
         
@@ -65,11 +70,21 @@ class DetailsViewController: UIViewController {
         
     }
     
+
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func bookmarkButtonPressed(_ sender: UIButton) {
+        let item = detailsViewModel!.getModel()
+        
+        let newItem: BookmarkItem = .init(idForSearch: item.id!,
+                                          title: item.cellTitle!,
+                                          description: item.cellTitle!,
+                                          image: item.image!,
+                                          type: detailsType!)
+        
+        detailsViewModel?.didSaveButtonPressed(newItem: newItem)
     }
 }
 
@@ -78,7 +93,9 @@ extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
         if isSuccess {
             let item = detailsViewModel!.getModel()
             
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                
                 self.coverImage.image = UIImage(named: item.image ?? "noImage")
                 self.titleLabel.text = item.cellTitle
                 self.descriptionLabel.text = item.desc

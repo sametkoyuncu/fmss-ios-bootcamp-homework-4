@@ -15,6 +15,10 @@ class ArticleListModel {
     weak var delegate: ArticleListModelProtocol?
     
     var articles: Articles = []
+    // TODO: 
+    deinit {
+        delegate = nil
+    }
     
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "articles", ofType: "json") else {
