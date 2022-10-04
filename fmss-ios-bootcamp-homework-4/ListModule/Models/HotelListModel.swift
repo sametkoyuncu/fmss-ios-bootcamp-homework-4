@@ -35,6 +35,7 @@ class HotelListModel {
             let result = try JSONDecoder().decode(Hotels.self, from: data)
 
             hotels = result
+            
             delegate?.didDataFetchProcessFinish(true)
 
         } catch {

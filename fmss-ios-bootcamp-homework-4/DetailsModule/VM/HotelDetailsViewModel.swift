@@ -36,22 +36,30 @@ class HotelDetailsViewModel {
 
 // MARK: - Model Protocol Methods
 extension HotelDetailsViewModel: HotelDetailsModelProtocol {
+    func didDataRemoveProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemRemoved(isSuccess: isSuccess)
+    }
+    
+    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
+    }
+    
     func didDataAddProcessFinish(_ isSuccess: Bool) {
-        // MARK: - Section Heading
+        viewDelegate?.didItemAdded(isSuccess: isSuccess)
     }
     
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        if isSuccess {
-            viewDelegate?.didCellItemFetch(isSuccess: true)
-        } else {
-            // TODO: 
-        }
+        viewDelegate?.didCellItemFetch(isSuccess: isSuccess)
     }
 }
 
 
 // MARK: - View Model Methods Protocol
 extension HotelDetailsViewModel: DetailsViewModelMethodsProtocol {
+    func removeFromFavoritesBy(id: String) {
+        model.removeData(by: id)
+    }
+    
     func didViewLoad() {
         model.fetchData()
     }
@@ -60,6 +68,7 @@ extension HotelDetailsViewModel: DetailsViewModelMethodsProtocol {
         // TODO:
         let hotel = model.selectedHotel!
         
+        model.isFavorite(by: hotel.id!)
         return transformHotelToDetailsScreenEntity(from: hotel)
     }
     

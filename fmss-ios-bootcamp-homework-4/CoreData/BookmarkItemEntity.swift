@@ -9,9 +9,9 @@ import Foundation
 
 struct BookmarkItem {
     var id: UUID?
-    var idForSearch: String
-    var title: String
-    var description: String
-    var image: String
-    var type: DetailsTypeEnum
+    var idForSearch: String?
+    var title: String?
+    var description: String?
+    var image: String?
+    var type: DetailsTypeEnum?
 }

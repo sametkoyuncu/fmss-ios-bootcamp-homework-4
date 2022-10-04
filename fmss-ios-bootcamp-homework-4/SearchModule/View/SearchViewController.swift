@@ -58,11 +58,7 @@ class SearchViewController: UIViewController {
         }
         
     }
-    // MARK: - Section Heading
-    override func viewDidDisappear(_ animated: Bool) {
-       searchViewModel = nil
-    }
-    
+
     func showEmpty() {
         noDataView.isHidden = true
         tableView.isHidden = true
@@ -79,9 +75,8 @@ class SearchViewController: UIViewController {
         DispatchQueue.main.async {
             self.noDataView.isHidden = false
         }
-        
-        
     }
+    
     @IBAction func textChanged(_ sender: UITextField) {
         if searchTextField.text?.count ?? 0 >= 3 {
             if let searchText = searchTextField.text {
@@ -151,13 +146,13 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
         tableView.deselectRow(at: indexPath, animated: true)
+
+        let vc = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
         
-        let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
-        
-        //destinationVC.selectedId = searchViewModel?.getModel(at: indexPath.row).id
-        destinationVC.detailsType = activeTab == .hotels ? .hotels : .flights
-        
-            
+        guard let id = searchViewModel?.getModel(at: indexPath.row).id else { return }
+        let detailsType: DetailsTypeEnum = activeTab == .hotels ? .hotels : .flights
+        let destinationVC = DetailsModuleBuilder.createModule(with: id, for: detailsType, vc: vc)
+
         navigationController?.pushViewController(destinationVC, animated: true)
     }
 }

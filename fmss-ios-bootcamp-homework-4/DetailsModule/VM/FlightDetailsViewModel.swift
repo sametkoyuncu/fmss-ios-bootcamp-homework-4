@@ -49,22 +49,30 @@ class FlightDetailsViewModel {
 
 // MARK: - Model Protocol Methods
 extension FlightDetailsViewModel: FlightDetailsModelProtocol {
+    func didDataRemoveProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemRemoved(isSuccess: isSuccess)
+    }
+    
+    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
+    }
+    
     func didDataAddProcessFinish(_ isSuccess: Bool) {
-        // TODO: Section Heading
+        viewDelegate?.didItemAdded(isSuccess: isSuccess)
     }
     
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        if isSuccess {
-            viewDelegate?.didCellItemFetch(isSuccess: true)
-        } else {
-            // TODO:
-        }
+        viewDelegate?.didCellItemFetch(isSuccess: isSuccess)
     }
 }
 
 
 // MARK: - View Model Methods Protocol
 extension FlightDetailsViewModel: DetailsViewModelMethodsProtocol {
+    func removeFromFavoritesBy(id: String) {
+        model.removeData(by: id)
+    }
+    
     func didSaveButtonPressed(newItem: BookmarkItem) {
         model.addItem(newItem)
     }

@@ -476,6 +476,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
         <!--Navigation Controller-->
         <scene sceneID="NBh-IQ-80B">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXE-Kd-tzl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="0fg-mt-vJK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="search" selectedImage="searchSelected" id="dNb-kr-Xfj">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
@@ -490,13 +491,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                         <segue destination="B6e-CD-ceH" kind="relationship" relationship="rootViewController" id="d49-gb-l5n"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lXE-Kd-tzl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bYh-MH-G5l">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xE8-Pd-zFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JmM-xA-kZs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="bookmarks" selectedImage="bookmarksSelected" id="sGp-sf-WpV">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
@@ -511,7 +512,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                         <segue destination="e4R-Ud-6Ty" kind="relationship" relationship="rootViewController" id="avD-uN-Lp3"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xE8-Pd-zFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="813.61607142857144"/>
         </scene>

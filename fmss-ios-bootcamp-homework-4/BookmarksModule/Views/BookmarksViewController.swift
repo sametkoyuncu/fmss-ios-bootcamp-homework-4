@@ -23,7 +23,12 @@ class BookmarksViewController: UIViewController {
         
         viewModel.viewDelegate = self
         
+        
         navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.viewDidLoad()
     }
     
     func registerCell() {
@@ -35,9 +40,13 @@ class BookmarksViewController: UIViewController {
 extension BookmarksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let destinationVC = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
-        // TODO: burası değişecek
-        destinationVC.detailsType = .flights
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
+        let selectedItem = viewModel.getModel(at: indexPath.row)
+        guard let id = selectedItem.idForSearch else { return }
+        guard let type =  selectedItem.type else { return }
+        
+        let destinationVC = DetailsModuleBuilder.createModule(with: id, for: type, vc: vc)
         
         navigationController?.pushViewController(destinationVC, animated: true)
     }
@@ -53,7 +62,7 @@ extension BookmarksViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BookmarksTableViewCell.identifier, for: indexPath) as! BookmarksTableViewCell
         
-        cell.coverImage.image = UIImage(named: item.image)
+        cell.coverImage.image = UIImage(named: item.image ?? "noImage")
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.description
         

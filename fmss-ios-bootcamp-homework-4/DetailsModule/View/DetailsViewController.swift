@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum ButtonState {
+    case add
+    case remove
+}
+
 class DetailsViewController: UIViewController {
     
     static let storyboardID = "DetailsVC"
@@ -14,6 +19,8 @@ class DetailsViewController: UIViewController {
     var detailsType: DetailsTypeEnum?
     
     var detailsViewModel: DetailsViewModelMethodsProtocol?
+    
+    var buttonState: ButtonState = .add
     
     // outlets
     @IBOutlet weak var headerView: UIView!
@@ -32,8 +39,9 @@ class DetailsViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         detailsViewModel?.viewDelegate = nil
         detailsViewModel = nil
+        navigationController?.popToRootViewController(animated: true)
     }
-    
+ 
     func setup() {
         headerView.clipsToBounds = true
         headerView.layer.cornerRadius = 35
@@ -41,25 +49,63 @@ class DetailsViewController: UIViewController {
         
         navigationController?.navigationBar.isHidden = true
     }
-
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func bookmarkButtonPressed(_ sender: UIButton) {
-        let item = detailsViewModel!.getModel()
+    @IBAction func bookmarkButtonPressed(_ sender: UIButton) {        
+
+        let item = detailsViewModel?.getModel()
         
-        let newItem: BookmarkItem = .init(idForSearch: item.id!,
-                                          title: item.cellTitle!,
-                                          description: item.cellTitle!,
-                                          image: item.image!,
-                                          type: detailsType!)
+        if let item = item {
+            if buttonState == .add {
+                let newItem: BookmarkItem = .init(idForSearch: item.id,
+                                                  title: item.cellTitle,
+                                                  description: item.desc,
+                                                  image: item.image)
+                detailsViewModel?.didSaveButtonPressed(newItem: newItem)
+            } else {
+                detailsViewModel?.removeFromFavoritesBy(id: item.id!)
+            }
+            
+        }
         
-        detailsViewModel?.didSaveButtonPressed(newItem: newItem)
     }
 }
 
 extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
+    func didItemRemoved(isSuccess: Bool) {
+        if isSuccess {
+            buttonState = .add
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.bookmarkButton.setImage(UIImage(named: "addBookmarkButton"), for: .normal)
+            }
+        }
+    }
+    
+    func didItemAdded(isSuccess: Bool) {
+        if isSuccess {
+            buttonState = .remove
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.bookmarkButton.setImage(UIImage(named: "removeBookmarkButton"), for: .normal)
+            }
+        }
+    }
+    
+    func didFavoriteCheck(isSuccess: Bool) {
+        if isSuccess {
+            buttonState = .remove
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                
+                self.bookmarkButton.setImage(UIImage(named: "removeBookmarkButton"), for: .normal)
+            }
+        }
+    }
+    
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {
             let item = detailsViewModel!.getModel()
@@ -82,22 +128,22 @@ extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
 /* old codes
  
  override func viewWillAppear(_ animated: Bool) {
-    
-    switch detailsType {
-    case .hotels:
-        detailsViewModel = HotelDetailsViewModel()
-    case .flights:
-        detailsViewModel = FlightDetailsViewModel()
-    case .articles:
-        detailsViewModel = ArticleDetailsViewModel()
-    case .none:
-        fatalError("Details Type Not Found! (from viewWillAppear)")
-    }
-    
-    detailsViewModel?.viewDelegate = self
-    
-    if let selectedId = selectedId {
-        detailsViewModel?.didViewLoad(selectedId)
-    }
-    
-}*/
+ 
+ switch detailsType {
+ case .hotels:
+ detailsViewModel = HotelDetailsViewModel()
+ case .flights:
+ detailsViewModel = FlightDetailsViewModel()
+ case .articles:
+ detailsViewModel = ArticleDetailsViewModel()
+ case .none:
+ fatalError("Details Type Not Found! (from viewWillAppear)")
+ }
+ 
+ detailsViewModel?.viewDelegate = self
+ 
+ if let selectedId = selectedId {
+ detailsViewModel?.didViewLoad(selectedId)
+ }
+ 
+ }*/

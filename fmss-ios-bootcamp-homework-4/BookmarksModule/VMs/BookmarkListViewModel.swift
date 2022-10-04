@@ -20,7 +20,7 @@ class BookmarkListViewModel {
         model.delegate = self
     }
     
-    func getData() {
+    func viewDidLoad() {
         model.fetchData()
     }
     
@@ -37,10 +37,11 @@ class BookmarkListViewModel {
     
     private func transformItemToTodoItem(from item: Item) -> BookmarkItem {
         let type: DetailsTypeEnum = item.type == "hotels" ? .hotels : .flights
-        return BookmarkItem(id: item.id,
+
+        return BookmarkItem(id: item.id!,
                             idForSearch: item.idForSearch!,
                             title: item.title!,
-                            description: item.description,
+                            description: item.desc!,
                             image: item.image!,
                             type: type)
     }
