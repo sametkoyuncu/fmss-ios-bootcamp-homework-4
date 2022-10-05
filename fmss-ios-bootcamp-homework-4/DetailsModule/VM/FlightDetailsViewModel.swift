@@ -83,7 +83,7 @@ extension FlightDetailsViewModel: DetailsViewModelMethodsProtocol {
     func getModel() -> DetailsScreenEntity {
         // TODO:
         let flight = model.selectedFlight!
-        
+        model.isFavorite(by: flight.flight!.number!)
         return transformFlightToDetailsScreenEntity(from: flight)
     }
 }
