@@ -85,7 +85,7 @@ class SearchViewController: UIViewController {
                 case .hotels:
                     searchViewModel = HotelSearchViewModel()
                     searchViewModel?.viewDelegate = self
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
                         guard let self = self else { return }
                         self.searchViewModel?.didViewLoad(searchText)
                     }
@@ -93,7 +93,7 @@ class SearchViewController: UIViewController {
                 case .flights:
                     searchViewModel = FlightSearchViewModel()
                     searchViewModel?.viewDelegate = self
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
                         guard let self = self else { return }
                         self.searchViewModel?.didViewLoad(searchText)
                     }
@@ -125,16 +125,14 @@ class SearchViewController: UIViewController {
     func activeTabChanged() {
         if let activeTab = activeTab {
             state = .empty
-            
+            searchTextField.text = ""
             switch activeTab {
             case .hotels:
                 hotelsButton.setImage(UIImage.init(named: "home tab active")!, for: .normal)
                 flightsButton.setImage(UIImage.init(named: "flights tab passive")!, for: .normal)
-                searchTextField.text = ""
             case .flights:
                 hotelsButton.setImage(UIImage.init(named: "home tab passive")!, for: .normal)
                 flightsButton.setImage(UIImage.init(named: "flights tab active")!, for: .normal)
-                searchTextField.text = ""
             }
         }
         

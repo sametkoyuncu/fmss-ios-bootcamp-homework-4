@@ -323,14 +323,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                                     <action selector="flightsButtonPressed:" destination="B6e-CD-ceH" eventType="touchUpInside" id="BzC-bP-5c9"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where next?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bH2-XM-ywQ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where next?" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bH2-XM-ywQ">
                                 <rect key="frame" x="32" y="228" width="350" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="xIA-ss-nob"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <connections>
                                     <action selector="textChanged:" destination="B6e-CD-ceH" eventType="editingChanged" id="x6t-Ss-gnV"/>
                                 </connections>
