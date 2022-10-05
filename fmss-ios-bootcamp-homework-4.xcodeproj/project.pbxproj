@@ -193,7 +193,6 @@
 				F1D716B328E6E2070095EF7D /* Extensions.swift */,
 				F13CA10628E6C41F00347497 /* Enums.swift */,
 				F181292828E718A4009DB64F /* Supported Files */,
-				F1410A1028ED6FEE00907D54 /* TabBarViewController.swift */,
 			);
 			path = "fmss-ios-bootcamp-homework-4";
 			sourceTree = "<group>";
@@ -304,6 +303,7 @@
 				F104B9DC28E562FA00A2C276 /* Main.storyboard */,
 				F104B9DF28E562FC00A2C276 /* Assets.xcassets */,
 				F104B9E128E562FC00A2C276 /* LaunchScreen.storyboard */,
+				F1410A1028ED6FEE00907D54 /* TabBarViewController.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -777,7 +777,7 @@
 				DEVELOPMENT_TEAM = A9S7ZDQSZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fmss-ios-bootcamp-homework-4/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Travel App New";
+				INFOPLIST_KEY_CFBundleDisplayName = "Travel App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -808,7 +808,7 @@
 				DEVELOPMENT_TEAM = A9S7ZDQSZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fmss-ios-bootcamp-homework-4/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Travel App New";
+				INFOPLIST_KEY_CFBundleDisplayName = "Travel App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
