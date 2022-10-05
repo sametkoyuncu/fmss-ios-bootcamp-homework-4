@@ -15,10 +15,12 @@ class BookmarksTableViewCell: UITableViewCell {
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var categoryView: UIView!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        categoryView.layer.cornerRadius = 5
         containerView.clipsToBounds = true
         containerView.layer.cornerRadius = 10
     }

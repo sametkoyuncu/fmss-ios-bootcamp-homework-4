@@ -81,6 +81,19 @@ extension BookmarksViewController: UITableViewDataSource {
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.description
         
+        var category: String?
+        
+        switch item.type {
+        case .hotels:
+            category = "HOTEL"
+        case .flights:
+            category = "FLIGHT"
+        default:
+            category = "ARTICLE"
+        }
+        
+        cell.categoryLabel.text = category
+        
         return cell
     }
     

@@ -18,6 +18,7 @@
 		F104B9ED28E5ACAE00A2C276 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */; };
 		F13CA10528E6C3DB00347497 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13CA10428E6C3DB00347497 /* DetailsViewController.swift */; };
 		F13CA10728E6C41F00347497 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13CA10628E6C41F00347497 /* Enums.swift */; };
+		F1410A1128ED6FEE00907D54 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1410A1028ED6FEE00907D54 /* TabBarViewController.swift */; };
 		F153628828E8D1B2008C0F5C /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = F153628728E8D1B2008C0F5C /* hotels.json */; };
 		F153628D28E8D279008C0F5C /* HotelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153628C28E8D279008C0F5C /* HotelListViewModel.swift */; };
 		F153628F28E8D295008C0F5C /* HotelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153628E28E8D295008C0F5C /* HotelEntity.swift */; };
@@ -82,6 +83,7 @@
 		F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		F13CA10428E6C3DB00347497 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F13CA10628E6C41F00347497 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F1410A1028ED6FEE00907D54 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F153628728E8D1B2008C0F5C /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hotels.json; path = "fmss-ios-bootcamp-homework-4/LocalJSONFiles/hotels.json"; sourceTree = SOURCE_ROOT; };
 		F153628C28E8D279008C0F5C /* HotelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewModel.swift; sourceTree = "<group>"; };
 		F153628E28E8D295008C0F5C /* HotelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelEntity.swift; sourceTree = "<group>"; };
@@ -148,7 +150,6 @@
 				ADC4A35F2E90026D77D2E19A /* Pods-fmss-ios-bootcamp-homework-4.debug.xcconfig */,
 				DA93AAABE5B5D81660390E5C /* Pods-fmss-ios-bootcamp-homework-4.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,9 +182,9 @@
 		F104B9D528E562FA00A2C276 /* fmss-ios-bootcamp-homework-4 */ = {
 			isa = PBXGroup;
 			children = (
+				F181292628E71875009DB64F /* Resources */,
 				F19D9ABB28EAD319001E0F4D /* CoreData */,
 				F153628628E8D18E008C0F5C /* LocalJSONFiles */,
-				F181292628E71875009DB64F /* Resources */,
 				F153627F28E8CF2A008C0F5C /* HomeModule */,
 				F153628128E8CF53008C0F5C /* ListModule */,
 				F153628228E8CF73008C0F5C /* DetailsModule */,
@@ -192,6 +193,7 @@
 				F1D716B328E6E2070095EF7D /* Extensions.swift */,
 				F13CA10628E6C41F00347497 /* Enums.swift */,
 				F181292828E718A4009DB64F /* Supported Files */,
+				F1410A1028ED6FEE00907D54 /* TabBarViewController.swift */,
 			);
 			path = "fmss-ios-bootcamp-homework-4";
 			sourceTree = "<group>";
@@ -580,6 +582,7 @@
 			files = (
 				F1D716AE28E6C9690095EF7D /* BookmarksViewController.swift in Sources */,
 				F1EFE72C28E9F929004338E6 /* ArticleListViewModel.swift in Sources */,
+				F1410A1128ED6FEE00907D54 /* TabBarViewController.swift in Sources */,
 				F1AF2F4E28E9B74B00297C3E /* ListViewModelProtocols.swift in Sources */,
 				F153629428E963C1008C0F5C /* ListItemEntity.swift in Sources */,
 				F1D716B128E6CC0C0095EF7D /* BookmarksTableViewCell.swift in Sources */,

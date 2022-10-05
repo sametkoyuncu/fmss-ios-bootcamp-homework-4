@@ -20,6 +20,7 @@ class ListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         containerView.clipsToBounds = true
         containerView.layer.cornerRadius = 10
+ 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

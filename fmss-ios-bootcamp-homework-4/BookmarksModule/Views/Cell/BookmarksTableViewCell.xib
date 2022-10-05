@@ -26,6 +26,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="432" height="146"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmh-Us-g3H">
+                                <rect key="frame" x="8" y="8" width="75" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cws-nC-IP1">
+                                        <rect key="frame" x="3" y="1.5" width="69" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.27843137254901962" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Cws-nC-IP1" firstAttribute="leading" secondItem="fmh-Us-g3H" secondAttribute="leading" constant="3" id="0qX-NR-eQU"/>
+                                    <constraint firstItem="Cws-nC-IP1" firstAttribute="centerY" secondItem="fmh-Us-g3H" secondAttribute="centerY" id="BMs-Cg-MDE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cws-nC-IP1" secondAttribute="trailing" constant="3" id="FIA-mD-W6t"/>
+                                    <constraint firstAttribute="height" constant="20" id="RUR-T5-I4k"/>
+                                    <constraint firstAttribute="width" constant="75" id="Uqq-A9-wbG"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP6-ef-3VE">
                                 <rect key="frame" x="24" y="43" width="384" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -46,9 +65,11 @@
                             <constraint firstItem="EIB-ht-ABU" firstAttribute="top" secondItem="zft-0H-DIV" secondAttribute="top" id="8NF-Of-xAy"/>
                             <constraint firstAttribute="trailing" secondItem="EIB-ht-ABU" secondAttribute="trailing" id="91W-Nc-TAW"/>
                             <constraint firstAttribute="bottom" secondItem="EIB-ht-ABU" secondAttribute="bottom" id="Bc9-rj-KMD"/>
+                            <constraint firstItem="fmh-Us-g3H" firstAttribute="top" secondItem="zft-0H-DIV" secondAttribute="top" constant="8" id="Bvl-yg-kg4"/>
                             <constraint firstAttribute="trailing" secondItem="V50-XP-EFR" secondAttribute="trailing" constant="24" id="FAU-SB-sks"/>
                             <constraint firstAttribute="trailing" secondItem="kP6-ef-3VE" secondAttribute="trailing" constant="24" id="Gak-my-c3J"/>
                             <constraint firstItem="qOt-Ed-Bt4" firstAttribute="leading" secondItem="zft-0H-DIV" secondAttribute="leading" id="ISN-z3-28I"/>
+                            <constraint firstItem="fmh-Us-g3H" firstAttribute="leading" secondItem="zft-0H-DIV" secondAttribute="leading" constant="8" id="Lyh-qC-ASm"/>
                             <constraint firstItem="V50-XP-EFR" firstAttribute="leading" secondItem="zft-0H-DIV" secondAttribute="leading" constant="24" id="PTh-ED-3Ah"/>
                             <constraint firstItem="qOt-Ed-Bt4" firstAttribute="top" secondItem="zft-0H-DIV" secondAttribute="top" id="W19-Wt-NLH"/>
                             <constraint firstItem="kP6-ef-3VE" firstAttribute="top" secondItem="zft-0H-DIV" secondAttribute="top" constant="43" id="csf-wY-u6a"/>
@@ -69,6 +90,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="categoryLabel" destination="Cws-nC-IP1" id="KZT-hh-YFt"/>
+                <outlet property="categoryView" destination="fmh-Us-g3H" id="FTJ-1I-YxE"/>
                 <outlet property="containerView" destination="zft-0H-DIV" id="g6h-nx-pbV"/>
                 <outlet property="coverImage" destination="EIB-ht-ABU" id="qo3-Xr-B3h"/>
                 <outlet property="descriptionLabel" destination="V50-XP-EFR" id="faT-uI-GTV"/>

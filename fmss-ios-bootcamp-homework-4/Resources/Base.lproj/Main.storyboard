@@ -441,13 +441,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
             </objects>
             <point key="canvasLocation" x="1818.840579710145" y="813.61607142857144"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="3Uj-C5-4uR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TgN-zv-lRL" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TgN-zv-lRL" customClass="TabBarViewController" customModule="fmss_ios_bootcamp_homework_4" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ahk-ra-Cx7"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" shadowImage="Shadow bottom bar" id="jPs-U2-4Uw">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jPs-U2-4Uw">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -485,7 +485,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
         </scene>
     </scenes>
     <resources>
-        <image name="Shadow bottom bar" width="390" height="88"/>
         <image name="addBookmarkButton" width="309" height="54"/>
         <image name="bookmarks" width="68" height="48"/>
         <image name="bookmarksSelected" width="68" height="48"/>
