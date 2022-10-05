@@ -3,5 +3,6 @@
 
 target 'fmss-ios-bootcamp-homework-4' do
   pod 'Kingfisher', '~> 7.0'
+  pod 'Alamofire'
 
 end
