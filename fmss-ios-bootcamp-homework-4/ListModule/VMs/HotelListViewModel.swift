@@ -25,7 +25,7 @@ class HotelListViewModel {
         return ListItemEntity(id: hotel.id,
                               cellTitle: hotel.name,
                               desc: hotel.hotelDescription,
-                              image: "noImage")
+                              image: hotel.image)
     }
 }
 

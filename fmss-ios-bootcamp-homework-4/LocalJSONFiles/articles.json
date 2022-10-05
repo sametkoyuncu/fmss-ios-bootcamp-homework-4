@@ -4,27 +4,27 @@
         "title": "Valencia, Spain",
         "content": "This port city on Spain’s southeastern coast has been named the World Design Capital for 2022 thanks to its longstanding legacy of design and innovative public policy. With the distinction comes a year’s worth of public programming celebrating design and its ability to improve the lives of the city’s inhabitants. If you go, be sure to check out the Turia Gardens, one of Spain’s largest urban parks.",
         "category": "TRAVEL",
-        "image": "article1"
+        "image": "https://img.theculturetrip.com/450x/smart/wp-content/uploads/2021/03/k789p8.jpg"
     },
     {
         "id": "2",
         "title": "Procida",
         "content": "This under-the-radar island off the coast of Naples is joining Capri and Ischia as a must-visit destination next year thanks to its nomination as Italy’s 2022 Cultural Capital. It’s the first time an island has ever received the distinction, and the award comes with one million euros, which will be used for 44 projects involving 240 artists. All Street Napoli, a new tour company by Annie Ojile and Alexandra Lawrence—two Americans living in Italy—can organize day trips to the island from Naples.",
         "category": "TRAVEL",
-        "image": "article2"
+        "image": "https://media-cdn.tripadvisor.com/media/photo-s/0a/50/52/06/isola-di-procida-panorama.jpg"
     },
     {
         "id": "3",
         "title": "Buffalo",
         "content": "Nine historic sites designed by Frank Lloyd Wright in western New York and western Pennsylvania have banded together to form the Great Wright Road Trip, starting in Buffalo. Five of the sites are in and around Buffalo, including the Martin House and Graycliff Estate, which completed a decades-long renovation just before the pandemic. A major expansion of the Albright-Knox Art Gallery for modern and contemporary art, and a $2 million renovation and expansion of the historic Colored Musicians Club provide two more reasons to go.",
         "category": "TRAVEL",
-        "image": "article3"
+        "image": "https://moneyinc.com/wp-content/uploads/2018/08/Buffalo.jpg"
     },
     {
         "id": "4",
         "title": "Istanbul",
         "content": "Galataport—a $1.7 billion development on the shores of the Bosphorus—is set to transform Istanbul’s waterfront neighborhood of Karaköy. In addition to a massive cruise port (part of which will be the world’s first underground cruise terminal), the development will include a new home for the Istanbul Modern Museum, designed by Renzo Piano, and will open the promenade to the public for the first time in around 200 years. In addition to the new buildings, many old warehouses are being transformed into shops, restaurants, and Peninsula Hotels will open a luxurious new property in three heritage buildings.",
         "category": "TRAVEL",
-        "image": "article4"
+        "image": "https://media.timeout.com/images/105859738/750/422/image.jpg"
     }
 ]

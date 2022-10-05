@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BookmarksViewController: UIViewController {
     
@@ -62,7 +63,21 @@ extension BookmarksViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BookmarksTableViewCell.identifier, for: indexPath) as! BookmarksTableViewCell
         
-        cell.coverImage.image = UIImage(named: item.image ?? "noImage")
+        if let imageUrl = item.image {
+            let url = URL(string: imageUrl)
+            cell.coverImage.kf.indicatorType = .activity
+            
+            cell.coverImage.kf.setImage(with: url,
+                                        placeholder: UIImage(named: "placeholderImage"),
+                                        options: [
+                                            .scaleFactor(UIScreen.main.scale),
+                                            .transition(.fade(1)),
+                                            .cacheOriginalImage
+                                        ])
+        } else {
+            cell.coverImage.image = UIImage(named: "noImage")
+        }
+        
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.description
         

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchViewController: UIViewController {
     
@@ -167,8 +168,22 @@ extension SearchViewController: UITableViewDataSource {
         let item = searchViewModel?.getModel(at: indexPath.row)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as! SearchTableViewCell
-        
-        cell.coverImage.image = UIImage(named: item?.image ?? "noImage")
+        // TODO: image güzel olmadı sanki
+        if let item = item {
+            cell.coverImage.kf.indicatorType = .activity
+            
+            let url = URL(string: item.image!)
+            cell.coverImage.kf.setImage(with: url,
+                                        placeholder: UIImage(named: "placeholderImage"),
+                                        options: [
+                                            .scaleFactor(UIScreen.main.scale),
+                                            .transition(.fade(1)),
+                                            .cacheOriginalImage
+                                        ])
+        } else {
+            cell.coverImage.image = UIImage(named: "noImage")
+        }
+    
         cell.titleLabel.text = item?.title
         cell.descriptionLabel.text = item?.desc
         

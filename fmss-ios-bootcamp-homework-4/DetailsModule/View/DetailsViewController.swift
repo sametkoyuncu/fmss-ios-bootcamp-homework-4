@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 enum ButtonState {
     case add
@@ -110,8 +111,21 @@ extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
             let item = detailsViewModel!.getModel()
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else {return}
+                self.coverImage.kf.indicatorType = .activity
                 
-                self.coverImage.image = UIImage(named: item.image ?? "noImage")
+                if let imageUrl = item.image {
+                    let url = URL(string: imageUrl)
+                    self.coverImage.kf.setImage(with: url,
+                                                placeholder: UIImage(named: "placeholderImage"),
+                                                options: [
+                                                    .scaleFactor(UIScreen.main.scale),
+                                                    .transition(.fade(1)),
+                                                    .cacheOriginalImage
+                                                ])
+                } else {
+                    self.coverImage.image = UIImage(named: "noImage")
+                }
+                
                 self.titleLabel.text = item.cellTitle
                 self.descriptionLabel.text = item.desc
                 self.categoryLabel.text = item.category
