@@ -154,13 +154,22 @@
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="14" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingImage" translatesAutoresizingMaskIntoConstraints="NO" id="mbb-cX-chf">
+                                <rect key="frame" x="175" y="416" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="VUg-WZ-mpq"/>
+                                    <constraint firstAttribute="height" constant="64" id="emi-Ni-jl5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i7H-5S-pz1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mbb-cX-chf" firstAttribute="centerY" secondItem="qZr-yA-zAj" secondAttribute="centerY" id="25L-iT-vBh"/>
                             <constraint firstItem="Zqb-dj-RlZ" firstAttribute="top" secondItem="zzo-Xv-ImL" secondAttribute="bottom" constant="10" id="Gam-e2-enh"/>
                             <constraint firstAttribute="bottom" secondItem="Zqb-dj-RlZ" secondAttribute="bottom" id="M8f-9c-hcy"/>
                             <constraint firstItem="zzo-Xv-ImL" firstAttribute="top" secondItem="i7H-5S-pz1" secondAttribute="top" constant="5" id="Vvl-Vr-q5o"/>
+                            <constraint firstItem="mbb-cX-chf" firstAttribute="centerX" secondItem="qZr-yA-zAj" secondAttribute="centerX" id="ahq-qZ-Uye"/>
                             <constraint firstItem="Kv4-pK-cl8" firstAttribute="top" secondItem="i7H-5S-pz1" secondAttribute="top" constant="5" id="cY6-fL-f6G"/>
                             <constraint firstItem="Zqb-dj-RlZ" firstAttribute="trailing" secondItem="i7H-5S-pz1" secondAttribute="trailing" constant="-11" id="ja8-W1-dr7"/>
                             <constraint firstItem="zzo-Xv-ImL" firstAttribute="leading" secondItem="i7H-5S-pz1" secondAttribute="leading" constant="20" id="nfN-0h-nyZ"/>
@@ -170,6 +179,7 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="loadingImage" destination="mbb-cX-chf" id="KJU-5a-8Qc"/>
                         <outlet property="tableView" destination="Zqb-dj-RlZ" id="lez-sC-6GB"/>
                         <outlet property="titleLabel" destination="Kv4-pK-cl8" id="tYZ-jr-GGh"/>
                     </connections>
@@ -497,6 +507,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
         <image name="homeBackground" width="390" height="455"/>
         <image name="homeSelected" width="68" height="48"/>
         <image name="hotelIconFull" width="114" height="121"/>
+        <image name="loadingImage" width="128" height="128"/>
         <image name="search" width="68" height="48"/>
         <image name="searchSelected" width="68" height="48"/>
         <image name="uil_cloud-info" width="87" height="87"/>

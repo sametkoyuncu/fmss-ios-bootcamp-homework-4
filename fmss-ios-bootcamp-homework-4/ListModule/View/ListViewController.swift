@@ -19,6 +19,7 @@ class ListViewController: UIViewController {
     // Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,6 +115,7 @@ extension ListViewController: ListViewModelViewDelegateProtocol {
         if isSuccess {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else {return}
+                self.loadingImage.isHidden = true
                 self.tableView.reloadData()
             }
         } else {

@@ -60,6 +60,9 @@ extension FlightListViewModel: ListViewModelMethodsProtocol {
     // view yüklendiyse data çek
     func didViewLoad() {
         model.fetchData()
+        // MARK: - using alamofire request from flightlabs api
+        //model.fetchDataUsingAlamofire()
+        
     }
     
     func NumberOfItems() -> Int {
