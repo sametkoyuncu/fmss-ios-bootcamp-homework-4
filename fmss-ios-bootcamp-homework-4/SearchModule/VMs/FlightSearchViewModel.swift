@@ -39,7 +39,7 @@ class FlightSearchViewModel {
             Airline: \(airline ?? "No airline")
         """
         
-        let image = "saw"
+        let image = "https://iasbh.tmgrup.com.tr/93bd9c/650/344/0/113/800/533?u=https://isbh.tmgrup.com.tr/sbh/2021/08/06/istanbul-sabiha-gokcen-havalimanini-7-ayda-118-milyon-yolcu-kullandi-1628238800986.jpg"
 
         
         return SearchCellEntity(id: id, title: title, desc: desc, image: image)

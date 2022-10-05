@@ -3,7 +3,7 @@
         "id": "1",
         "name": "Mahali Mzuri, Masai Mara, Kenya",
         "description": "Part of the Virgin Limited Edition collection, Sir Richard Branson's majestic safari camp in the Masai Mara is 'just perfect', according to one voter. The seemingly space-age tents somehow rise up out of the landscape and blend in with it simultaneously. Wildlife remains abundant in the surrounding bush — ideal for the twice-daily game drives — and the guides are extremely knowledgeable. One respondent raved about the 'excellent service', adding that 'the hospitality provided at Mahali Mzuri resembles the name', which means beautiful place in Swahili. Another reader says simply that it's 'the best luxurious camp to visit on the African continent.'",
-        "image": "hotel1",
+        "image": "https://images.blacktomato.com/2020/08/WEB-Setting-1.jpg?auto=compress%2Cformat&fit=crop&h=424&ixlib=php-3.3.0&w=722&s=16e01f22742bdd9904c9e08d1fd6c5a0",
         "score": 99.73,
         "website": "https://www.virginlimitededition.com/en/mahali-mzuri"
     },
@@ -11,7 +11,7 @@
         "id": "2",
         "name": "Nayara Tented Camp, Arenal Volcano National Park, Costa Rica",
         "description": "The most recent entry to the Nayara brand has all the details covered. Cliff-top safari tents have spacious bathrooms with soaking tubs, private decks, and infinity plunge pools that overlook the lush Costa Rican rain forest and the imposing Arenal Volcano. Elsewhere on the property, guests can spot wildlife like sloths and toucans; take a dip in the dramatic, cantilevered, hot-spring-fed mineral pools; and indulge in the plush spa.",
-        "image": "hotel2",
+        "image": "https://dam.vacationscostarica.com/crvacations/2019-hotels/arenal-northern-lowlands/nayara_tented_camp/nayara-tented-camp-volcano-view.jpg",
         "score": 99.58,
         "website": "https://nayaratentedcamp.com/"
     },
@@ -19,7 +19,7 @@
         "id": "3",
         "name": "The Opposite House, Beijing",
         "description": "Japanese architect Kengo Kuma designed this emerald glass building with subtle references to traditional Chinese architecture. Rooms are minimalist with luxurious touches like oak soaking tubs and plush beds, the staff is über-attentive, and the location is close to all the Beijing attractions.",
-        "image": "hotel3",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAN7cE9Ad7EMIYoIcy-JDi5xClDIxop_v9guw6Kp63IpSnf9tYkbhqm8p2F_7RmG57idQ&usqp=CAU",
         "score": 99.47,
         "website": "https://www.thehousecollective.com/en/the-opposite-house/"
     },
@@ -27,7 +27,7 @@
         "id": "4",
         "name": "Capella Bangkok",
         "description": "Situated on the east bank of the Chao Phraya River, this new urban retreat offers impressive views of the lively Thai capital. There are four dining venues, including one overseen by chef Mauro Colagreco of France's Michelin three-starred Mirazur, and a swank spa with treatments, therapies, and fitness classes.",
-        "image": "hotel4",
+        "image": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/300735294.jpg?k=0bef16837d82e2ef438ca3af735c1a003c5d18b673c2b3532849b02935549bb6&o=",
         "score": 99.38,
         "website": "https://www.capellahotels.com/en/capella-bangkok"
     },
@@ -35,7 +35,7 @@
         "id": "5",
         "name": "Capella Ubud, Bali, Indonesia",
         "description": "Last year's Top 100 Hotels winner, this glamorous, Bill Bensley-designed resort features a dramatic suspension bridge leading to 22 tented hideaways surrounded by lush rain forest and the river Wos gurgling below. The on-site organic Keliki Garden supplies two restaurants and a bar, and the nightly campfire is the setting for storytelling, movies, and live music with s'mores and hot chocolate.",
-        "image": "hotel5",
+        "image": "https://cdn.kiwicollection.com/media/property/PR119429/l/119429-17-ubud-accommodation-kelikivalley-viewfromtop-Capella%20Ubud-2019.jpg?cb=1594848675",
         "score": 99.34,
         "website": "https://www.capellahotels.com/en/capella-ubud"
     },
@@ -43,7 +43,7 @@
         "id": "6",
         "name": "Grace Hotel, Auberge Resorts Collection, Santorini, Greece",
         "description": "This whitewashed resort, tucked away on the quieter side of Santorini, has unobstructed views of the sparkling Aegean, minus the crowds found elsewhere. Stay on property to enjoy yoga alfresco (the cliff-top setting is magical), or ask the staff to coordinate a scenic hike or cruise to see the island from a different vantage point.",
-        "image": "hotel6",
+        "image": "https://www.britishairways.com/badp/static/external/GR-JTR-2458702/201_GR-JTR-2458702-MK4034511683.jpeg",
         "score": 99.18,
         "website": "https://aubergeresorts.com/gracehotel/"
     },
@@ -51,7 +51,7 @@
         "id": "7",
         "name": "Kamalame Cay, Andros Island, Bahamas",
         "description": "Although this serene Bahamian island resort is a bit hard to get to, it's worth the journey for guests who make it to its sparkling private shores. Guests can relax on the deck of their beachfront bungalows, have breakfast delivered daily in a wicker basket, and borrow golf carts and bikes to explore the 96-acre island.",
-        "image": "hotel7",
+        "image": "https://d3e7bfg0h5jt4g.mrandmrssmith.com/images/480x327/3759603-kamalame-cay-hotel-bahamas-bahamas.jpg",
         "score": 99.14,
         "website": "https://www.kamalame.com/"
     },
@@ -59,7 +59,7 @@
         "id": "8",
         "name": "The Oberoi Udaivilas, Udaipur, India",
         "description": "It's not hard to feel like royalty in this extravagant palace hotel, where Udaipur's glittering Lake Pichola is front and center. Posh rooms have semi-private pools that create a kind of moat around the hotel, and staff are trained to anticipate guests' every desire.",
-        "image": "hotel8",
+        "image": "https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-udaivilas-udaipur/overview/welcome/best-resort-hotel-724x426.jpg?w=724&hash=4bdb4e46deb333afd2ee3444fea7085d",
         "score": 99.12,
         "website": "https://www.oberoihotels.com/hotels-in-udaipur-udaivilas-resort/"
     },
@@ -67,7 +67,7 @@
         "id": "9",
         "name": "The Temple House, Chengdu, China",
         "description": "Two modernist, glass mid-rise towers emerge from a century-old building and tree-filled courtyard, creating a refuge within Sichuan's bustling capital. Rooms are modern and minimal, and there are four food and beverage outlets, a spa, an indoor pool, and a house car to enjoy.",
-        "image": "hotel9",
+        "image": "https://media-cdn.tripadvisor.com/media/photo-s/22/41/52/a4/exterior.jpg",
         "score": 98.94,
         "website": "https://www.thehousecollective.com/en/the-temple-house/"
     },
@@ -75,7 +75,7 @@
         "id": "10",
         "name": "The Oberoi, New Delhi",
         "description": "There are 220 well-appointed rooms in this luxury hotel situated near several Delhi attractions. Guests can unwind at either the indoor or outdoor swimming pool, then choose from seven restaurants and bars, including one by Alfred Prasad, formerly of the Michelin-starred Tamarind in London.",
-        "image": "hotel10",
+        "image": "https://cf.bstatic.com/xdata/images/hotel/max500/44522456.jpg?k=9947bae2627f2fc1ec561c4284d877d0cddcad32a7e4b3716a84a115b29ee8ff&o=&hp=1",
         "score": 98.90,
         "website": "https://www.oberoihotels.com/hotels-in-delhi/"
     },
@@ -83,7 +83,7 @@
         "id": "11",
         "name": "Four Seasons Hotel Istanbul at Sultanahmet",
         "description": "This location can't be beat for guests that want to be right in the middle of all of Istanbul's old-city attractions. Set inside a former prison, the 65 modern rooms are lavish and spacious, and what once served as the prison yard is now a fragrant, landscaped courtyard. Head up to the roof terrace for panoramic views across the domes and minarets of Hagia Sofia and the Blue Mosque and out to the glittering Bosporus.",
-        "image": "hotel11",
+        "image": "https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/37/54/37541_v9.jpeg",
         "score": 98.40,
         "website": "https://www.fourseasons.com/istanbul/"
     }

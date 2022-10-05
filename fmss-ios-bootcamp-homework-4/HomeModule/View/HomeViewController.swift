@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
     static let storyboardID = "HomeVC"
@@ -86,7 +87,21 @@ extension HomeViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
         
-        cell.coverImage.image = UIImage(named: item.image ?? "noImage")
+        if let imageUrl = item.image {
+            cell.coverImage.kf.indicatorType = .activity
+            
+            let url = URL(string: imageUrl)
+            cell.coverImage.kf.setImage(with: url,
+                                        placeholder: UIImage(named: "placeholderImage"),
+                                        options: [
+                                            .scaleFactor(UIScreen.main.scale),
+                                            .transition(.fade(1)),
+                                            .cacheOriginalImage
+                                        ])
+        } else {
+            cell.coverImage.image = UIImage(named: "noImage")
+        }
+        
         cell.categoryLabel.text = item.category
         cell.titleLabel.text = item.content
         

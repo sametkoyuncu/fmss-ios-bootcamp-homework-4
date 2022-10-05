@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		364A4D1E176604A3B9442622 /* libPods-fmss-ios-bootcamp-homework-4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5549126A179FCD4A4A8A88D /* libPods-fmss-ios-bootcamp-homework-4.a */; };
 		F104B9D728E562FA00A2C276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104B9D628E562FA00A2C276 /* AppDelegate.swift */; };
 		F104B9D928E562FA00A2C276 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104B9D828E562FA00A2C276 /* SceneDelegate.swift */; };
 		F104B9DB28E562FA00A2C276 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104B9DA28E562FA00A2C276 /* HomeViewController.swift */; };
@@ -66,6 +67,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5549126A179FCD4A4A8A88D /* libPods-fmss-ios-bootcamp-homework-4.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fmss-ios-bootcamp-homework-4.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADC4A35F2E90026D77D2E19A /* Pods-fmss-ios-bootcamp-homework-4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmss-ios-bootcamp-homework-4.debug.xcconfig"; path = "Target Support Files/Pods-fmss-ios-bootcamp-homework-4/Pods-fmss-ios-bootcamp-homework-4.debug.xcconfig"; sourceTree = "<group>"; };
+		DA93AAABE5B5D81660390E5C /* Pods-fmss-ios-bootcamp-homework-4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmss-ios-bootcamp-homework-4.release.xcconfig"; path = "Target Support Files/Pods-fmss-ios-bootcamp-homework-4/Pods-fmss-ios-bootcamp-homework-4.release.xcconfig"; sourceTree = "<group>"; };
 		F104B9D328E562FA00A2C276 /* fmss-ios-bootcamp-homework-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fmss-ios-bootcamp-homework-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F104B9D628E562FA00A2C276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F104B9D828E562FA00A2C276 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,17 +135,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364A4D1E176604A3B9442622 /* libPods-fmss-ios-bootcamp-homework-4.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ACE513EB9B892327E212EF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADC4A35F2E90026D77D2E19A /* Pods-fmss-ios-bootcamp-homework-4.debug.xcconfig */,
+				DA93AAABE5B5D81660390E5C /* Pods-fmss-ios-bootcamp-homework-4.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D893F3B713BBAEE865D84444 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5549126A179FCD4A4A8A88D /* libPods-fmss-ios-bootcamp-homework-4.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F104B9CA28E562FA00A2C276 = {
 			isa = PBXGroup;
 			children = (
 				F104B9D528E562FA00A2C276 /* fmss-ios-bootcamp-homework-4 */,
 				F104B9D428E562FA00A2C276 /* Products */,
+				1ACE513EB9B892327E212EF9 /* Pods */,
+				D893F3B713BBAEE865D84444 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -456,6 +481,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F104B9E728E562FC00A2C276 /* Build configuration list for PBXNativeTarget "fmss-ios-bootcamp-homework-4" */;
 			buildPhases = (
+				9F13967253F901DB6EC52182 /* [CP] Check Pods Manifest.lock */,
 				F104B9CF28E562FA00A2C276 /* Sources */,
 				F104B9D028E562FA00A2C276 /* Frameworks */,
 				F104B9D128E562FA00A2C276 /* Resources */,
@@ -521,6 +547,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F13967253F901DB6EC52182 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fmss-ios-bootcamp-homework-4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F104B9CF28E562FA00A2C276 /* Sources */ = {
@@ -714,6 +765,7 @@
 		};
 		F104B9E828E562FC00A2C276 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADC4A35F2E90026D77D2E19A /* Pods-fmss-ios-bootcamp-homework-4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -744,6 +796,7 @@
 		};
 		F104B9E928E562FC00A2C276 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA93AAABE5B5D81660390E5C /* Pods-fmss-ios-bootcamp-homework-4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
