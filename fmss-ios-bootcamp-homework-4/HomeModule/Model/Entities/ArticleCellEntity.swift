@@ -8,5 +8,6 @@
 import Foundation
 
 struct ArticleCellEntity {
-    let id, content, category, image: String?
+    let id, title, content, category, image: String?
+    var isFavorite: Bool?
 }

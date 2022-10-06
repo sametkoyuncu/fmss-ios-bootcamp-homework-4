@@ -16,11 +16,7 @@ class HotelListViewModel {
         model = _model
         model.delegate = self
     }
-    // MARK: - 
-    deinit {
-        model.delegate = nil
-    }
-    
+
     private func transformHotelToListItemEntity(from hotel: Hotel) -> ListItemEntity {
         return ListItemEntity(id: hotel.id,
                               cellTitle: hotel.name,

@@ -26,11 +26,6 @@ class HotelDetailsModel {
         self.id = id
     }
     
-    // MARK: -
-    deinit {
-        delegate = nil
-    }
-    
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "hotels", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)

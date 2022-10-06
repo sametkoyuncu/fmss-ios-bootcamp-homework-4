@@ -9,11 +9,15 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     static let identifier = "HomeCollectionViewCell"
+    
+    var handleClick: (()->())?
+    
     // outlets
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bookmarkIcon: UIButton!
     
     
     override func awakeFromNib() {
@@ -31,5 +35,10 @@ class HomeCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOpacity = 1
         self.layer.masksToBounds = false
     }
-
+    
+    
+    @IBAction func bookmarkButtonPressed(_ sender: UIButton) {
+        handleClick?()
+    }
+    
 }

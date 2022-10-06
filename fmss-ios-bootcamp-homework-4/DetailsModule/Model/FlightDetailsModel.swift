@@ -27,11 +27,6 @@ class FlightDetailsModel {
         self.id = id
     }
     
-    // MARK: -
-    deinit {
-        delegate = nil
-    }
-    
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "flights", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)

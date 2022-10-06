@@ -103,7 +103,6 @@ extension BookmarksViewController: UITableViewDataSource {
     
 }
 
-
 extension BookmarksViewController: BookmarkListViewModelProtocol {
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {

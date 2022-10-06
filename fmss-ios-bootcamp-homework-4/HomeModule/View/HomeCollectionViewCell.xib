@@ -38,14 +38,28 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2h-a5-nAD">
+                                <rect key="frame" x="285" y="5" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="6dR-js-xam"/>
+                                    <constraint firstAttribute="height" constant="64" id="ezo-Ds-OIg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Bookmark"/>
+                                <connections>
+                                    <action selector="bookmarkButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="oJE-2F-JLi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="s6v-dy-hrY" firstAttribute="top" secondItem="GOM-mn-yVy" secondAttribute="top" id="Buz-Sd-col"/>
+                            <constraint firstItem="Z2h-a5-nAD" firstAttribute="top" secondItem="GOM-mn-yVy" secondAttribute="top" constant="5" id="GHe-KL-N1s"/>
                             <constraint firstItem="A5P-UN-mE0" firstAttribute="leading" secondItem="GOM-mn-yVy" secondAttribute="leading" constant="16" id="IYk-DH-8XM"/>
                             <constraint firstItem="s6v-dy-hrY" firstAttribute="leading" secondItem="GOM-mn-yVy" secondAttribute="leading" id="O2d-ZD-uFu"/>
                             <constraint firstItem="9u4-dt-xg2" firstAttribute="leading" secondItem="GOM-mn-yVy" secondAttribute="leading" constant="16" id="PAK-W3-gf0"/>
                             <constraint firstItem="9u4-dt-xg2" firstAttribute="top" secondItem="s6v-dy-hrY" secondAttribute="bottom" constant="10" id="SZF-zY-Ghr"/>
+                            <constraint firstAttribute="trailing" secondItem="Z2h-a5-nAD" secondAttribute="trailing" constant="5" id="UgC-X1-A4F"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="s6v-dy-hrY" secondAttribute="bottom" constant="126" id="jpc-dp-ZEu"/>
                             <constraint firstAttribute="trailing" secondItem="s6v-dy-hrY" secondAttribute="trailing" id="kiQ-cJ-3Jt"/>
                             <constraint firstAttribute="bottom" secondItem="A5P-UN-mE0" secondAttribute="bottom" constant="20" id="mBv-BL-LCP"/>
@@ -66,6 +80,7 @@
             </constraints>
             <size key="customSize" width="354" height="276"/>
             <connections>
+                <outlet property="bookmarkIcon" destination="Z2h-a5-nAD" id="qDs-Cx-uI5"/>
                 <outlet property="categoryLabel" destination="9u4-dt-xg2" id="iLT-eO-Eds"/>
                 <outlet property="containerView" destination="GOM-mn-yVy" id="7Q5-df-6QI"/>
                 <outlet property="coverImage" destination="s6v-dy-hrY" id="auU-o5-BnA"/>
@@ -75,6 +90,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="Bookmark" width="50" height="50"/>
         <image name="homeBackground" width="390" height="455"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

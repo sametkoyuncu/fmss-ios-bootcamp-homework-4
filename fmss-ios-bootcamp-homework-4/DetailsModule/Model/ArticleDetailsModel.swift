@@ -24,13 +24,7 @@ class ArticleDetailsModel {
     
     init(id:String) {
         self.id = id
-    }
-    
-    // MARK: -
-    deinit {
-        delegate = nil
-    }
-    
+    }    
     
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "articles", ofType: "json") else {

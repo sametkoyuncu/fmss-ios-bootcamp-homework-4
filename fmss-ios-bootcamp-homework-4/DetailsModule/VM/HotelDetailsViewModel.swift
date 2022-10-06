@@ -17,12 +17,6 @@ class HotelDetailsViewModel {
         model.delegate = self
     }
     
-    // MARK: - Section Heading
-    deinit {
-        model.delegate = nil
-        viewDelegate = nil
-    }
-    
     private func transformHotelToDetailsScreenEntity(from hotel: Hotel) -> DetailsScreenEntity {
         let score = hotel.score
         let category = "Score: \(score!)"

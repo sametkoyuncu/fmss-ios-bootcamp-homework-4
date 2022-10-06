@@ -36,11 +36,6 @@ class DetailsViewController: UIViewController {
         detailsViewModel?.didViewLoad()
         setup()
     }
-    // MARK: - Section Heading
-    override func viewDidDisappear(_ animated: Bool) {
-        detailsViewModel?.viewDelegate = nil
-        detailsViewModel = nil
-    }
  
     func setup() {
         headerView.clipsToBounds = true
