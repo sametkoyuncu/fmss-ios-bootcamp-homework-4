@@ -22,9 +22,8 @@ class HomeViewController: UIViewController {
         setup()
     }
     
-    // bir etkisi var mı emin değilim
-    override func viewDidDisappear(_ animated: Bool) {
-        viewModel.viewDelegate = nil
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.didViewLoad()
     }
     
     func setup() {
@@ -34,7 +33,7 @@ class HomeViewController: UIViewController {
         collectionView.dataSource = self
         
         viewModel.viewDelegate = self
-        viewModel.didViewLoad()
+        
         
         // header view shadow
         headerView.layer.borderWidth = 0.0
@@ -71,7 +70,7 @@ extension HomeViewController: UICollectionViewDelegate {
         
         guard let id = viewModel.getModel(at: indexPath.row).content else { return }
         let destinationVC = DetailsModuleBuilder.createModule(with: id, for: .articles, vc: vc)
-
+        
         navigationController?.pushViewController(destinationVC, animated: true)
     }
 }
@@ -102,8 +101,24 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.coverImage.image = UIImage(named: "noImage")
         }
         
+        item.isFavorite! ? cell.bookmarkIcon.setImage(UIImage(named: "BookmarkFilled"), for: .normal) : cell.bookmarkIcon.setImage(UIImage(named: "Bookmark"), for: .normal)
+        
         cell.categoryLabel.text = item.category
         cell.titleLabel.text = item.content
+        
+        cell.handleClick = item.isFavorite! ?
+        { [weak self] in
+            guard let self = self else {return}
+            self.viewModel.removeFromFavoritesBy(id: item.id!, row: indexPath.row) } :
+        { [weak self] in
+            guard let self = self else {return}
+            self.viewModel.didSaveButtonPressed(newItem: .init(idForSearch: item.id,
+                                                               title: item.content,
+                                                               description: item.content,
+                                                               image: item.image,
+                                                               type: .articles),
+                                                row: indexPath.row)
+        }
         
         return cell
     }
@@ -129,6 +144,21 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - View Model Delegate Methods
 extension HomeViewController: ArticleListViewModelViewProtocol {
+    func didItemAdded(isSuccess: Bool, row: Int) {
+        if isSuccess {
+            print("item added samet")
+            collectionView.reloadItems(at: [IndexPath.init(item: row, section: 0)])
+        }
+    }
+    
+    func didItemRemoved(isSuccess: Bool, row: Int) {
+        if isSuccess {
+            print("item removed samet")
+            collectionView.reloadItems(at: [IndexPath.init(item: row, section: 0)])
+        }
+    }
+    
+    
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {
             DispatchQueue.main.async { [weak self] in

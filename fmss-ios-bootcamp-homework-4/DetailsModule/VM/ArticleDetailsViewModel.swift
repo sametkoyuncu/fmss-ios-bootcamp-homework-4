@@ -17,14 +17,12 @@ class ArticleDetailsViewModel {
         model.delegate = self
     }
     
-    // MARK: - Section Heading
-    deinit {
-        model.delegate = nil
-        viewDelegate = nil
-    }
-    
     private func transformArticleToDetailsScreenEntity(from article: Article) -> DetailsScreenEntity {
-        return DetailsScreenEntity(id: article.content, cellTitle: article.title, desc: article.content, image: article.image, category: article.category)
+        return DetailsScreenEntity(id: article.content,
+                                   cellTitle: article.title,
+                                   desc: article.content,
+                                   image: article.image,
+                                   category: article.category)
     }
 }
 

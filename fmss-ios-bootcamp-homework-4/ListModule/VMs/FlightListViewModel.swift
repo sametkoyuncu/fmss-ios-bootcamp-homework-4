@@ -17,11 +17,6 @@ class FlightListViewModel {
         model.delegate = self
     }
     
-    // MARK: - Section Heading
-    deinit {
-        viewDelegate = nil
-    }
-    
     private func transformFlightToListItemEntity(from flight: Flight) -> ListItemEntity {
         let title = "Flight Number: \(flight.flight?.number ?? "")"
         //  description details

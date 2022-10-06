@@ -16,11 +16,6 @@ class FlightListModel {
     weak var delegate: FlightListModelProtocol?
     
     var flights: Flights = []
-    
-    // TODO: -
-    deinit {
-        delegate = nil
-    }
 
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "flights", ofType: "json") else {
