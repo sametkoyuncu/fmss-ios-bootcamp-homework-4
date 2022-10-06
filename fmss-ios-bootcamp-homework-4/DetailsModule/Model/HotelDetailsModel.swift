@@ -8,15 +8,8 @@
 import Foundation
 import CoreData
 
-protocol HotelDetailsModelProtocol: AnyObject {
-    func didDataFetchProcessFinish(_ isSuccess: Bool)
-    func didDataAddProcessFinish(_ isSuccess: Bool)
-    func didDataRemoveProcessFinish(_ isSuccess: Bool)
-    func didCheckFavoriteProcessFinish(_ isSuccess: Bool)
-}
-
 class HotelDetailsModel {
-    weak var delegate: HotelDetailsModelProtocol?
+    weak var delegate: DetailsModelDelegateProtocol?
     
     var selectedHotel: Hotel?
     
@@ -49,8 +42,9 @@ class HotelDetailsModel {
             print(error.localizedDescription)
         }
     }
-    
-    
+}
+
+extension HotelDetailsModel: DetailsModelMethodsProtocol {
     func addItem(_ item: BookmarkItem) {
         let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
         

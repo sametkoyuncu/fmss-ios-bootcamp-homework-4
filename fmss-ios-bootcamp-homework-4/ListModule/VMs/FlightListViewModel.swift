@@ -39,13 +39,9 @@ class FlightListViewModel {
 }
 
 // MARK: - Model Protocol Methods
-extension FlightListViewModel: FlightListModelProtocol {
+extension FlightListViewModel: ListModelDelegateProtocol {
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        if isSuccess {
-            viewDelegate?.didCellItemFetch(isSuccess: true)
-        } else {
-            // else
-        }
+        viewDelegate?.didCellItemFetch(isSuccess: true)
     }
 }
 

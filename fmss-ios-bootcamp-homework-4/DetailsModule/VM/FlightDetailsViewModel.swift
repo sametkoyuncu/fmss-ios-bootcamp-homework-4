@@ -41,7 +41,7 @@ class FlightDetailsViewModel {
 }
 
 // MARK: - Model Protocol Methods
-extension FlightDetailsViewModel: FlightDetailsModelProtocol {
+extension FlightDetailsViewModel: DetailsModelDelegateProtocol {
     func didDataRemoveProcessFinish(_ isSuccess: Bool) {
         viewDelegate?.didItemRemoved(isSuccess: isSuccess)
     }

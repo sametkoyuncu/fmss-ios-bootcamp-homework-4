@@ -7,15 +7,14 @@
 
 import Foundation
 
-protocol HotelSearchModelProtocol: AnyObject {
-    func didDataFetchProcessFinish(_ isSuccess: Bool)
-}
-
 class HotelSearchModel {
-    weak var delegate: HotelSearchModelProtocol?
+    weak var delegate: SearchModelDelegateProtocol?
     
     var hotels: Hotels = []
     
+}
+
+extension HotelSearchModel: SearchModelMethodsProtocol {
     func fetchDataBy(searchText: String) {
         guard let path = Bundle.main.path(forResource: "hotels", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)

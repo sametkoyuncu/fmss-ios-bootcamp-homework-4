@@ -7,15 +7,13 @@
 
 import Foundation
 
-protocol HotelListModelProtocol: AnyObject {
-    func didDataFetchProcessFinish(_ isSuccess: Bool)
-}
-
 class HotelListModel {
-    weak var delegate: HotelListModelProtocol?
+    weak var delegate: ListModelDelegateProtocol?
     
     var hotels: Hotels = []
-    
+}
+
+extension HotelListModel: ListModelMethodsProtocol {
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "hotels", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)
