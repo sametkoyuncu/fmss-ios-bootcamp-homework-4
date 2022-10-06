@@ -8,15 +8,8 @@
 import Foundation
 import CoreData
 
-protocol ArticleDetailsModelProtocol: AnyObject {
-    func didDataFetchProcessFinish(_ isSuccess: Bool)
-    func didDataAddProcessFinish(_ isSuccess: Bool)
-    func didDataRemoveProcessFinish(_ isSuccess: Bool)
-    func didCheckFavoriteProcessFinish(_ isSuccess: Bool)
-}
-
 class ArticleDetailsModel {
-    weak var delegate: ArticleDetailsModelProtocol?
+    weak var delegate: DetailsModelDelegateProtocol?
     
     var selectedArticle: Article?
     
@@ -25,7 +18,9 @@ class ArticleDetailsModel {
     init(id:String) {
         self.id = id
     }    
-    
+}
+
+extension ArticleDetailsModel: DetailsModelMethodsProtocol {
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "articles", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)

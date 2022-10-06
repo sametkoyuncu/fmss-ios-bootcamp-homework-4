@@ -25,7 +25,7 @@ class HotelSearchViewModel {
 }
 
 // MARK: - Model Protocol Methods
-extension HotelSearchViewModel: HotelSearchModelProtocol {
+extension HotelSearchViewModel: SearchModelDelegateProtocol {
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
         if isSuccess {
             viewDelegate?.didCellItemFetch(isSuccess: true)

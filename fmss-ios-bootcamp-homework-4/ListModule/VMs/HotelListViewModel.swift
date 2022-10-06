@@ -26,13 +26,9 @@ class HotelListViewModel {
 }
 
 // MARK: - Model Protocol Methods
-extension HotelListViewModel: HotelListModelProtocol {
+extension HotelListViewModel: ListModelDelegateProtocol {
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        if isSuccess {
-            viewDelegate?.didCellItemFetch(isSuccess: true)
-        } else {
-            // else
-        }
+        viewDelegate?.didCellItemFetch(isSuccess: true)
     }
 }
 

@@ -29,7 +29,7 @@ class HotelDetailsViewModel {
 }
 
 // MARK: - Model Protocol Methods
-extension HotelDetailsViewModel: HotelDetailsModelProtocol {
+extension HotelDetailsViewModel: DetailsModelDelegateProtocol {
     func didDataRemoveProcessFinish(_ isSuccess: Bool) {
         viewDelegate?.didItemRemoved(isSuccess: isSuccess)
     }

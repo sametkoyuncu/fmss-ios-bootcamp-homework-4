@@ -8,16 +8,8 @@
 import Foundation
 import CoreData
 
-
-protocol FlightDetailsModelProtocol: AnyObject {
-    func didDataFetchProcessFinish(_ isSuccess: Bool)
-    func didDataAddProcessFinish(_ isSuccess: Bool)
-    func didDataRemoveProcessFinish(_ isSuccess: Bool)
-    func didCheckFavoriteProcessFinish(_ isSuccess: Bool)
-}
-
 class FlightDetailsModel {
-    weak var delegate: FlightDetailsModelProtocol?
+    weak var delegate: DetailsModelDelegateProtocol?
     
     var selectedFlight: Flight?
     
@@ -26,7 +18,9 @@ class FlightDetailsModel {
     init(id:String) {
         self.id = id
     }
-    
+}
+
+extension FlightDetailsModel: DetailsModelMethodsProtocol {
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "flights", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)

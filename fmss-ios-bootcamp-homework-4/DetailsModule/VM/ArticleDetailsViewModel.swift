@@ -27,7 +27,7 @@ class ArticleDetailsViewModel {
 }
 
 // MARK: - Model Protocol Methods
-extension ArticleDetailsViewModel: ArticleDetailsModelProtocol {
+extension ArticleDetailsViewModel: DetailsModelDelegateProtocol {
     func didDataRemoveProcessFinish(_ isSuccess: Bool) {
         viewDelegate?.didItemRemoved(isSuccess: isSuccess)
     }

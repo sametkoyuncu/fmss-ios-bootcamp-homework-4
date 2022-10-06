@@ -40,7 +40,7 @@ class FlightSearchViewModel {
 }
 
 // MARK: - Model Protocol Methods
-extension FlightSearchViewModel: FlightSearchModelProtocol {
+extension FlightSearchViewModel: SearchModelDelegateProtocol {
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
         if isSuccess {
             viewDelegate?.didCellItemFetch(isSuccess: true)
