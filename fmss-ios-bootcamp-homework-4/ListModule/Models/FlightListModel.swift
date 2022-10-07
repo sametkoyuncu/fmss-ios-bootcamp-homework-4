@@ -25,7 +25,6 @@ class FlightListModel {
         let arrivalIATAcode = "ESB"
         
         AF.request("https://app.goflightlabs.com/routes?access_key=\(first_API_KEY)&dep_iata=\(departureIATAcode)&arr_iata=\(arrivalIATAcode)").response { response in
-        
             do {
                 guard let data = response.data else { return }
 

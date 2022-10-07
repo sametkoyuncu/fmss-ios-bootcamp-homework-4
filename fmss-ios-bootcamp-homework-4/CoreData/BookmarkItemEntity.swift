@@ -13,5 +13,5 @@ struct BookmarkItem {
     var title: String?
     var description: String?
     var image: String?
-    var type: DetailsTypeEnum?
+    var type: DataTypeEnum?
 }

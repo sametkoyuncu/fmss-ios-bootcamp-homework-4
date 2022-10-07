@@ -19,6 +19,9 @@ class HotelDetailsModel {
         self.id = id
     }
     
+}
+
+extension HotelDetailsModel: DetailsModelMethodsProtocol {
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "hotels", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)
@@ -42,9 +45,7 @@ class HotelDetailsModel {
             print(error.localizedDescription)
         }
     }
-}
-
-extension HotelDetailsModel: DetailsModelMethodsProtocol {
+    
     func addItem(_ item: BookmarkItem) {
         let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
         

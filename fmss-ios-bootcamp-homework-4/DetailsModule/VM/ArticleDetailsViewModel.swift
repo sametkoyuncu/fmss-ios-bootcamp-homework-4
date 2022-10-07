@@ -61,9 +61,10 @@ extension ArticleDetailsViewModel: DetailsViewModelMethodsProtocol {
     }
     
     func getModel() -> DetailsScreenEntity {
-        // TODO:
+
         let article = model.selectedArticle!
         
+        // bookmark kontrolü için olayı başlat
         model.isFavorite(by: article.content!)
         return transformArticleToDetailsScreenEntity(from: article)
     }

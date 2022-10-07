@@ -11,7 +11,6 @@ protocol ArticleListViewModelViewProtocol: AnyObject {
     func didCellItemFetch(isSuccess: Bool)
     func didItemAdded(isSuccess: Bool, row: Int)
     func didItemRemoved(isSuccess: Bool, row: Int)
-//    func didFavoriteCheck(isSuccess: Bool)
 }
 
 class ArticleListViewModel {
@@ -44,7 +43,7 @@ class ArticleListViewModel {
         model.removeData(by: id, row: row)
     }
     
-    func didSaveButtonPressed(newItem: BookmarkItem, row: Int) {
+    func didBookmarkButtonPressed(newItem: BookmarkItem, row: Int) {
         model.addItem(newItem,  row: row)
     }
     
@@ -58,14 +57,10 @@ class ArticleListViewModel {
     }
 }
 
-// MARK: - PostListModel Delegate Methods
+// MARK: - Articles Delegate Methods
 extension ArticleListViewModel: ArticleListModelProtocol {
     func didDataRemoveProcessFinish(_ isSuccess: Bool, row: Int) {
         viewDelegate?.didItemRemoved(isSuccess: isSuccess, row: row)
-    }
-    
-    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
-        //viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
     }
     
     func didDataAddProcessFinish(_ isSuccess: Bool, row: Int) {

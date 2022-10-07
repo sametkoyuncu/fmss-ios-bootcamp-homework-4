@@ -59,9 +59,8 @@ extension HotelDetailsViewModel: DetailsViewModelMethodsProtocol {
     }
     
     func getModel() -> DetailsScreenEntity {
-        // TODO:
         let hotel = model.selectedHotel!
-        
+        // bookmark kontrolü için olayı başlat
         model.isFavorite(by: hotel.id!)
         return transformHotelToDetailsScreenEntity(from: hotel)
     }

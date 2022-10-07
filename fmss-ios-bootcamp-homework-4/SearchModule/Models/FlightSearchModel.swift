@@ -28,6 +28,7 @@ extension FlightSearchModel: SearchModelMethodsProtocol {
 
             let result = try JSONDecoder().decode(Flights.self, from: data)
             
+            // uçuş numarası, firma adı, firmanın kısa adı, kalkış veya varış yerine göre arama işlemi
             let searchList = result.filter {
                 $0.flight?.number?.lowercased().contains(searchText.lowercased()) ?? false ||
                 $0.airline?.callsign?.rawValue.lowercased().contains(searchText.lowercased()) ?? false ||

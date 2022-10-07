@@ -17,7 +17,7 @@ class DetailsViewController: UIViewController {
     
     static let storyboardID = "DetailsVC"
     
-    var detailsType: DetailsTypeEnum?
+    var detailsType: DataTypeEnum?
     
     var detailsViewModel: DetailsViewModelMethodsProtocol?
     
@@ -33,8 +33,10 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailsViewModel?.didViewLoad()
         setup()
+        
+        detailsViewModel?.didViewLoad()
+        
     }
  
     func setup() {
@@ -49,8 +51,7 @@ class DetailsViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func bookmarkButtonPressed(_ sender: UIButton) {        
-
+    @IBAction func bookmarkButtonPressed(_ sender: UIButton) {
         let item = detailsViewModel?.getModel()
         
         if let item = item {
@@ -63,44 +64,13 @@ class DetailsViewController: UIViewController {
             } else {
                 detailsViewModel?.removeFromFavoritesBy(id: item.id!)
             }
-            
         }
-        
     }
 }
 
 extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
-    func didItemRemoved(isSuccess: Bool) {
-        if isSuccess {
-            buttonState = .add
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else {return}
-                self.bookmarkButton.setImage(UIImage(named: "addBookmarkButton"), for: .normal)
-            }
-        }
-    }
     
-    func didItemAdded(isSuccess: Bool) {
-        if isSuccess {
-            buttonState = .remove
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else {return}
-                self.bookmarkButton.setImage(UIImage(named: "removeBookmarkButton"), for: .normal)
-            }
-        }
-    }
-    
-    func didFavoriteCheck(isSuccess: Bool) {
-        if isSuccess {
-            buttonState = .remove
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else {return}
-                
-                self.bookmarkButton.setImage(UIImage(named: "removeBookmarkButton"), for: .normal)
-            }
-        }
-    }
-    
+    // veri geldiyse ilgili yerleri doldur
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {
             let item = detailsViewModel!.getModel()
@@ -126,7 +96,40 @@ extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
                 self.categoryLabel.text = item.category
             }
         } else {
-            // TODO:
+            // TODO: no data göster
+        }
+    }
+    
+    // bookmark'tan silme gerçekleştiyse butonu güncelle
+    func didItemRemoved(isSuccess: Bool) {
+        if isSuccess {
+            buttonState = .add
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.bookmarkButton.setImage(UIImage(named: "addBookmarkButton"), for: .normal)
+            }
+        }
+    }
+    
+    // bookmark'a ekleme gerçekleştiyse butonu güncelle
+    func didItemAdded(isSuccess: Bool) {
+        if isSuccess {
+            buttonState = .remove
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.bookmarkButton.setImage(UIImage(named: "removeBookmarkButton"), for: .normal)
+            }
+        }
+    }
+    
+    // bookmark'a ekli mi diye kontrol et, ona göre butonu güncelle
+    func didFavoriteCheck(isSuccess: Bool) {
+        if isSuccess {
+            buttonState = .remove
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.bookmarkButton.setImage(UIImage(named: "removeBookmarkButton"), for: .normal)
+            }
         }
     }
 }

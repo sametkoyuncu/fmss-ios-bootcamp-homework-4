@@ -12,14 +12,13 @@ protocol ArticleListModelProtocol: AnyObject {
     func didDataFetchProcessFinish(_ isSuccess: Bool)
     func didDataAddProcessFinish(_ isSuccess: Bool, row: Int)
     func didDataRemoveProcessFinish(_ isSuccess: Bool, row: Int)
-    func didCheckFavoriteProcessFinish(_ isSuccess: Bool)
 }
 
 class ArticleListModel {
     weak var delegate: ArticleListModelProtocol?
     
     var articles: Articles = []
-
+    // tüm article'ları çek
     func fetchData() {
         guard let path = Bundle.main.path(forResource: "articles", ofType: "json") else {
             delegate?.didDataFetchProcessFinish(false)
@@ -42,6 +41,7 @@ class ArticleListModel {
         }
     }
     
+    // article'ı coredata'ya ekle
     func addItem(_ item: BookmarkItem, row: Int) {
         let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
         
@@ -56,11 +56,10 @@ class ArticleListModel {
         data.setValue(Date(), forKey: #keyPath(Item.date))
         
         AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
-        
         delegate?.didDataAddProcessFinish(true, row: row)
-        
     }
     
+    // article'ı coredata'dan sil
     func removeData(by id: String, row: Int) {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let predicate = NSPredicate(format: "(idForSearch = %@)", id as CVarArg)
@@ -82,7 +81,9 @@ class ArticleListModel {
             print(error.localizedDescription)
         }
     }
-    // MARK: - return lere bi ayar çek
+    
+    // TODO: - return lere bi ayar çek
+    // article bookmarks'a eklenmiş mi, eklenmemiş mi onun kontrolü
     func isFavorite(by id: String) -> Bool {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let predicate = NSPredicate(format: "(idForSearch = %@)", id as CVarArg)
@@ -92,12 +93,11 @@ class ArticleListModel {
         do {
             let context = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
             let result = try context.fetch(fetchRequest).first
-            
+            // if let olabilir
             guard let _ = result else {
                 return false
             }
             return true
-            
         } catch {
             print(error.localizedDescription)
             return false

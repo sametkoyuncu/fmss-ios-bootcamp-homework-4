@@ -11,13 +11,14 @@ import Kingfisher
 class SearchViewController: UIViewController {
     
     var searchViewModel: SearchViewModelMethodsProtocol?
-    
+    // arama yapılacak tab ve değişince ui güncellemesi
     var activeTab: ActiveSearchTab? {
         didSet {
             activeTabChanged()
         }
     }
-    
+    // arama ekranının davranışları için state
+    // state değiştiği zaman, state'e göre ekranı güncelliyor
     var state: SearchStates? {
         didSet {
             switch state {
@@ -42,35 +43,38 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        activeTab = .hotels
-        
+        setup()
         registerCell()
+    }
+    
+    func setup() {
+        // initial states
+        activeTab = .hotels
+        state = .empty
         
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.separatorStyle = .none
         
-        state = .empty
         
+        // textField'ın sağ tarafına extension ile görsel ekleme işlemi
         if let searchImage = UIImage(named: "searchIcon") {
             searchTextField.withImage(direction: .Right, image: searchImage, colorSeparator: UIColor.clear, colorBorder: UIColor.clear)
         }
-        
     }
-
+    // ekran ilk açıldığında gösterilecek
     func showEmpty() {
         noDataView.isHidden = true
         tableView.isHidden = true
     }
-    
+    // arama sonucu varsa gösterilecek
     func showResults() {
         noDataView.isHidden = true
         tableView.isHidden = false
         tableView.reloadData()
     }
-    
+    // arama sonucu yoksa gösterilecek
     func showNotFound() {
         tableView.isHidden = true
         DispatchQueue.main.async {
@@ -79,8 +83,10 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func textChanged(_ sender: UITextField) {
+        // textField'e 3 harf ve daha fazlası girildiyse arama yap
         if searchTextField.text?.count ?? 0 >= 3 {
             if let searchText = searchTextField.text {
+                // seçili tab'a göre arama işlemi yap
                 switch activeTab {
                 case .hotels:
                     searchViewModel = HotelSearchViewModel()
@@ -98,13 +104,10 @@ class SearchViewController: UIViewController {
                         self.searchViewModel?.didViewLoad(searchText)
                     }
                 case .none:
-                    // TODO:
                     fatalError("there is no active tab")
                 }
-                state = .success
             }
-        }
-        else {
+        } else {
            state = .empty
        }
 
@@ -122,6 +125,7 @@ class SearchViewController: UIViewController {
         tableView.register(.init(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: SearchTableViewCell.identifier)
     }
     
+    // ekranı güncelleme
     func activeTabChanged() {
         if let activeTab = activeTab {
             state = .empty
@@ -135,7 +139,6 @@ class SearchViewController: UIViewController {
                 flightsButton.setImage(UIImage.init(named: "flights tab active")!, for: .normal)
             }
         }
-        
     }
 }
 
@@ -149,7 +152,8 @@ extension SearchViewController: UITableViewDelegate {
         let vc = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
         
         guard let id = searchViewModel?.getModel(at: indexPath.row).id else { return }
-        let detailsType: DetailsTypeEnum = activeTab == .hotels ? .hotels : .flights
+        let detailsType: DataTypeEnum = activeTab == .hotels ? .hotels : .flights
+        
         let destinationVC = DetailsModuleBuilder.createModule(with: id, for: detailsType, vc: vc)
 
         navigationController?.pushViewController(destinationVC, animated: true)
@@ -166,8 +170,12 @@ extension SearchViewController: UITableViewDataSource {
         let item = searchViewModel?.getModel(at: indexPath.row)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as! SearchTableViewCell
-        // TODO: image güzel olmadı sanki
+        
         if let item = item {
+            cell.titleLabel.text = item.title
+            cell.descriptionLabel.text = item.desc
+            
+            // image
             cell.coverImage.kf.indicatorType = .activity
             
             let url = URL(string: item.image!)
@@ -181,15 +189,13 @@ extension SearchViewController: UITableViewDataSource {
         } else {
             cell.coverImage.image = UIImage(named: "noImage")
         }
-    
-        cell.titleLabel.text = item?.title
-        cell.descriptionLabel.text = item?.desc
         
         return cell
     }
 }
 
 extension SearchViewController: SearchViewModelViewDelegateProtocol {
+    // arama sonucuna göre ekranı güncelle
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {
             state = .success

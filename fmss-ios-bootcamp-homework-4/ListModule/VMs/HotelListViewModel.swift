@@ -34,7 +34,7 @@ extension HotelListViewModel: ListModelDelegateProtocol {
 
 // MARK: - View Model Methods Protocol
 extension HotelListViewModel: ListViewModelMethodsProtocol {
-    // view yüklendiyse data çek
+
     func didViewLoad() {
         model.fetchData()
     }

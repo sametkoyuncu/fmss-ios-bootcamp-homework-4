@@ -9,7 +9,7 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     static let identifier = "HomeCollectionViewCell"
-    
+    // for adding or removing bookmark
     var handleClick: (()->())?
     
     // outlets
@@ -36,7 +36,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         self.layer.masksToBounds = false
     }
     
-    
+    // add or remove bookmark button
     @IBAction func bookmarkButtonPressed(_ sender: UIButton) {
         handleClick?()
     }

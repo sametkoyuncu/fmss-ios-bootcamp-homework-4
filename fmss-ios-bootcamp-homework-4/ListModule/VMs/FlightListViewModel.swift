@@ -47,11 +47,12 @@ extension FlightListViewModel: ListModelDelegateProtocol {
 
 // MARK: - View Model Methods Protocol
 extension FlightListViewModel: ListViewModelMethodsProtocol {
-    
-    // view yüklendiyse data çek
+
     func didViewLoad() {
         model.fetchData()
-        // MARK: - using alamofire request from flightlabs api
+        
+        // MARK: - api'den veri çekmek için yukarıdaki satırı kapatıp
+        //         alttaki satırı aktif hale getirin
         //model.fetchDataUsingAlamofire()
         
     }

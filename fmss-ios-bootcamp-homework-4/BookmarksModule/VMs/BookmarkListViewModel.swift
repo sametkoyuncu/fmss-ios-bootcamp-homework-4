@@ -36,8 +36,8 @@ class BookmarkListViewModel {
 
     
     private func transformItemToTodoItem(from item: Item) -> BookmarkItem {
-        let type: DetailsTypeEnum?
-        
+        let type: DataTypeEnum?
+        // data type to string
         switch item.type {
         case "hotels":
             type = .hotels
@@ -60,7 +60,6 @@ class BookmarkListViewModel {
 
 // MARK: - TodoListModel Delegate Methods
 extension BookmarkListViewModel: BookmarkListModelProtocol {
-    
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
         if isSuccess {
             viewDelegate?.didCellItemFetch(isSuccess: true)

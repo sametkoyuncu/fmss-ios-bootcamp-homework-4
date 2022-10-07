@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum DetailsTypeEnum: String  {
+enum DataTypeEnum: String  {
     case flights = "Flights"
     case hotels = "Hotels"
     case articles = "Articles"

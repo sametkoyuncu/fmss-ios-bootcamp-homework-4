@@ -28,6 +28,7 @@ extension HotelSearchModel: SearchModelMethodsProtocol {
 
             let result = try JSONDecoder().decode(Hotels.self, from: data)
             
+            // otel adı veya açıklamasına göre arama işlemi
             let searchList = result.filter { $0.name?.lowercased().contains(searchText.lowercased()) ?? false || (($0.hotelDescription?.lowercased().contains(searchText.lowercased())) ?? false) }
             
             if searchList.count == 0 {

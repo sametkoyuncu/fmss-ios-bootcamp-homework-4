@@ -14,7 +14,7 @@ class ListViewController: UIViewController {
     
     var listViewModel: ListViewModelMethodsProtocol?
 
-    var detailsType: DetailsTypeEnum?
+    var dataType: DataTypeEnum?
     
     // Outlets
     @IBOutlet weak var titleLabel: UILabel!
@@ -25,12 +25,13 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         setup()
         registerCells()
+        
         listViewModel?.didViewLoad()
     }
     
     func setup() {
-        if let detailsType = detailsType {
-            titleLabel.text = detailsType.rawValue
+        if let dataType = dataType {
+            titleLabel.text = dataType.rawValue
         } else {
             fatalError("Details Type Not Found! (from viewDidLoad)")
         }
@@ -54,13 +55,12 @@ class ListViewController: UIViewController {
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+
         let vc = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
         
         guard let id = listViewModel?.getModel(at: indexPath.row).id else { return }
-        
-        guard let detailsType = detailsType else { return }
-        
+        guard let detailsType = dataType else { return }
+        // navigation controller için vc'yi buradan gönderiyorum, diğer türlü storyboard'a erişilmiyor
         let destinationVC = DetailsModuleBuilder.createModule(with: id, for: detailsType, vc: vc)
 
         navigationController?.pushViewController(destinationVC, animated: true)
@@ -118,7 +118,7 @@ extension ListViewController: ListViewModelViewDelegateProtocol {
                 self.tableView.reloadData()
             }
         } else {
-            // TODO:
+            // TODO: no data görseli göster
         }
     }
     
@@ -126,7 +126,6 @@ extension ListViewController: ListViewModelViewDelegateProtocol {
 }
 
 // MARK: - bu kullanım çalışmadı ama lazım olur diye kalsın :)
-
 /*private var listViewModel: FlightOrHotelViewModel?
 
 enum FlightOrHotelViewModel {

@@ -8,9 +8,10 @@
 import UIKit
 
 struct DetailsModuleBuilder {
-    static func createModule(with id: String, for model: DetailsTypeEnum, vc: DetailsViewController) -> UIViewController {
+    static func createModule(with id: String, for model: DataTypeEnum, vc: DetailsViewController) -> UIViewController {
         let vc = vc
-
+        
+        // data tipine göre view model ve model'leri setle
         switch model {
         case .flights:
             let model = FlightDetailsModel(id: id)

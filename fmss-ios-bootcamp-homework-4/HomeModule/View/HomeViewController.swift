@@ -43,14 +43,14 @@ class HomeViewController: UIViewController {
         headerView.layer.shadowOpacity = 1
         headerView.layer.masksToBounds = false
     }
-    
+    // go flights list
     @IBAction func flightsButtonPressed(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: ListViewController.storboardID) as! ListViewController
         let destinationVC = ListModuleBuilder.createModule(for: .flights, vc: vc)
         
         navigationController?.pushViewController(destinationVC, animated: true)
     }
-    
+    // go hotels list
     @IBAction func hotelsButtonPressed(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: ListViewController.storboardID) as! ListViewController
         let destinationVC = ListModuleBuilder.createModule(for: .hotels, vc: vc)
@@ -105,14 +105,14 @@ extension HomeViewController: UICollectionViewDataSource {
         
         cell.categoryLabel.text = item.category
         cell.titleLabel.text = item.content
-        
+        // add to bookmarks and remove from bookmarks methods
         cell.handleClick = item.isFavorite! ?
         { [weak self] in
             guard let self = self else {return}
             self.viewModel.removeFromFavoritesBy(id: item.id!, row: indexPath.row) } :
         { [weak self] in
             guard let self = self else {return}
-            self.viewModel.didSaveButtonPressed(newItem: .init(idForSearch: item.id,
+            self.viewModel.didBookmarkButtonPressed(newItem: .init(idForSearch: item.id,
                                                                title: item.content,
                                                                description: item.content,
                                                                image: item.image,
@@ -131,9 +131,7 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 // MARK: - Collection View Delegete Flow Layout Methods
-
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.view.frame.width - 100
         let height = collectionView.frame.height - 40
@@ -144,26 +142,24 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - View Model Delegate Methods
 extension HomeViewController: ArticleListViewModelViewProtocol {
+    func didCellItemFetch(isSuccess: Bool) {
+        if isSuccess {
+            DispatchQueue.main.async { [weak self] in
+                self?.collectionView.reloadData()
+            }
+        }
+    }
+    
+    // bookmark ekle/sil işleminde sonra cell'i güncelle
     func didItemAdded(isSuccess: Bool, row: Int) {
         if isSuccess {
-            print("item added samet")
             collectionView.reloadItems(at: [IndexPath.init(item: row, section: 0)])
         }
     }
     
     func didItemRemoved(isSuccess: Bool, row: Int) {
         if isSuccess {
-            print("item removed samet")
             collectionView.reloadItems(at: [IndexPath.init(item: row, section: 0)])
-        }
-    }
-    
-    
-    func didCellItemFetch(isSuccess: Bool) {
-        if isSuccess {
-            DispatchQueue.main.async { [weak self] in
-                self?.collectionView.reloadData()
-            }
         }
     }
 }

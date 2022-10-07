@@ -8,10 +8,10 @@
 import UIKit
 
 struct ListModuleBuilder {
-    static func createModule(for model: DetailsTypeEnum, vc: ListViewController) -> UIViewController {
+    static func createModule(for model: DataTypeEnum, vc: ListViewController) -> UIViewController {
         let vc = vc
-        vc.detailsType = model
-
+        vc.dataType = model
+        // veri tipine göre ilgili view model ve model birbirine bağlanıyor
         switch model {
         case .flights:
             let model = FlightListModel()

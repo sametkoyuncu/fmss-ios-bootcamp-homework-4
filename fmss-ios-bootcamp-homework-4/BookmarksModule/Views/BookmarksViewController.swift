@@ -16,20 +16,21 @@ class BookmarksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setup()
         registerCell()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.viewDidLoad()
+    }
+    
+    func setup() {
         tableView.delegate = self
         tableView.dataSource = self
         
         viewModel.viewDelegate = self
         
-        
         navigationController?.navigationBar.isHidden = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        viewModel.viewDidLoad()
     }
     
     func registerCell() {
@@ -113,6 +114,4 @@ extension BookmarksViewController: BookmarkListViewModelProtocol {
             }
         }
     }
-    
-    
 }
