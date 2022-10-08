@@ -36,7 +36,6 @@ extension HotelDetailsModel: DetailsModelMethodsProtocol {
             let result = try JSONDecoder().decode(Hotels.self, from: data)
             
             let hotelById = result.filter { $0.id == id }.first
-            
             selectedHotel = hotelById
             delegate?.didDataFetchProcessFinish(true)
             

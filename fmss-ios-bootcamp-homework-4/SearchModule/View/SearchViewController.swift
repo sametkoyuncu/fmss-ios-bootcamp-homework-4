@@ -109,8 +109,7 @@ class SearchViewController: UIViewController {
             }
         } else {
            state = .empty
-       }
-
+        }
     }
     
     @IBAction func hotelsButtonPressed(_ sender: UIButton) {

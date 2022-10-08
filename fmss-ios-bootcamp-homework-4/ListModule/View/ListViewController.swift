@@ -114,7 +114,7 @@ extension ListViewController: ListViewModelViewDelegateProtocol {
         if isSuccess {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else {return}
-                self.loadingImage.isHidden = true
+                //self.loadingImage.isHidden = true
                 self.tableView.reloadData()
             }
         } else {
