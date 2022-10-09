@@ -32,4 +32,4 @@ func didViewLoad() {
 <img src="https://github.com/sametkoyuncu/fmss-ios-bootcamp-homework-4/blob/development/screenshots/hm4-ss2.png"  alt="screenshot 2" />
 
 ## Ekran Kaydı
-[![youtube-video](https://i.ibb.co/vX2864R/Ekran-Resmi-2022-10-09-11-27-48.png)](https://www.youtube.com/embed/9-LWFcrKKl8)
+[![youtube-video](https://github.com/sametkoyuncu/fmss-ios-bootcamp-homework-4/blob/development/screenshots/youtube.png)](https://www.youtube.com/embed/9-LWFcrKKl8)
