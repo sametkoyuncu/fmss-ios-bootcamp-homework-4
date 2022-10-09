@@ -33,7 +33,7 @@ class ArticleListViewModel {
     
     func getModel(at index: Int) -> ArticleCellEntity {
         let article = model.articles[index]
-        // MARK: - async olmalı mı? bence olmalı gibi
+        // bookmark'a eklenmiş mi kontrol et
         let isFavorite = model.isFavorite(by: article.content!)
     
         return transformArticleToArticleCellEntity(from: article, isFavorite: isFavorite)

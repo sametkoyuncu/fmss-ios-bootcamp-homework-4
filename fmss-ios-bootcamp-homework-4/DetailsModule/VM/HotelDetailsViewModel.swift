@@ -28,6 +28,29 @@ class HotelDetailsViewModel {
     }
 }
 
+// MARK: - View Model Methods Protocol
+extension HotelDetailsViewModel: DetailsViewModelMethodsProtocol {
+    func removeFromFavoritesBy(id: String) {
+        model.removeData(by: id)
+    }
+    
+    func didViewLoad() {
+        model.fetchData()
+    }
+    
+    func getModel() -> DetailsScreenEntity {
+        let hotel = model.selectedHotel!
+        // bookmark'a eklenmiş mi kontrolü için olayı başlat
+        // vc'de delegate ile sonuç gelecek
+        model.isFavorite(by: hotel.id!)
+        return transformHotelToDetailsScreenEntity(from: hotel)
+    }
+    
+    func didSaveButtonPressed(newItem: BookmarkItem) {
+        model.addItem(newItem)
+    }
+}
+
 // MARK: - Model Protocol Methods
 extension HotelDetailsViewModel: DetailsModelDelegateProtocol {
     func didDataRemoveProcessFinish(_ isSuccess: Bool) {
@@ -47,25 +70,3 @@ extension HotelDetailsViewModel: DetailsModelDelegateProtocol {
     }
 }
 
-
-// MARK: - View Model Methods Protocol
-extension HotelDetailsViewModel: DetailsViewModelMethodsProtocol {
-    func removeFromFavoritesBy(id: String) {
-        model.removeData(by: id)
-    }
-    
-    func didViewLoad() {
-        model.fetchData()
-    }
-    
-    func getModel() -> DetailsScreenEntity {
-        let hotel = model.selectedHotel!
-        // bookmark kontrolü için olayı başlat
-        model.isFavorite(by: hotel.id!)
-        return transformHotelToDetailsScreenEntity(from: hotel)
-    }
-    
-    func didSaveButtonPressed(newItem: BookmarkItem) {
-        model.addItem(newItem)
-    }
-}

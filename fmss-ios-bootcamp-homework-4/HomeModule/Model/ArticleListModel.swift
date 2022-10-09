@@ -82,7 +82,6 @@ class ArticleListModel {
         }
     }
     
-    // TODO: - return lere bi ayar çek
     // article bookmarks'a eklenmiş mi, eklenmemiş mi onun kontrolü
     func isFavorite(by id: String) -> Bool {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()

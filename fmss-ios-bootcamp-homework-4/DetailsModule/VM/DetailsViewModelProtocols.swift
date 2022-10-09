@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Details View Model Methods
 protocol DetailsViewModelMethodsProtocol {
     var viewDelegate: DetailsViewModelViewDelegateProtocol? {get set}
     
@@ -16,6 +17,7 @@ protocol DetailsViewModelMethodsProtocol {
     func removeFromFavoritesBy(id: String)
 }
 
+// Details View Model Delegate Methods
 protocol DetailsViewModelViewDelegateProtocol: AnyObject {
     func didCellItemFetch(isSuccess: Bool)
     func didItemAdded(isSuccess: Bool)

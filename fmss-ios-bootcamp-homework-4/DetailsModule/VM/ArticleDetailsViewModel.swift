@@ -26,26 +26,6 @@ class ArticleDetailsViewModel {
     }
 }
 
-// MARK: - Model Protocol Methods
-extension ArticleDetailsViewModel: DetailsModelDelegateProtocol {
-    func didDataRemoveProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didItemRemoved(isSuccess: isSuccess)
-    }
-    
-    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
-    }
-    
-    func didDataAddProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didItemAdded(isSuccess: isSuccess)
-    }
-    
-    func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didCellItemFetch(isSuccess: isSuccess)
-    }
-}
-
-
 // MARK: - View Model Methods Protocol
 extension ArticleDetailsViewModel: DetailsViewModelMethodsProtocol {
     func removeFromFavoritesBy(id: String) {
@@ -64,8 +44,28 @@ extension ArticleDetailsViewModel: DetailsViewModelMethodsProtocol {
 
         let article = model.selectedArticle!
         
-        // bookmark kontrolü için olayı başlat
+        // bookmark'a eklenmiş mi kontrolü için olayı başlat
+        // vc'de delegate ile sonuç gelecek
         model.isFavorite(by: article.content!)
         return transformArticleToDetailsScreenEntity(from: article)
+    }
+}
+
+// MARK: - Model Protocol Methods
+extension ArticleDetailsViewModel: DetailsModelDelegateProtocol {
+    func didDataRemoveProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemRemoved(isSuccess: isSuccess)
+    }
+    
+    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
+    }
+    
+    func didDataAddProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemAdded(isSuccess: isSuccess)
+    }
+    
+    func didDataFetchProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didCellItemFetch(isSuccess: isSuccess)
     }
 }

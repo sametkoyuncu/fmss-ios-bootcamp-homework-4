@@ -33,5 +33,4 @@ class BookmarkListModel {
             print(error.localizedDescription)
         }
     }
-   
 }

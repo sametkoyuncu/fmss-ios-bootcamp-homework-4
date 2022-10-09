@@ -21,7 +21,7 @@ class DetailsViewController: UIViewController {
     
     var detailsViewModel: DetailsViewModelMethodsProtocol?
     
-    var buttonState: ButtonState = .add
+    private var buttonState: ButtonState = .add
     
     // outlets
     @IBOutlet weak var headerView: UIView!
@@ -37,14 +37,6 @@ class DetailsViewController: UIViewController {
         
         detailsViewModel?.didViewLoad()
         
-    }
- 
-    func setup() {
-        headerView.clipsToBounds = true
-        headerView.layer.cornerRadius = 35
-        headerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        
-        navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
@@ -68,6 +60,19 @@ class DetailsViewController: UIViewController {
     }
 }
 
+// MARK: - Details VC private methods
+private extension DetailsViewController {
+    
+    func setup() {
+        headerView.clipsToBounds = true
+        headerView.layer.cornerRadius = 35
+        headerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
+        navigationController?.navigationBar.isHidden = true
+    }
+}
+
+// MARK: - Details VM Delegate Methods
 extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
     
     // veri geldiyse ilgili yerleri doldur
@@ -96,7 +101,8 @@ extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
                 self.categoryLabel.text = item.category
             }
         } else {
-            // TODO: no data göster
+            // TODO: no data göster - şimdilik sıkıntı yok,
+            //       zaten olan data'ya tıkladığımız için
         }
     }
     
@@ -133,28 +139,3 @@ extension DetailsViewController: DetailsViewModelViewDelegateProtocol {
         }
     }
 }
-
-
-
-/* old codes
- 
- override func viewWillAppear(_ animated: Bool) {
- 
- switch detailsType {
- case .hotels:
- detailsViewModel = HotelDetailsViewModel()
- case .flights:
- detailsViewModel = FlightDetailsViewModel()
- case .articles:
- detailsViewModel = ArticleDetailsViewModel()
- case .none:
- fatalError("Details Type Not Found! (from viewWillAppear)")
- }
- 
- detailsViewModel?.viewDelegate = self
- 
- if let selectedId = selectedId {
- detailsViewModel?.didViewLoad(selectedId)
- }
- 
- }*/

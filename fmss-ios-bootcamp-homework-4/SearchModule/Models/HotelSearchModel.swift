@@ -11,7 +11,6 @@ class HotelSearchModel {
     weak var delegate: SearchModelDelegateProtocol?
     
     var hotels: Hotels = []
-    
 }
 
 extension HotelSearchModel: SearchModelMethodsProtocol {

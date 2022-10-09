@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Details Model Methods
 protocol DetailsModelMethodsProtocol {
     var delegate: DetailsModelDelegateProtocol? {get set}
     func fetchData()
@@ -15,6 +16,7 @@ protocol DetailsModelMethodsProtocol {
     func isFavorite(by id: String)
 }
 
+// Details Model Delegate Methods
 protocol DetailsModelDelegateProtocol: AnyObject {
     func didDataFetchProcessFinish(_ isSuccess: Bool)
     func didDataAddProcessFinish(_ isSuccess: Bool)

@@ -9,7 +9,7 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     static let identifier = "HomeCollectionViewCell"
-    // for adding or removing bookmark
+    // closure for adding or removing bookmark
     var handleClick: (()->())?
     
     // outlets

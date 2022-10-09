@@ -40,26 +40,6 @@ class FlightDetailsViewModel {
     }
 }
 
-// MARK: - Model Protocol Methods
-extension FlightDetailsViewModel: DetailsModelDelegateProtocol {
-    func didDataRemoveProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didItemRemoved(isSuccess: isSuccess)
-    }
-    
-    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
-    }
-    
-    func didDataAddProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didItemAdded(isSuccess: isSuccess)
-    }
-    
-    func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didCellItemFetch(isSuccess: isSuccess)
-    }
-}
-
-
 // MARK: - View Model Methods Protocol
 extension FlightDetailsViewModel: DetailsViewModelMethodsProtocol {
     func removeFromFavoritesBy(id: String) {
@@ -77,8 +57,28 @@ extension FlightDetailsViewModel: DetailsViewModelMethodsProtocol {
     func getModel() -> DetailsScreenEntity {
         let flight = model.selectedFlight!
         
-        // bookmark kontrolü için olayı başlat
+        // bookmark'a eklenmiş mi kontrolü için olayı başlat
+        // vc'de delegate ile sonuç gelecek
         model.isFavorite(by: flight.flight!.number!)
         return transformFlightToDetailsScreenEntity(from: flight)
+    }
+}
+
+// MARK: - Model Protocol Methods
+extension FlightDetailsViewModel: DetailsModelDelegateProtocol {
+    func didDataRemoveProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemRemoved(isSuccess: isSuccess)
+    }
+    
+    func didCheckFavoriteProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didFavoriteCheck(isSuccess: isSuccess)
+    }
+    
+    func didDataAddProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didItemAdded(isSuccess: isSuccess)
+    }
+    
+    func didDataFetchProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didCellItemFetch(isSuccess: isSuccess)
     }
 }

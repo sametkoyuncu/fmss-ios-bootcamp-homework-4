@@ -6,12 +6,13 @@
 //
 
 import Foundation
-
+// model methods
 protocol ListModelMethodsProtocol {
     var delegate: ListModelDelegateProtocol? {get set}
     func fetchData()
 }
 
+// model delegate methods
 protocol ListModelDelegateProtocol: AnyObject {
     func didDataFetchProcessFinish(_ isSuccess: Bool)
 }

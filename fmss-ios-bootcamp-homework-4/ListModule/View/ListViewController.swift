@@ -13,7 +13,7 @@ class ListViewController: UIViewController {
     static let storboardID = "ListVC"
     
     var listViewModel: ListViewModelMethodsProtocol?
-
+    // flight or hotel
     var dataType: DataTypeEnum?
     
     // Outlets
@@ -29,7 +29,15 @@ class ListViewController: UIViewController {
         listViewModel?.didViewLoad()
     }
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+// MARK: - ListVC private methods
+private extension ListViewController {
     func setup() {
+        // set screen title
         if let dataType = dataType {
             titleLabel.text = dataType.rawValue
         } else {
@@ -44,10 +52,6 @@ class ListViewController: UIViewController {
     
     func registerCells() {
         tableView.register(.init(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
-    }
-    
-    @IBAction func backButtonPressed(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -114,18 +118,22 @@ extension ListViewController: ListViewModelViewDelegateProtocol {
         if isSuccess {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else {return}
-                //self.loadingImage.isHidden = true
+                self.loadingImage.isHidden = true
                 self.tableView.reloadData()
             }
         } else {
-            // TODO: no data görseli göster
+            DispatchQueue.main.async { [weak self] in
+                guard let _ = self else {return}
+                // no data görseli eklenebilir
+                print("not found any data (listVC)")
+            }
         }
     }
     
     
 }
 
-// MARK: - bu kullanım çalışmadı ama lazım olur diye kalsın :)
+// MARK: - bu kullanım çalışmadı ama kullanım şekli hoşuma gitti, örnek için bıraktım
 /*private var listViewModel: FlightOrHotelViewModel?
 
 enum FlightOrHotelViewModel {
@@ -144,21 +152,4 @@ override func viewWillAppear(_ animated: Bool) {
     case .none:
         return
     }
-}*/
-
-
-
-
-/*
-override func viewWillAppear(_ animated: Bool) {
-    switch detailsType {
-    case .hotels:
-        listViewModel = HotelListViewModel()
-    case .flights:
-        listViewModel = FlightListViewModel()
-    case .articles, .none:
-        fatalError("Details Type Not Found! (from viewWillAppear)")
-    }
-    listViewModel?.viewDelegate = self
-    listViewModel?.didViewLoad()
 }*/

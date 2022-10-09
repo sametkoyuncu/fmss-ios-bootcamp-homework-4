@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum DataTypeEnum: String  {
     case flights = "Flights"
     case hotels = "Hotels"

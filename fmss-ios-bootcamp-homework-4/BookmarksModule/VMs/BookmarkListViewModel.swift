@@ -58,13 +58,13 @@ class BookmarkListViewModel {
     }
 }
 
-// MARK: - TodoListModel Delegate Methods
+// MARK: - BookmarkListModel Delegate Methods
 extension BookmarkListViewModel: BookmarkListModelProtocol {
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
         if isSuccess {
             viewDelegate?.didCellItemFetch(isSuccess: true)
         } else {
-            print("error")
+            print("error ")
         }
     }
 }

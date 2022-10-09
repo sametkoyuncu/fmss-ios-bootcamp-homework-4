@@ -7,11 +7,13 @@
 
 import Foundation
 
+// Search Model Methods
 protocol SearchModelMethodsProtocol {
     var delegate: SearchModelDelegateProtocol? {get set}
     func fetchDataBy(searchText: String)
 }
 
+// Search Model Delegate Methods
 protocol SearchModelDelegateProtocol: AnyObject {
     func didDataFetchProcessFinish(_ isSuccess: Bool)
 }

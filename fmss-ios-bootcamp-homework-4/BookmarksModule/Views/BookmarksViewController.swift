@@ -23,7 +23,9 @@ class BookmarksViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         viewModel.viewDidLoad()
     }
-    
+}
+// MARK: - VC Private Methods
+private extension BookmarksViewController {
     func setup() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -36,9 +38,9 @@ class BookmarksViewController: UIViewController {
     func registerCell() {
         tableView.register(.init(nibName: "BookmarksTableViewCell", bundle: nil), forCellReuseIdentifier: BookmarksTableViewCell.identifier)
     }
-
 }
 
+// MARK: - TableView Delegate Methods
 extension BookmarksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -54,6 +56,7 @@ extension BookmarksViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - TableView DataSource Methods
 extension BookmarksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfItems()
@@ -82,6 +85,7 @@ extension BookmarksViewController: UITableViewDataSource {
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.description
         
+        //TODO: bu vm'ye taşınabilir
         var category: String?
         
         switch item.type {
@@ -104,6 +108,7 @@ extension BookmarksViewController: UITableViewDataSource {
     
 }
 
+// MARK: - BookmarkList VM Delegate Methods
 extension BookmarksViewController: BookmarkListViewModelProtocol {
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {

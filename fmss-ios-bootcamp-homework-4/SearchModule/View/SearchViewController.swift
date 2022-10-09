@@ -11,15 +11,15 @@ import Kingfisher
 class SearchViewController: UIViewController {
     
     var searchViewModel: SearchViewModelMethodsProtocol?
-    // arama yapılacak tab ve değişince ui güncellemesi
-    var activeTab: ActiveSearchTab? {
+    // arama yapılacak tab değişince ui güncelleme
+    private var activeTab: ActiveSearchTab? {
         didSet {
             activeTabChanged()
         }
     }
     // arama ekranının davranışları için state
-    // state değiştiği zaman, state'e göre ekranı güncelliyor
-    var state: SearchStates? {
+    // state değiştiği zaman, state'e göre ekranı güncelleme
+    private var state: SearchStates? {
         didSet {
             switch state {
             case .empty:
@@ -46,7 +46,48 @@ class SearchViewController: UIViewController {
         setup()
         registerCell()
     }
+    // textField action
+    @IBAction func textChanged(_ sender: UITextField) {
+        // textField'e 3 harf ve daha fazlası girildiyse arama yap
+        if searchTextField.text?.count ?? 0 >= 3 {
+            if let searchText = searchTextField.text {
+                // seçili tab'a göre arama işlemi yap
+                switch activeTab {
+                case .hotels:
+                    searchViewModel = HotelSearchViewModel()
+                    searchViewModel?.viewDelegate = self
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                        guard let self = self else { return }
+                        self.searchViewModel?.didViewLoad(searchText)
+                    }
+                    
+                case .flights:
+                    searchViewModel = FlightSearchViewModel()
+                    searchViewModel?.viewDelegate = self
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                        guard let self = self else { return }
+                        self.searchViewModel?.didViewLoad(searchText)
+                    }
+                case .none:
+                    fatalError("there is no active tab")
+                }
+            }
+        } else {
+            state = .empty
+        }
+    }
     
+    @IBAction func hotelsButtonPressed(_ sender: UIButton) {
+        activeTab = .hotels
+    }
+    
+    @IBAction func flightsButtonPressed(_ sender: UIButton) {
+        activeTab = .flights
+    }
+}
+
+// MARK: - Search VC Private Methods
+private extension SearchViewController {
     func setup() {
         // initial states
         activeTab = .hotels
@@ -77,54 +118,13 @@ class SearchViewController: UIViewController {
     // arama sonucu yoksa gösterilecek
     func showNotFound() {
         tableView.isHidden = true
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.noDataView.isHidden = false
         }
     }
     
-    @IBAction func textChanged(_ sender: UITextField) {
-        // textField'e 3 harf ve daha fazlası girildiyse arama yap
-        if searchTextField.text?.count ?? 0 >= 3 {
-            if let searchText = searchTextField.text {
-                // seçili tab'a göre arama işlemi yap
-                switch activeTab {
-                case .hotels:
-                    searchViewModel = HotelSearchViewModel()
-                    searchViewModel?.viewDelegate = self
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-                        guard let self = self else { return }
-                        self.searchViewModel?.didViewLoad(searchText)
-                    }
-                    
-                case .flights:
-                    searchViewModel = FlightSearchViewModel()
-                    searchViewModel?.viewDelegate = self
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-                        guard let self = self else { return }
-                        self.searchViewModel?.didViewLoad(searchText)
-                    }
-                case .none:
-                    fatalError("there is no active tab")
-                }
-            }
-        } else {
-           state = .empty
-        }
-    }
-    
-    @IBAction func hotelsButtonPressed(_ sender: UIButton) {
-        activeTab = .hotels
-    }
-    
-    @IBAction func flightsButtonPressed(_ sender: UIButton) {
-        activeTab = .flights
-    }
-    
-    func registerCell() {
-        tableView.register(.init(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: SearchTableViewCell.identifier)
-    }
-    
-    // ekranı güncelleme
+    // arama tab'ı değiştiğinde ekranı güncelle
     func activeTabChanged() {
         if let activeTab = activeTab {
             state = .empty
@@ -139,22 +139,26 @@ class SearchViewController: UIViewController {
             }
         }
     }
+    
+    func registerCell() {
+        tableView.register(.init(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: SearchTableViewCell.identifier)
+    }
 }
 
 
 // MARK: - table view delegate methods
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+        
         tableView.deselectRow(at: indexPath, animated: true)
-
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: DetailsViewController.storyboardID) as! DetailsViewController
         
         guard let id = searchViewModel?.getModel(at: indexPath.row).id else { return }
         let detailsType: DataTypeEnum = activeTab == .hotels ? .hotels : .flights
         
         let destinationVC = DetailsModuleBuilder.createModule(with: id, for: detailsType, vc: vc)
-
+        
         navigationController?.pushViewController(destinationVC, animated: true)
     }
 }
@@ -174,30 +178,40 @@ extension SearchViewController: UITableViewDataSource {
             cell.titleLabel.text = item.title
             cell.descriptionLabel.text = item.desc
             
-            // image
+            // set image
             cell.coverImage.kf.indicatorType = .activity
             
-            let url = URL(string: item.image!)
-            cell.coverImage.kf.setImage(with: url,
-                                        placeholder: UIImage(named: "placeholderImage"),
-                                        options: [
-                                            .scaleFactor(UIScreen.main.scale),
-                                            .transition(.fade(1)),
-                                            .cacheOriginalImage
-                                        ])
-        } else {
-            cell.coverImage.image = UIImage(named: "noImage")
+            if let image = item.image {
+                let url = URL(string: image)
+                cell.coverImage.kf.setImage(with: url,
+                                            placeholder: UIImage(named: "placeholderImage"),
+                                            options: [
+                                                .scaleFactor(UIScreen.main.scale),
+                                                .transition(.fade(1)),
+                                                .cacheOriginalImage
+                                            ])
+            } else {
+                cell.coverImage.image = UIImage(named: "noImage")
+            }
         }
         
         return cell
     }
 }
 
+// MARK: - View Model Delegate Methods
 extension SearchViewController: SearchViewModelViewDelegateProtocol {
     // arama sonucuna göre ekranı güncelle
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {
-            state = .success
+            // kullanıcı 3 harf yazıp, arama sorgusu göndermiş ama sonuç gelmeden
+            // harf silmişse, gelecek veri ekranda gözükmesin
+            if let searchText = searchTextField.text, searchText.count > 2 {
+                state = .success
+            } else {
+                state = .empty
+            }
+            
         } else {
             state = .notFound
         }

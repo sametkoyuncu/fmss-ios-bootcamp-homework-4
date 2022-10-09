@@ -80,7 +80,7 @@ extension HotelDetailsModel: DetailsModelMethodsProtocol {
                 
                 delegate?.didDataRemoveProcessFinish(true)
             } else {
-                delegate?.didDataRemoveProcessFinish(true)
+                delegate?.didDataRemoveProcessFinish(false)
             }
         } catch {
             delegate?.didDataRemoveProcessFinish(false)

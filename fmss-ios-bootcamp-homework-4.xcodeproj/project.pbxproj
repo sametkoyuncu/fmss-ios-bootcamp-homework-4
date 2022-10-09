@@ -203,6 +203,15 @@
 			path = "fmss-ios-bootcamp-homework-4";
 			sourceTree = "<group>";
 		};
+		F145AC0028F2C27000467D1A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F104B9EA28E5ACAE00A2C276 /* HomeCollectionViewCell.swift */,
+				F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F153627F28E8CF2A008C0F5C /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,9 +421,8 @@
 		F19D9AC628EAD5F4001E0F4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F145AC0028F2C27000467D1A /* Cell */,
 				F104B9DA28E562FA00A2C276 /* HomeViewController.swift */,
-				F104B9EA28E5ACAE00A2C276 /* HomeCollectionViewCell.swift */,
-				F104B9EB28E5ACAE00A2C276 /* HomeCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";

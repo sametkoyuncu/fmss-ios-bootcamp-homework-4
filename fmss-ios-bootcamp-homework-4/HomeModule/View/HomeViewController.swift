@@ -25,7 +25,25 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         viewModel.didViewLoad()
     }
-    
+   
+    // go flights list
+    @IBAction func flightsButtonPressed(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: ListViewController.storboardID) as! ListViewController
+        let destinationVC = ListModuleBuilder.createModule(for: .flights, vc: vc)
+        
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    // go hotels list
+    @IBAction func hotelsButtonPressed(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: ListViewController.storboardID) as! ListViewController
+        let destinationVC = ListModuleBuilder.createModule(for: .hotels, vc: vc)
+        
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+}
+
+// MARK: - HomeVC private methods
+private extension HomeViewController {
     func setup() {
         registerCells()
         
@@ -42,20 +60,6 @@ class HomeViewController: UIViewController {
         headerView.layer.shadowRadius = 5.0
         headerView.layer.shadowOpacity = 1
         headerView.layer.masksToBounds = false
-    }
-    // go flights list
-    @IBAction func flightsButtonPressed(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: ListViewController.storboardID) as! ListViewController
-        let destinationVC = ListModuleBuilder.createModule(for: .flights, vc: vc)
-        
-        navigationController?.pushViewController(destinationVC, animated: true)
-    }
-    // go hotels list
-    @IBAction func hotelsButtonPressed(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: ListViewController.storboardID) as! ListViewController
-        let destinationVC = ListModuleBuilder.createModule(for: .hotels, vc: vc)
-        
-        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     func registerCells() {
@@ -105,7 +109,7 @@ extension HomeViewController: UICollectionViewDataSource {
         
         cell.categoryLabel.text = item.category
         cell.titleLabel.text = item.content
-        // add to bookmarks and remove from bookmarks methods
+        // 'add to bookmarks' and 'remove from bookmarks' methods
         cell.handleClick = item.isFavorite! ?
         { [weak self] in
             guard let self = self else {return}
@@ -142,6 +146,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - View Model Delegate Methods
 extension HomeViewController: ArticleListViewModelViewProtocol {
+    // veri çekildiyse collection view'ı güncelle
     func didCellItemFetch(isSuccess: Bool) {
         if isSuccess {
             DispatchQueue.main.async { [weak self] in

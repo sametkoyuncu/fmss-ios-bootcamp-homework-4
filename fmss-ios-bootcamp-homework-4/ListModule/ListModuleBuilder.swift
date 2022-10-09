@@ -11,6 +11,7 @@ struct ListModuleBuilder {
     static func createModule(for model: DataTypeEnum, vc: ListViewController) -> UIViewController {
         let vc = vc
         vc.dataType = model
+        
         // veri tipine göre ilgili view model ve model birbirine bağlanıyor
         switch model {
         case .flights:

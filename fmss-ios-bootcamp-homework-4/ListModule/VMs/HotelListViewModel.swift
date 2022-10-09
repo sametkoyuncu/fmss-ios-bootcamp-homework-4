@@ -25,12 +25,6 @@ class HotelListViewModel {
     }
 }
 
-// MARK: - Model Protocol Methods
-extension HotelListViewModel: ListModelDelegateProtocol {
-    func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didCellItemFetch(isSuccess: true)
-    }
-}
 
 // MARK: - View Model Methods Protocol
 extension HotelListViewModel: ListViewModelMethodsProtocol {
@@ -47,5 +41,12 @@ extension HotelListViewModel: ListViewModelMethodsProtocol {
         let hotel = model.hotels[index]
         
         return transformHotelToListItemEntity(from: hotel)
+    }
+}
+
+// MARK: - Model Delegate Methods
+extension HotelListViewModel: ListModelDelegateProtocol {
+    func didDataFetchProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didCellItemFetch(isSuccess: true)
     }
 }

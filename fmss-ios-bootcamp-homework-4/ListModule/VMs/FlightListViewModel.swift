@@ -38,13 +38,6 @@ class FlightListViewModel {
     }
 }
 
-// MARK: - Model Protocol Methods
-extension FlightListViewModel: ListModelDelegateProtocol {
-    func didDataFetchProcessFinish(_ isSuccess: Bool) {
-        viewDelegate?.didCellItemFetch(isSuccess: true)
-    }
-}
-
 // MARK: - View Model Methods Protocol
 extension FlightListViewModel: ListViewModelMethodsProtocol {
 
@@ -65,5 +58,12 @@ extension FlightListViewModel: ListViewModelMethodsProtocol {
         let flight = model.flights[index]
         
         return transformFlightToListItemEntity(from: flight)
+    }
+}
+
+// MARK: - Model Delegate Methods
+extension FlightListViewModel: ListModelDelegateProtocol {
+    func didDataFetchProcessFinish(_ isSuccess: Bool) {
+        viewDelegate?.didCellItemFetch(isSuccess: true)
     }
 }
