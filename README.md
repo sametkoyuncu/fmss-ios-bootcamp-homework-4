@@ -1,7 +1,7 @@
 # Travel APP
-FMSS Bilişim & Patika.dev iOS Bootcamp'i Bitirme Projesi - Travel App
+FMSS Bilişim & Patika.dev iOS Bootcamp'i Bitirme Projesi
 
-Kullanıcıların uçuş, otel ve gezi yazılarını görüntüleyebildiği. Uçuşlar ve oteller arasında arama yapabildiği. İstediği uçuş, otel veya yazıyı favorilerine ekleyebildiği uygulama. 
+Kullanıcıların uçuş bilgileri, otel bilgiler ve gezi yazılarını görüntüleyebildiği. Uçuşlar ve oteller arasında arama yapabildiği. İstediği uçuş, otel veya yazıyı favorilerine ekleyebildiği uygulama. 
 
 > API'lerde istek sınır olduğu için veriler yerel JSON dosyalarından çekildi. Flights için model dosyasında 2 farklı method hazırladım. İlki JSON dosyasından veri çekerken, ikincisi `Alamofire` ile API'den veri çekiyor. Uygulama varsayılan olarak ilk methodu kullanıyor. Eğer ikinci methodu kullanmak isterseniz `ListModule > VMs > FlightListViewModel.swift` dosyasında `didViewLoad` metodu içindeki kodları aşağıdaki gibi düzenleyin.
 ```swift
