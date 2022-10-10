@@ -211,7 +211,6 @@ extension SearchViewController: SearchViewModelViewDelegateProtocol {
             } else {
                 state = .empty
             }
-            
         } else {
             state = .notFound
         }
